@@ -1,0 +1,155 @@
+---
+import Prompt from "./Prompt.astro";
+---
+
+<section class="terminal">
+  <div class="terminal-header">
+    <div class="terminal-dots"><span></span><span></span><span></span></div>
+    <div>Code-Hub</div>
+  </div>
+
+  <Prompt topic="recursos">
+    <!-- <div class="item">
+      <a class="download" href="/markdown/test">descarga.zip</a>
+    </div> -->
+
+    <div class="item external">
+      <a class="internal" href="/markdown/recursos/documentacion"
+        >Recursos.md</a
+      >
+    </div>
+
+    <div class="item external">
+      <a class="internal" href="/markdown/recursos/ideas">Recursos.md</a>
+    </div>
+
+    <div class="item external">
+      <a class="internal" href="/markdown/recursos/herramientas"
+        >Recursos.md</a
+      >
+    </div>
+
+    <div class="item external">
+      <a class="internal" href="/markdown/recursos/">Recursos.md</a>
+    </div>
+
+    <div class="item external">
+      <a class="download" href="/markdown/recursos/ejercicios" title="Descargar Cheatsheets">Recursos.zip</a>
+    </div>
+
+    <div class="item external">
+      <a class="download" href="/markdown/test" title="Descargar códigos">Recursos.zip</a>
+    </div>
+    
+  </Prompt>
+
+  <style>
+    .terminal {
+      width: 100%;
+      max-width: 920px;
+      border: 1px solid #12181b;
+      border-radius: 1rem;
+      padding: 1rem 1rem 1.25rem;
+      text-align: center;
+      font-family: var(--mono);
+      overflow: hidden;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+      /* Fondo */
+      background:
+        linear-gradient(180deg, rgba(154, 255, 107, 0.05) 0%, transparent 40%),
+        linear-gradient(0deg, rgba(255, 107, 107, 0.05) 0%, transparent 40%),
+        #0b0f10;
+      color: var(--fg);
+
+      /* Textura de ruido sutil */
+      background-image:
+        linear-gradient(180deg, rgba(154, 255, 107, 0.05) 0%, transparent 40%),
+        linear-gradient(0deg, rgba(255, 107, 107, 0.05) 0%, transparent 40%),
+        url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100' height='100'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='4' stitchTiles='stitch'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");
+      background-blend-mode: overlay;
+    }
+
+    .terminal-header {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      margin-bottom: 0.6rem;
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+    .terminal-dots {
+      display: inline-flex;
+      gap: 0.35rem;
+      margin-right: 0.25rem;
+    }
+    .terminal-dots span {
+      width: 0.7rem;
+      height: 0.7rem;
+      border-radius: 999px;
+      display: inline-block;
+    }
+    .terminal-dots span:nth-child(1) {
+      background: #ff5f56;
+    }
+    .terminal-dots span:nth-child(2) {
+      background: #ffbd2e;
+    }
+    .terminal-dots span:nth-child(3) {
+      background: #27c93f;
+    }
+
+    .item {
+      display: block;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      padding: 0.2rem 0.25rem;
+      border-radius: 0.25rem;
+      break-inside: avoid; /* evita que se corten entre columnas */
+    }
+
+    .item a {
+      display: inline-block;
+      max-width: 100%;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      text-decoration: none;
+    }
+
+    .item a:hover {
+      color: #fff;
+    }
+
+    a.internal {
+      color: #93da97;
+      font-weight: 300;
+    }
+    a.internal::before {
+      content: "📄 ";
+    }
+
+    a.external {
+      color: #65ada7;
+    }
+    /* a.external::after {
+      content: "↗";
+      font-size: 1.4em;
+      margin-left: 0.25rem;
+    } */
+    a.external::before {
+      content: "🔗 ";
+    }
+
+    a.download {
+      color: #dfa773;
+    }
+    a.download::before {
+      content: "📥 ";
+    }
+
+    .item.marked {
+      outline: 1px dashed color-mix(in oklab, var(--accent), transparent 60%);
+      background: #0d1617;
+    }
+  </style>
+</section>

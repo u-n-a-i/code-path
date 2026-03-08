@@ -1,0 +1,54 @@
+---
+import "../styles/globals.css";
+
+const { title, heading, description } = Astro.props;
+---
+
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/img/logo.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+  </head>
+  <body>
+    <main class="container">
+      <h1 class="heading">{heading}</h1>
+      <p class="description">{description}</p>
+      <slot />
+    </main>
+  </body>
+</html>
+
+<style>
+  .container {
+    max-width: 920px;
+    margin: 0 auto;
+    padding: 2rem 1rem 4rem;
+    display: grid;
+    place-items: center;
+    text-align: center;
+  }
+
+  .heading {
+    font-size: clamp(3rem, 4vw, 3.5rem);
+    line-height: 1.1;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    background: linear-gradient(90deg, var(--fg), var(--accent));
+    -webkit-background: text;
+    background-clip: text;
+    color: transparent;
+    margin-bottom: 10px;
+  }
+
+  .description {
+    color: var(--muted);
+    max-width: 70ch;
+    text-wrap: pretty;
+    text-align: start;
+    line-height: 1.4;
+    margin-bottom: 30px;
+  }
+</style>

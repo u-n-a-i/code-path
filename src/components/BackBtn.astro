@@ -1,0 +1,36 @@
+---
+
+---
+
+<a href="/" aria-label="Volver" class="back-btn"> ↩</a>
+
+<style>
+  .back-btn {
+    position: fixed;
+    left: 1.5rem;
+    top: 1rem;
+    color: var(--accent);
+    text-decoration: none;
+    background: var(--panel);
+    font-size: 2rem;
+    padding: 1rem;
+    border-radius: 50%;
+    width: 3.5rem;
+    height: 3.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+  }
+
+  .back-btn:hover {
+    background: color-mix(in oklab, var(--accent), transparent 85%);
+  }
+
+  @media (max-width: 850px) {
+    .back-btn {
+      top: 0px;
+      left: 0px;
+    }
+  }
+</style>

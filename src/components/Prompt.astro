@@ -1,0 +1,53 @@
+---
+const { topic = "pc" } = Astro.props;
+---
+
+<div class="prompt">
+  <div class="prompt-header">
+    <span class="user">unai</span>@<span class="cwd">pc</span>:~/<span
+      class="folder"
+      >{topic}$<span class="cmd"> ls</span>
+    </span>
+    <div class="ls-grid">
+      <!-- <div class="item dir"><a href="/projects">projects</a></div> -->
+      <slot />
+    </div>
+  </div>
+
+  <style>
+    .prompt {
+      color: var(--fg);
+      margin: 0.4rem 0 0.8rem;
+      word-break: break-word;
+      margin-top: 20px;
+      margin-bottom: 50px;
+    }
+
+    .prompt-header {
+      text-align: start;
+      margin: 10px 0;
+    }
+
+    .prompt .user {
+      color: var(--accent);
+    }
+    .prompt .cwd {
+      color: var(--fg);
+    }
+    .prompt .cmd {
+      color: var(--muted);
+    }
+    .prompt .folder {
+      color: var(--file);
+    }
+
+    /* LS estilo columnas tipo terminal */
+    .ls-grid {
+      columns: auto 200px;
+      column-gap: 2rem;
+      padding: 0.25rem 0 0;
+      text-align: start;
+      margin-top: 10px;
+    }
+  </style>
+</div>

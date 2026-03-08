@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="256" height="256" viewBox="0 0 256 256">
+  <!-- Fondo -->
+  <rect width="256" height="256" rx="32" fill="#0b0f10"/>
+
+  <!-- Caja (línea) -->
+  <rect x="32" y="32" width="192" height="192" rx="16" 
+        stroke="#91adc8" stroke-width="8" fill="none"/>
+
+  <!-- Símbolo >_ -->
+  <text x="50%" y="55%" text-anchor="middle" 
+        font-family="monospace" font-size="96" 
+        fill="#9aff6b" dominant-baseline="middle">
+    >_
+  </text>
+</svg>

@@ -1,0 +1,425 @@
+---
+const { frontmatter } = Astro.props;
+
+import "../styles/globals.css";
+
+import BackBtn from "../components/BackBtn.astro";
+---
+
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/img/logo.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{frontmatter?.title ?? "Documento"}</title>
+  </head>
+  <body>
+    <main>
+      <article>
+        <BackBtn />
+        <slot />
+      </article>
+    </main>
+  </body>
+</html>
+
+<style is:global>
+  /* =====================================================
+   GLOBAL / LAYOUT BASE
+   ===================================================== */
+  body {
+    color: #fff; /* color base del texto */
+  }
+
+  main {
+    width: 100%;
+    max-width: 920px; /* ancho de lectura */
+    margin: 0 auto; /* centrado */
+    padding: 1rem;
+    background: var(--panel);
+  }
+
+  /* Ajustes móviles */
+  @media (max-width: 850px) {
+    main {
+      margin-top: 20px;
+    }
+  }
+
+  /* =====================================================
+   TIPOGRAFÍA
+   ===================================================== */
+
+  /* Títulos con escalado fluido */
+  h1 {
+    font-size: clamp(2rem, 5vw, 2.25rem);
+    line-height: 1.2;
+    text-align: center;
+    color: var(--accent);
+  }
+
+  h2 {
+    font-size: clamp(1.5rem, 3vw, 1.75rem);
+    line-height: 1.3;
+  }
+
+  h3 {
+    font-size: clamp(1.25rem, 2.5vw, 1.5rem);
+    line-height: 1.4;
+  }
+
+  h4 {
+    font-size: clamp(1rem, 2vw, 1.25rem);
+    line-height: 1.5;
+  }
+
+  /* Texto base */
+  p {
+    font-size: clamp(1rem, 1.5vw, 1.125rem);
+    line-height: 1.6;
+    max-width: 80ch; /* ancho óptimo de lectura */
+    color: #dadada;
+    text-wrap: pretty;
+  }
+
+  /* =====================================================
+   ELEMENTOS GENERALES
+   ===================================================== */
+
+  img {
+    width: clamp(300px, 100%, 700px);
+    display: block;
+    margin: 1.5rem auto;
+    border-radius: 12px;
+  }
+
+  .readme img{
+    width: auto;
+    display: inline;
+    margin: 5px 0;
+  }
+
+  li {
+    margin: 5px 0;
+  }
+
+  /* =====================================================
+   CITAS / BLOCKQUOTE
+   ===================================================== */
+
+  blockquote {
+    position: relative;
+    font-family: var(--mono);
+    color: var(--fg);
+    background-color: var(--panel);
+    border-left: 4px solid var(--accent);
+    padding: 2rem 1.5rem;
+    margin: 1.5rem 0;
+    border-radius: 8px;
+    line-height: 1.6;
+    font-size: 1rem;
+    transition:
+      background 0.3s,
+      transform 0.3s;
+  }
+
+  /* Decoradores visuales */
+  blockquote::before {
+    content: "❱";
+    font-size: 2.5rem;
+    color: var(--accent);
+    position: absolute;
+    top: -10px;
+    left: 10px;
+  }
+
+  blockquote::after {
+    content: "⚊";
+    font-size: 2.5rem;
+    color: var(--accent);
+    position: absolute;
+    bottom: -10px;
+    right: 10px;
+  }
+
+  /* Hover tipo tarjeta */
+  blockquote:hover {
+    background-color: var(--bg);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+  }
+
+  /* Autor / fuente */
+  blockquote footer {
+    display: block;
+    margin-top: 0.75rem;
+    font-size: 0.875rem;
+    color: var(--muted);
+    text-align: right;
+  }
+
+  /* =====================================================
+   GLOSARIO LATERAL
+   ===================================================== */
+
+  .glosario {
+    position: fixed;
+    right: 10px;
+    top: 40%;
+    transform: translateY(-30%);
+    background: var(--panel);
+    color: var(--fg);
+    font-family: var(--mono);
+    padding: 1rem 1.2rem;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+    max-width: 280px;
+    max-height: 400px;
+    overflow-y: auto;
+    line-height: 1.6;
+    font-size: 0.9rem;
+  }
+
+  /* Ocultar en pantallas pequeñas */
+  @media (max-width: 1454px) {
+    .glosario {
+      display: none;
+    }
+  }
+
+  /* Listas internas */
+  .glosario ul,
+  .glosario li {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .glosario li {
+    margin: 0.4rem 0.2rem;
+  }
+
+  .glosario li li {
+    margin-left: 1rem;
+    color: var(--muted);
+    font-size: 0.85rem;
+  }
+
+  /* Indicador visual */
+  .glosario li::before {
+    content: ">";
+    color: var(--accent);
+    margin-right: 6px;
+  }
+
+  /* Enlaces */
+  .glosario a {
+    color: var(--link);
+    text-decoration: none;
+    border-bottom: 1px dashed transparent;
+    transition:
+      color 0.2s ease,
+      border-bottom 0.2s ease;
+  }
+
+  .glosario a:hover {
+    color: var(--accent);
+    border-bottom: 1px dashed var(--accent);
+  }
+
+  /* Scrollbar minimalista */
+  .glosario::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  .glosario::-webkit-scrollbar-thumb {
+    background: var(--muted);
+    border-radius: 6px;
+  }
+
+  /* =====================================================
+   PAGINACIÓN
+   ===================================================== */
+
+  .pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    margin: 3rem 0;
+  }
+
+  .pagination a {
+    padding: 0.6rem 1.2rem;
+    background: var(--panel);
+    color: var(--fg);
+    text-decoration: none;
+    font-family: var(--mono);
+    font-weight: bold;
+    border: 1px solid var(--accent);
+    border-radius: 0.75rem;
+    transition:
+      background 0.3s,
+      color 0.3s,
+      transform 0.2s;
+  }
+
+  .pagination a.prev::before {
+    content: "← ";
+    color: var(--accent);
+  }
+
+  .pagination a.next::after {
+    content: " →";
+    color: var(--accent);
+  }
+
+  .pagination a:hover {
+    background: var(--accent);
+    color: var(--bg);
+    transform: translateY(-2px);
+  }
+
+  /* =====================================================
+   TABLAS
+   ===================================================== */
+
+  /* wrapper virtual */
+  table {
+    display: block;
+    width: 100%;
+    overflow-x: auto;
+    border-collapse: collapse;
+    font-family: var(--mono);
+    font-size: 0.95rem;
+    color: var(--fg);
+    background: var(--panel);
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+  }
+
+  /* fuerza ancho mínimo para evitar columnas microscópicas */
+  table thead,
+  table tbody {
+    display: table;
+    width: 100%;
+    min-width: 720px; /* 👈 CLAVE */
+  }
+
+  /* header */
+  thead {
+    background: var(--bg);
+  }
+
+  thead th {
+    color: var(--accent);
+    text-align: left;
+    padding: 0.75rem 1rem;
+    border-bottom: 2px solid var(--accent);
+    white-space: normal; /* 👈 permitir wrap */
+  }
+
+  /* celdas */
+  tbody td {
+    padding: 0.75rem 1rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+
+    /* 🔥 FIX DEL TEXTO */
+    white-space: normal;
+    word-break: normal;
+    overflow-wrap: anywhere;
+  }
+
+  /* filas alternadas */
+  tbody tr:nth-child(even) {
+    background: rgba(154, 255, 107, 0.05);
+  }
+
+  /* hover */
+  tbody tr:hover {
+    background: rgba(154, 255, 107, 0.1);
+  }
+
+  /* =====================================================
+   BLOQUES DE CÓDIGO
+   ===================================================== */
+
+  pre,
+  code {
+    font-family: var(--mono);
+    color: var(--fg);
+  }
+
+  pre {
+    background: var(--panel);
+    border: 1px solid rgba(154, 255, 107, 0.2);
+    padding: 1.2rem 1.4rem;
+    border-radius: 10px;
+    overflow-x: auto;
+    margin: 1.5rem 0;
+    transition:
+      background 0.25s ease,
+      border-color 0.25s ease;
+  }
+
+  pre:hover {
+    background: #0c1011;
+    border-color: var(--accent);
+  }
+
+  pre code {
+    font-size: 0.92rem;
+    line-height: 1.55rem;
+    display: block;
+  }
+
+  /* Código inline */
+  code {
+    padding: 0.2em 0.4em;
+    border-radius: 6px;
+    color: var(--accent);
+  }
+
+  /* =====================================================
+   LISTAS
+   ===================================================== */
+
+  ul,
+  ol {
+    margin: 1rem 0 1.5rem 1.2rem;
+    padding-left: 1.2rem;
+  }
+
+  ul li {
+    list-style: none;
+    position: relative;
+  }
+
+  ul li::before {
+    content: "•";
+    color: var(--accent);
+    position: absolute;
+    left: -1.2rem;
+  }
+
+  ol li::marker {
+    color: var(--accent);
+    font-weight: bold;
+  }
+
+  /* =====================================================
+   UTILIDADES
+   ===================================================== */
+
+  .subrayado {
+    background: rgba(34, 107, 0, 0.4);
+  }
+
+  /* Estilo final de H1 (sobrescribe el inicial) */
+  h1 {
+    font-size: 3rem;
+    text-shadow: 0 0 8px var(--accent);
+  }
+</style>

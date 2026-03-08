@@ -1,0 +1,26 @@
+---
+import MainLayout from "../layouts/MainLayout.astro";
+
+import Terminal from "../components/Terminal.astro";
+import Accordion from "../components/Accordion.astro";
+import ActionMenu from "../components/ActionMenu.astro";
+
+import { home } from "../data/home";
+---
+
+<MainLayout
+  title="Code Path"
+  heading="Code-Path"
+  description=`
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+        Sed posuere nunc vel justo dictum, facilisis cursus erat gravida. 
+        Curabitur euismod sapien ac velit varius, fermentum luctus magna dapibus. 
+        Integer vitae augue sed urna cursus aliquet et vitae lorem.
+`
+>
+  <Terminal />
+
+  <Accordion title="Bienvenida y Configuraciones" sections={home.bienvenida} />
+
+  <ActionMenu />
+</MainLayout>

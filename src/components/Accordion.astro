@@ -1,0 +1,149 @@
+---
+interface Lesson {
+  title: string;
+  duration?: string;
+  url?: string;
+}
+
+interface Section {
+  title: string;
+  meta: string;
+  lessons: Lesson[];
+}
+
+interface Props {
+  title: string;
+  sections: Section[];
+}
+
+const { title, sections } = Astro.props as Props;
+const accordionId = title.replace(/\s+/g, "-").toLowerCase(); // prefijo único
+---
+
+<div class="course-accordion">
+  <h2>{title}</h2>
+
+  {
+    sections.map((section: Section, index: number) => {
+      const id = `${accordionId}-section-${index}`;
+      return (
+        <div class="section">
+          <div
+            class="section-header"
+            onclick={`document.getElementById('${id}').classList.toggle('open'); 
+                    this.querySelector('.section-icon').style.transform = 
+                    this.querySelector('.section-icon').style.transform === 'rotate(90deg)' 
+                      ? 'rotate(0deg)' 
+                      : 'rotate(90deg)';`}
+          >
+            <span class="section-title">
+              <span class="section-icon">▶</span> {section.title}
+            </span>
+            <span>{section.meta}</span>
+          </div>
+
+          <div id={id} class="section-content">
+            {section.lessons.map((lesson: Lesson) => (
+              <div class="lesson">
+                <a href={lesson.url} target="_blank">
+                  {lesson.title}
+                </a>
+                <span>{lesson.duration}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+      );
+    })
+  }
+</div>
+
+<style>
+  .course-accordion {
+    background: var(--panel);
+    border-radius: 0.75rem;
+    font-family: var(--mono);
+    color: var(--fg);
+    margin: 1rem 0;
+    overflow: hidden;
+    width: 100%;
+  }
+
+  .course-accordion h2 {
+    padding: 1rem;
+    text-align: start;
+    color: var(--accent);
+    margin-bottom: 0px;
+  }
+
+  .section {
+    border-bottom: 1px solid var(--muted);
+  }
+
+  .section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    padding: 1rem;
+    font-weight: bold;
+    text-wrap: pretty;
+    transition: background 0.2s;
+  }
+
+  @media(width <= 500px) {
+    .section-header {
+     text-align: start;
+    }
+  }
+
+  .section-header:hover {
+    background: rgba(255, 255, 255, 0.05);
+  }
+
+  .section-title {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .section-icon {
+    transition: transform 0.3s ease;
+  }
+
+  .section-content {
+    max-height: 0;
+    overflow: hidden;
+    transition:
+      max-height 0.3s ease,
+      opacity 0.3s ease;
+    opacity: 0;
+    padding-left: 1rem;
+  }
+
+  .section-content.open {
+    max-height: 600px;
+    opacity: 1;
+  }
+
+  .lesson {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5rem 1rem;
+    color: var(--link);
+    text-wrap: pretty;
+  }
+
+  @media(width <= 500px) {
+    .lesson {
+     padding: 0.5rem 0px;
+     text-align: start;
+    }
+  }
+
+  .lesson a:hover {
+    color: #fff !important;
+    cursor: pointer;
+    text-decoration: none;
+  }
+</style>

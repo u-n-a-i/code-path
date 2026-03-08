@@ -1,0 +1,114 @@
+---
+
+---
+
+<div class="menu-container">
+  <a href="/" class="menu-button">
+    <span class="icon">🏠</span>
+    <span class="tooltip">Home</span>
+  </a>
+
+  <a href="sistemas" class="menu-button">
+    <span class="icon">🖥️</span>
+    <span class="tooltip">Infraestructura y Sistemas</span>
+  </a>
+
+  <a href="datos" class="menu-button">
+    <span class="icon">📊</span>
+    <span class="tooltip">Gestión y Análisis de Datos</span>
+  </a>
+
+  <a href="web" class="menu-button">
+    <span class="icon">🌐</span>
+    <span class="tooltip">Desarrollo Web</span>
+  </a>
+
+  <!-- <a href="java" class="menu-button">
+    <span class="icon">🙇🏻</span>
+    <span class="tooltip">Conceptos avanzados</span>
+  </a> -->
+</div>
+
+<style>
+  /* Contenedor del menú */
+  .menu-container {
+    position: fixed;
+    /* bottom: -30px; */
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    background-color: #0b0f10;
+    opacity: 0.7;
+    border-radius: 24px;
+    border: var(--accent);
+    padding: 8px;
+    gap: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+    /* opacity: 0.3;
+    transition:
+      opacity 0.3s ease,
+      bottom 0.3s ease; */
+    /* filter: blur(3px); */
+  }
+
+  .menu-container:hover {
+    opacity: 1;
+    /* bottom: 10px; */
+  }
+
+  /* Botones del menú */
+  .menu-button {
+    background-color: transparent;
+    border: var(--accent);
+    color: #fff;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    position: relative;
+    text-decoration: none;
+  }
+
+  .menu-button:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+
+  .menu-button:active {
+    transform: scale(0.95);
+  }
+
+  /* Tooltip */
+  .tooltip {
+    position: absolute;
+    top: -40px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #333;
+    color: var(--accent);
+    padding: 6px 12px;
+    border-radius: 6px;
+    font-size: 14px;
+    white-space: nowrap;
+    opacity: 0;
+    visibility: hidden;
+    transition:
+      opacity 0.2s ease,
+      visibility 0.2s ease;
+    z-index: 10;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  }
+
+  .menu-button:hover .tooltip {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .icon {
+    font-size: 20px;
+  }
+</style>
