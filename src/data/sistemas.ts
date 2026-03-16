@@ -4,10 +4,10 @@ export const sistemas = {
   hardware: [
     {
       title: "Arquitectura de la computadora",
-      meta: "X temas",
+      meta: "5 temas",
       lessons: [
         { title: "📖 ¿Qué es una computadora?", url: "/markdown/sistemas/hardware/arquitectura/intro" },
-        { title: "📖 El modelo de von Neumann", url: "/markdown/sistemas/hardware/arquitectura/von_neumann" },
+        { title: "📖 El modelo de Von Neumann", url: "/markdown/sistemas/hardware/arquitectura/von_neumann" },
         { title: "📖 Jerarquía y flujo de datos", url: "/markdown/sistemas/hardware/arquitectura/jerarquia" },
         { title: "📖 Paralelismo y rendimiento", url: "/markdown/sistemas/hardware/arquitectura/paralelismo" },
         { title: "📖 Tipos de arquitecturas", url: "/markdown/sistemas/hardware/arquitectura/tipos" },
@@ -15,7 +15,7 @@ export const sistemas = {
     },
     {
       title: "La placa base",
-      meta: "X temas",
+      meta: "7 temas",
       lessons: [
         { title: "📖 Función de la placa base", url: "/markdown/sistemas/hardware/placa_base/funcion" },
         { title: "📖 Formatos y estándares", url: "/markdown/sistemas/hardware/placa_base/formatos" },
@@ -23,14 +23,14 @@ export const sistemas = {
         { title: "📖 Zócalos y ranuras de expansión", url: "/markdown/sistemas/hardware/placa_base/zocalos" },
         { title: "📖 BIOS y UEFI", url: "/markdown/sistemas/hardware/placa_base/bios" },
         { title: "📖 Circuitería y calidad eléctrica", url: "/markdown/sistemas/hardware/placa_base/circuiteria" },
-        { title: "📖 Diagnóstico y problemas comunes", url: "/markdown/sistemas/hardware/placa_base/diagnostico" },
+        { title: "📖 Diagnóstico y problemas comunes", url: "/markdown/sistemas/hardware/placa_base/problemas" },
       ],
     },
     {
-      title: "El procesador (CPU)",
-      meta: "X temas",
+      title: "El procesador(CPU)",
+      meta: "6 temas",
       lessons: [
-        { title: "📖 ¿Qué es la CPU?", url: "/markdown/sistemas/hardware/cpu/que_es" },
+        { title: "📖 ¿Qué es la CPU?", url: "/markdown/sistemas/hardware/cpu/cpu" },
         { title: "📖 Componentes internos", url: "/markdown/sistemas/hardware/cpu/componentes" },
         { title: "📖 El ciclo de instrucciones", url: "/markdown/sistemas/hardware/cpu/ciclo" },
         { title: "📖 La jerarquía de caché", url: "/markdown/sistemas/hardware/cpu/cache" },
@@ -39,8 +39,8 @@ export const sistemas = {
       ],
     },
     {
-      title: "Las tarjetas gráficas (GPU)",
-      meta: "X temas",
+      title: "Las tarjetas gráficas(GPU)",
+      meta: "5 temas",
       lessons: [
         { title: "📖 Función de la GPU", url: "/markdown/sistemas/hardware/gpu/funcion" },
         { title: "📖 Arquitectura de una GPU", url: "/markdown/sistemas/hardware/gpu/arquitectura" },
@@ -50,8 +50,8 @@ export const sistemas = {
       ],
     },
     {
-      title: "Las fuentes de alimentación (PSU)",
-      meta: "X temas",
+      title: "Las fuentes de alimentación(PSU)",
+      meta: "7 temas",
       lessons: [
         { title: "📖 Función de la fuente de alimentación", url: "/markdown/sistemas/hardware/psu/funcion" },
         { title: "📖 Formatos y tipos", url: "/markdown/sistemas/hardware/psu/formato" },
@@ -64,9 +64,9 @@ export const sistemas = {
     },
     {
       title: "Los tipos de memoria",
-      meta: "X temas",
+      meta: "7 temas",
       lessons: [
-        { title: "📖 Conceptos de memoria", url: "/markdown/sistemas/hardware/memoria/conceptos" },
+        { title: "📖 Conceptos de memoria", url: "/markdown/sistemas/hardware/memoria/memoria" },
         { title: "📖 La memoria RAM", url: "/markdown/sistemas/hardware/memoria/ram" },
         { title: "📖 Arquitectura de memoria", url: "/markdown/sistemas/hardware/memoria/arquitectura" },
         { title: "📖 Módulos y tiempos de acceso", url: "/markdown/sistemas/hardware/memoria/modulos" },
@@ -77,9 +77,9 @@ export const sistemas = {
     },
     {
       title: "Los dispositivos de almacenamiento",
-      meta: "X temas",
+      meta: "6 temas",
       lessons: [
-        { title: "📖 Conceptos de almacenamiento", url: "/markdown/sistemas/hardware/almacenamiento/conceptos" },
+        { title: "📖 Conceptos de almacenamiento", url: "/markdown/sistemas/hardware/almacenamiento/almacenamiento" },
         { title: "📖 Discos duros (HDD)", url: "/markdown/sistemas/hardware/almacenamiento/hdd" },
         { title: "📖 Unidades de estado sólido (SSD)", url: "/markdown/sistemas/hardware/almacenamiento/ssd" },
         { title: "📖 Métricas de durabilidad", url: "/markdown/sistemas/hardware/almacenamiento/durabilidad" },
@@ -89,36 +89,36 @@ export const sistemas = {
     },
     {
       title: "Conexiones y buses",
-      meta: "X temas",
+      meta: "3 temas",
       lessons: [
-        { title: "📖 ¿Qué es un bus?", url: "/markdown/sistemas/hardware/buses/definicion" },
-        { title: "📖 Buses internos", url: "/markdown/sistemas/hardware/buses/internos" },
-        { title: "📖 Buses externos", url: "/markdown/sistemas/hardware/buses/externos" },
+        { title: "📖 ¿Qué es un bus?", url: "/markdown/sistemas/hardware/conexiones/bus" },
+        { title: "📖 Buses internos", url: "/markdown/sistemas/hardware/conexiones/internos" },
+        { title: "📖 Buses externos", url: "/markdown/sistemas/hardware/conexiones/externos" },
       ],
     },
     {
       title: "La refrigeración",
-      meta: "X temas",
+      meta: "7 temas",
       lessons: [
         { title: "📖 Principios de transferencia de calor", url: "/markdown/sistemas/hardware/refrigeracion/principios" },
         { title: "📖 Refrigeración por aire", url: "/markdown/sistemas/hardware/refrigeracion/aire" },
         { title: "📖 Pasta térmica y almohadillas", url: "/markdown/sistemas/hardware/refrigeracion/pasta" },
         { title: "📖 Refrigeración líquida", url: "/markdown/sistemas/hardware/refrigeracion/liquida" },
-        { title: "📖 Refrigeración de componentes específicos", url: "/markdown/sistemas/hardware/refrigeracion/componentes" },
+        { title: "📖 Refrigeración de componentes específicos", url: "/markdown/sistemas/hardware/refrigeracion/refrigeracion" },
         { title: "📖 Flujo de aire en el gabinete", url: "/markdown/sistemas/hardware/refrigeracion/flujo" },
         { title: "📖 Monitoreo térmico", url: "/markdown/sistemas/hardware/refrigeracion/monitoreo" },
       ],
     },
     {
       title: "Las tarjetas de expansión",
-      meta: "X temas",
+      meta: "6 temas",
       lessons: [
-        { title: "📖 Introducción a las tarjetas de expansión", url: "/markdown/sistemas/hardware/expansion/intro" },
-        { title: "📖 Tarjetas de sonido dedicadas", url: "/markdown/sistemas/hardware/expansion/sonido" },
-        { title: "📖 Tarjetas de red especializadas", url: "/markdown/sistemas/hardware/expansion/red" },
-        { title: "📖 Controladores de almacenamiento", url: "/markdown/sistemas/hardware/expansion/almacenamiento" },
-        { title: "📖 Tarjetas de captura de vídeo", url: "/markdown/sistemas/hardware/expansion/captura" },
-        { title: "📖 Instalación y configuración", url: "/markdown/sistemas/hardware/expansion/instalacion" },
+        { title: "📖 Introducción a las tarjetas de expansión", url: "/markdown/sistemas/hardware/tarjetas/intro" },
+        { title: "📖 Tarjetas de sonido dedicadas", url: "/markdown/sistemas/hardware/tarjetas/sonido" },
+        { title: "📖 Tarjetas de red especializadas", url: "/markdown/sistemas/hardware/tarjetas/red" },
+        { title: "📖 Controladores de almacenamiento", url: "/markdown/sistemas/hardware/tarjetas/controladores" },
+        { title: "📖 Tarjetas de captura de vídeo", url: "/markdown/sistemas/hardware/tarjetas/capturadora" },
+        { title: "📖 Instalación y configuración", url: "/markdown/sistemas/hardware/tarjetas/instalaciones" },
       ],
     },
   ],
@@ -127,9 +127,9 @@ export const sistemas = {
   software: [
     {
       title: "Conceptos y tipos de software",
-      meta: "X temas",
+      meta: "6 temas",
       lessons: [
-        { title: "📖 Definición y fundamentos", url: "/markdown/sistemas/software/conceptos/definicion" },
+        { title: "📖 Definición y fundamentos", url: "/markdown/sistemas/software/conceptos/intro" },
         { title: "📖 El software de sistema", url: "/markdown/sistemas/software/conceptos/sistema" },
         { title: "📖 El software de programación", url: "/markdown/sistemas/software/conceptos/programacion" },
         { title: "📖 El software de aplicación", url: "/markdown/sistemas/software/conceptos/aplicacion" },
@@ -139,9 +139,9 @@ export const sistemas = {
     },
     {
       title: "Arquitectura del software y capas de abstracción",
-      meta: "X temas",
+      meta: "5 temas",
       lessons: [
-        { title: "📖 Conceptos de arquitectura de software", url: "/markdown/sistemas/software/arquitectura/conceptos" },
+        { title: "📖 Conceptos de arquitectura de software", url: "/markdown/sistemas/software/arquitectura/intro" },
         { title: "📖 La abstracción en computación", url: "/markdown/sistemas/software/arquitectura/abstraccion" },
         { title: "📖 El núcleo del sistema: el kernel", url: "/markdown/sistemas/software/arquitectura/kernel" },
         { title: "📖 Interacción entre capas", url: "/markdown/sistemas/software/arquitectura/capas" },
@@ -150,19 +150,19 @@ export const sistemas = {
     },
     {
       title: "Gestión y organización de la información",
-      meta: "X temas",
+      meta: "6 temas",
       lessons: [
-        { title: "📖 Fundamentos de la información", url: "/markdown/sistemas/software/gestion/fundamentos" },
+        { title: "📖 Fundamentos de la información", url: "/markdown/sistemas/software/gestion/intro" },
         { title: "📖 El sistema de archivos", url: "/markdown/sistemas/software/gestion/archivos" },
         { title: "📖 Tipos de sistemas de archivos", url: "/markdown/sistemas/software/gestion/tipos" },
         { title: "📖 Directorios y metadatos", url: "/markdown/sistemas/software/gestion/directorios" },
         { title: "📖 Seguridad y permisos", url: "/markdown/sistemas/software/gestion/seguridad" },
-        { title: "📖 Operaciones y mantenimiento", url: "/markdown/sistemas/software/gestion/mantenimiento" },
+        { title: "📖 Operaciones y mantenimiento", url: "/markdown/sistemas/software/gestion/operaciones" },
       ],
     },
     {
       title: "Representación de la información en sistemas digitales",
-      meta: "X temas",
+      meta: "7 temas",
       lessons: [
         { title: "📖 Unidades de información", url: "/markdown/sistemas/software/representacion/unidades" },
         { title: "📖 Sistemas de numeración posicional", url: "/markdown/sistemas/software/representacion/numeracion" },

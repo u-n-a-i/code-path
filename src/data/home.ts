@@ -3,37 +3,31 @@ export const home = {
   bienvenida: [
     {
       title: "Bienvenida",
-      meta: "X temas ",
+      meta: "4 temas ",
       lessons: [
-        { title: "📖 Propósito", url: "/markdown/" },
-        { title: "📖 Estructura", url: "/markdown/" },
+        { title: "📖 Propósito", url: "/markdown/home/bienvenida/proposito" },
+        { title: "📖 Estructura", url: "/markdown/home/bienvenida/estructura" },
+        { title: "📖 Componentes", url: "/markdown/home/bienvenida/componentes" },
+        { title: "📖 ¿Como colaborar?", url: "/markdown/home/bienvenida/colaborar" },
       ],
     },
-    {
-      title: "Guía",
-      meta: "X temas ",
-      lessons: [
-        { title: "📖 ¿Como colaborar?", url: "/markdown/" },
-        { title: "📖 Componentes", url: "/markdown/recursos/test" },
-      ],
-    },
-    {
-      title: "Mapas",
-      meta: "X temas ",
-      lessons: [
-        { title: "🗺️ Sistemas", url: "/markdown/" },
-        { title: "🗺️ Datos", url: "/markdown/" },
-        { title: "🗺️ Web", url: "/markdown/" },
-      ],
-    },
-    {
-      title: "Configuraciones",
-      meta: "X temas ",
-      lessons: [
-        { title: "📖 Terminal", url: "/markdown/" },
-        { title: "📖 Navegador", url: "/markdown/" },
-        { title: "📖 VSCode", url: "/markdown/recursos/" },
-      ],
-    },
+    // {
+    //   title: "Mapas",
+    //   meta: "X temas ",
+    //   lessons: [
+    //     { title: "🗺️ Sistemas", url: "/markdown/home/mapas/sistemas" },
+    //     { title: "🗺️ Datos", url: "/markdown/home/mapas/datos" },
+    //     { title: "🗺️ Web", url: "/markdown/home/mapas/web" },
+    //   ],
+    // },
+    // {
+    //   title: "Configuraciones",
+    //   meta: "X temas ",
+    //   lessons: [
+    //     { title: "📖 Terminal", url: "/markdown/home/configuraciones/terminal" },
+    //     { title: "📖 Navegador", url: "/markdown/home/configuraciones/navegador" },
+    //     { title: "📖 VSCode", url: "/markdown/home/configuraciones/vscode" },
+    //   ],
+    // },
   ],
 }
