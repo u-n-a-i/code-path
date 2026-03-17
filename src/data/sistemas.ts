@@ -294,7 +294,7 @@ export const sistemas = {
   redes: [
     {
       title: "Fundamentos de las redes de computadoras",
-      meta: "X temas",
+      meta: "4 temas",
       lessons: [
         { title: "📖 ¿Qué es una red?", url: "/markdown/sistemas/redes/fundamentos/intro" },
         { title: "📖 Topologías de red", url: "/markdown/sistemas/redes/fundamentos/topologias" },
@@ -304,7 +304,7 @@ export const sistemas = {
     },
     {
       title: "Modelos de capas de red",
-      meta: "X temas",
+      meta: "6 temas",
       lessons: [
         { title: "📖 La necesidad de modelos", url: "/markdown/sistemas/redes/capas/necesidad" },
         { title: "📖 El modelo OSI de siete capas", url: "/markdown/sistemas/redes/capas/osi" },
@@ -316,7 +316,7 @@ export const sistemas = {
     },
     {
       title: "La capa física",
-      meta: "X temas",
+      meta: "4 temas",
       lessons: [
         { title: "📖 Funciones de la capa física", url: "/markdown/sistemas/redes/fisica/funciones" },
         { title: "📖 Señales, medios y codificación", url: "/markdown/sistemas/redes/fisica/senales" },
@@ -326,7 +326,7 @@ export const sistemas = {
     },
     {
       title: "La capa de enlace de datos",
-      meta: "X temas",
+      meta: "5 temas",
       lessons: [
         { title: "📖 Tramas y control de acceso", url: "/markdown/sistemas/redes/enlace/tramas" },
         { title: "📖 Subcapas MAC y LLC", url: "/markdown/sistemas/redes/enlace/mac_llc" },
@@ -337,7 +337,7 @@ export const sistemas = {
     },
     {
       title: "La capa de red",
-      meta: "X temas",
+      meta: "6 temas",
       lessons: [
         { title: "📖 Funciones de la capa de red", url: "/markdown/sistemas/redes/red/funciones" },
         { title: "📖 El protocolo IPv4", url: "/markdown/sistemas/redes/red/ipv4" },
@@ -349,7 +349,7 @@ export const sistemas = {
     },
     {
       title: "La capa de transporte",
-      meta: "X temas",
+      meta: "7 temas",
       lessons: [
         { title: "📖 Funciones de la capa de transporte", url: "/markdown/sistemas/redes/transporte/funciones" },
         { title: "📖 Puertos y sockets", url: "/markdown/sistemas/redes/transporte/puertos" },
@@ -362,7 +362,7 @@ export const sistemas = {
     },
     {
       title: "La capa de sesión",
-      meta: "X temas",
+      meta: "3 temas",
       lessons: [
         { title: "📖 Gestión de sesiones", url: "/markdown/sistemas/redes/sesion/gestion" },
         { title: "📖 Sincronización de datos", url: "/markdown/sistemas/redes/sesion/sincronizacion" },
@@ -371,7 +371,7 @@ export const sistemas = {
     },
     {
       title: "La capa de presentación",
-      meta: "X temas",
+      meta: "3 temas",
       lessons: [
         { title: "📖 Formatos de representación", url: "/markdown/sistemas/redes/presentacion/formatos" },
         { title: "📖 Compresión y cifrado", url: "/markdown/sistemas/redes/presentacion/compresion" },
@@ -380,7 +380,7 @@ export const sistemas = {
     },
     {
       title: "La capa de aplicación",
-      meta: "X temas",
+      meta: "6 temas",
       lessons: [
         { title: "📖 Funciones de la capa de aplicación", url: "/markdown/sistemas/redes/aplicacion/funciones" },
         { title: "📖 Protocolos esenciales", url: "/markdown/sistemas/redes/aplicacion/protocolos" },
@@ -392,7 +392,7 @@ export const sistemas = {
     },
     {
       title: "Infraestructura de red básica",
-      meta: "X temas",
+      meta: "6 temas",
       lessons: [
         { title: "📖 Dispositivos de interconexión", url: "/markdown/sistemas/redes/infraestructura/dispositivos" },
         { title: "📖 Redes domésticas y oficinas pequeñas", url: "/markdown/sistemas/redes/infraestructura/soho" },
@@ -404,7 +404,7 @@ export const sistemas = {
     },
     {
       title: "Redes en la práctica con Linux",
-      meta: "X temas",
+      meta: "8 temas",
       lessons: [
         { title: "📖 Interfaces de red", url: "/markdown/sistemas/redes/practica/interfaces" },
         { title: "📖 Configuración de red", url: "/markdown/sistemas/redes/practica/configuracion" },
