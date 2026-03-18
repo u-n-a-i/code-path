@@ -422,9 +422,9 @@ export const sistemas = {
   git: [
     {
       title: "Introducción al control de versiones",
-      meta: "X temas",
+      meta: "6 temas",
       lessons: [
-        { title: "📖 ¿Qué es el control de versiones?", url: "/markdown/sistemas/git/intro/que_es" },
+        { title: "📖 ¿Qué es el control de versiones?", url: "/markdown/sistemas/git/intro/intro" },
         { title: "📖 Tipos de sistemas de control", url: "/markdown/sistemas/git/intro/tipos" },
         { title: "📖 Problemas que resuelve", url: "/markdown/sistemas/git/intro/problemas" },
         { title: "📖 Usos más allá del código", url: "/markdown/sistemas/git/intro/usos" },
@@ -434,7 +434,7 @@ export const sistemas = {
     },
     {
       title: "Fundamentos de Git",
-      meta: "X temas",
+      meta: "6 temas",
       lessons: [
         { title: "📖 Cómo funciona Git", url: "/markdown/sistemas/git/fundamentos/funcionamiento" },
         { title: "📖 Crear un repositorio", url: "/markdown/sistemas/git/fundamentos/repositorio" },
@@ -446,9 +446,9 @@ export const sistemas = {
     },
     {
       title: "Gestión del historial y ramas",
-      meta: "X temas",
+      meta: "6 temas",
       lessons: [
-        { title: "📖 ¿Qué es una rama?", url: "/markdown/sistemas/git/ramas/que_es" },
+        { title: "📖 ¿Qué es una rama?", url: "/markdown/sistemas/git/ramas/intro" },
         { title: "📖 Trabajo con ramas", url: "/markdown/sistemas/git/ramas/trabajo" },
         { title: "📖 Estrategias de ramificación", url: "/markdown/sistemas/git/ramas/estrategias" },
         { title: "📖 Resolver conflictos", url: "/markdown/sistemas/git/ramas/conflictos" },
@@ -458,7 +458,7 @@ export const sistemas = {
     },
     {
       title: "Trabajo con repositorios remotos",
-      meta: "X temas",
+      meta: "6 temas",
       lessons: [
         { title: "📖 Conceptos de repositorios remotos", url: "/markdown/sistemas/git/remotos/conceptos" },
         { title: "📖 Conectar con un repositorio remoto", url: "/markdown/sistemas/git/remotos/conectar" },
@@ -470,7 +470,7 @@ export const sistemas = {
     },
     {
       title: "GitHub: desarrollo colaborativo",
-      meta: "X temas",
+      meta: "7 temas",
       lessons: [
         { title: "📖 Más allá de Git: funciones de GitHub", url: "/markdown/sistemas/git/github/funciones" },
         { title: "📖 Solicitudes de integración (pull requests)", url: "/markdown/sistemas/git/github/pull_requests" },
@@ -483,7 +483,7 @@ export const sistemas = {
     },
     {
       title: "Herramientas y buenas prácticas",
-      meta: "X temas",
+      meta: "7 temas",
       lessons: [
         { title: "📖 Escribir buenos mensajes de confirmación", url: "/markdown/sistemas/git/herramientas/mensajes" },
         { title: "📖 Interfaces gráficas para Git", url: "/markdown/sistemas/git/herramientas/graficas" },
