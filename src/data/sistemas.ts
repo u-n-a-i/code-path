@@ -500,9 +500,9 @@ export const sistemas = {
   virtualizacion: [
     {
       title: "Fundamentos de la virtualización",
-      meta: "X temas",
+      meta: "6 temas",
       lessons: [
-        { title: "📖 ¿Qué es la virtualización?", url: "/markdown/sistemas/virtualizacion/intro/que_es" },
+        { title: "📖 ¿Qué es la virtualización?", url: "/markdown/sistemas/virtualizacion/intro/intro" },
         { title: "📖 Evolución histórica", url: "/markdown/sistemas/virtualizacion/intro/historia" },
         { title: "📖 Ventajas principales", url: "/markdown/sistemas/virtualizacion/intro/ventajas" },
         { title: "📖 Tipos de virtualización", url: "/markdown/sistemas/virtualizacion/intro/tipos" },
@@ -512,7 +512,7 @@ export const sistemas = {
     },
     {
       title: "Hipervisores de tipo 1 (bare-metal)",
-      meta: "X temas",
+      meta: "6 temas",
       lessons: [
         { title: "📖 Características del hipervisor nativo", url: "/markdown/sistemas/virtualizacion/tipo1/caracteristicas" },
         { title: "📖 Arquitectura interna", url: "/markdown/sistemas/virtualizacion/tipo1/arquitectura" },
@@ -524,7 +524,7 @@ export const sistemas = {
     },
     {
       title: "Hipervisores de tipo 2 (alojados)",
-      meta: "X temas",
+      meta: "6 temas",
       lessons: [
         { title: "📖 Características del hipervisor alojado", url: "/markdown/sistemas/virtualizacion/tipo2/caracteristicas" },
         { title: "📖 Cómo funciona internamente", url: "/markdown/sistemas/virtualizacion/tipo2/funcionamiento" },
@@ -536,7 +536,7 @@ export const sistemas = {
     },
     {
       title: "Gestión de máquinas virtuales",
-      meta: "X temas",
+      meta: "6 temas",
       lessons: [
         { title: "📖 Ciclo de vida de una máquina virtual", url: "/markdown/sistemas/virtualizacion/vms/ciclo" },
         { title: "📖 Crear una máquina virtual", url: "/markdown/sistemas/virtualizacion/vms/crear" },
@@ -548,7 +548,7 @@ export const sistemas = {
     },
     {
       title: "Virtualización en la nube",
-      meta: "X temas",
+      meta: "6 temas",
       lessons: [
         { title: "📖 De la virtualización a la nube", url: "/markdown/sistemas/virtualizacion/nube/evolucion" },
         { title: "📖 Proveedores y sus tecnologías", url: "/markdown/sistemas/virtualizacion/nube/proveedores" },
@@ -560,7 +560,7 @@ export const sistemas = {
     },
     {
       title: "Comparación con otras tecnologías",
-      meta: "X temas",
+      meta: "6 temas",
       lessons: [
         { title: "📖 Máquinas virtuales frente a contenedores", url: "/markdown/sistemas/virtualizacion/comparacion/contenedores" },
         { title: "📖 Virtualización frente a emulación", url: "/markdown/sistemas/virtualizacion/comparacion/emulacion" },
@@ -572,7 +572,7 @@ export const sistemas = {
     },
     {
       title: "Casos de uso prácticos",
-      meta: "X temas",
+      meta: "5 temas",
       lessons: [
         { title: "📖 Entornos de desarrollo y pruebas", url: "/markdown/sistemas/virtualizacion/casos/desarrollo" },
         { title: "📖 Laboratorios caseros (homelab)", url: "/markdown/sistemas/virtualizacion/casos/homelab" },

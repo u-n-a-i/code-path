@@ -45,7 +45,7 @@ const accordionId = title.replace(/\s+/g, "-").toLowerCase(); // prefijo único
           <div id={id} class="section-content">
             {section.lessons.map((lesson: Lesson) => (
               <div class="lesson">
-                <a href={lesson.url} target="_blank">
+                <a href={lesson.url}>
                   {lesson.title}
                 </a>
                 <span>{lesson.duration}</span>
