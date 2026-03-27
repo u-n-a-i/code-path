@@ -5,12 +5,12 @@ import Terminal from "../components/Terminal.astro";
 import Accordion from "../components/Accordion.astro";
 import ActionMenu from "../components/ActionMenu.astro";
 
-import { datos } from "../data/datos";
+import { data } from "../data/data";
 ---
 
 <MainLayout
-  title="Gestión y Análisis de Datos"
-  heading="Gestión y Análisis de Datos"
+  title="Gestión de datos"
+  heading="Gestión de datos"
   description=`
         Domina el almacenamiento y la gestión eficiente de la información digital. 
         Apuntes sobre bases de datos relacionales, no relacionales, APIs y análisis de datos. 
@@ -18,7 +18,11 @@ import { datos } from "../data/datos";
 >
   <Terminal />
 
-  <Accordion title="Bases de datos relacionales" sections={datos.bd_relacionales} />
+  <Accordion title="Fundamentos gestión de datos" sections={data.fundamentos} />
+  <Accordion title="Bases de datos relacionales" sections={data.sql} />
+  <Accordion title="Bases de datos no relacionales" sections={data.nosql} />
+  <Accordion title="Análisis de datos y big data" sections={data.bigdata} />
+
 
   <ActionMenu />
 </MainLayout>

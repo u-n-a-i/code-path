@@ -1,0 +1,34 @@
+---
+import MainLayout from "../layouts/MainLayout.astro";
+
+import Terminal from "../components/Terminal.astro";
+import Accordion from "../components/Accordion.astro";
+import ActionMenu from "../components/ActionMenu.astro";
+
+import { devops } from "../data/devops";
+---
+
+<MainLayout
+  title="DevOps"
+  heading="DevOps"
+  description=`
+        Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
+        when an unknown printer took a galley of type and scrambled it to make a type specimen book. 
+        It has survived not only five centuries, but also the leap into electronic `
+>
+  <Terminal />
+
+  <Accordion title="Linux" sections={devops.linux} />
+  <Accordion title="Redes" sections={devops.redes} />
+  <Accordion title="Control de versiones" sections={devops.git} />
+  <Accordion title="Contenedores {Docker}" sections={devops.docker} />
+  <Accordion title="Orquestadores {Kubernetes}" sections={devops.kubernetes} />
+  <Accordion title="Infraestructura como código {Terraform}" sections={devops.terraform} />
+  <Accordion title="Gestión y despliegue de servidores " sections={devops.servidores} />
+
+
+
+
+  <ActionMenu />
+</MainLayout>

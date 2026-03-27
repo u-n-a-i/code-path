@@ -1,33 +1,31 @@
 export const home = {
-// #### Home ####
+  // #### Bienvenida y herramientas ####
   bienvenida: [
     {
       title: "Bienvenida",
-      meta: "4 temas ",
+      meta: "X temas",
       lessons: [
-        { title: "📖 Propósito", url: "/markdown/home/bienvenida/proposito" },
-        { title: "📖 Estructura", url: "/markdown/home/bienvenida/estructura" },
-        { title: "📖 Componentes", url: "/markdown/home/bienvenida/componentes" },
-        { title: "📖 ¿Como colaborar?", url: "/markdown/home/bienvenida/colaborar" },
+        { title: "📖 Objetivo", url: "/markdown/start/bienvenida/objetivo" },
+        { title: "📖 Mapas", url: "/markdown/start/bienvenida/mapas" },
       ],
     },
-    // {
-    //   title: "Mapas",
-    //   meta: "X temas ",
-    //   lessons: [
-    //     { title: "🗺️ Sistemas", url: "/markdown/home/mapas/sistemas" },
-    //     { title: "🗺️ Datos", url: "/markdown/home/mapas/datos" },
-    //     { title: "🗺️ Web", url: "/markdown/home/mapas/web" },
-    //   ],
-    // },
-    // {
-    //   title: "Configuraciones",
-    //   meta: "X temas ",
-    //   lessons: [
-    //     { title: "📖 Terminal", url: "/markdown/home/configuraciones/terminal" },
-    //     { title: "📖 Navegador", url: "/markdown/home/configuraciones/navegador" },
-    //     { title: "📖 VSCode", url: "/markdown/home/configuraciones/vscode" },
-    //   ],
-    // },
+    {
+      title: "Herramientas",
+      meta: "X temas",
+      lessons: [
+        { title: "📖 Usuario vs Desarrollador", url: "/markdown/start/herramientas/usuario" },
+        { title: "📖 Sistema operativo", url: "/markdown/start/herramientas/sistema" },
+        { title: "📖 Navegador", url: "/markdown/start/herramientas/navegador" },
+        { title: "📖 Terminal", url: "/markdown/start/herramientas/terminal" },
+        { title: "📖 IDEs", url: "/markdown/start/herramientas/ides" },
+      ],
+    },
+    {
+      title: "Colaborar",
+      meta: "X temas",
+      lessons: [
+        { title: "📖 Colaborar", url: "/markdown/start/colaborar/colaborar" },
+      ],
+    },
   ],
-}
+};

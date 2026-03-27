@@ -1,0 +1,31 @@
+---
+import MainLayout from "../layouts/MainLayout.astro";
+
+import Terminal from "../components/Terminal.astro";
+import Accordion from "../components/Accordion.astro";
+import ActionMenu from "../components/ActionMenu.astro";
+
+import { ai } from "../data/ai";
+---
+
+<MainLayout
+  title="Inteligencia Artificial"
+  heading="Inteligencia Artificial"
+  description=`
+        Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
+        when an unknown printer took a galley of type and scrambled it to make a type specimen book. 
+        It has survived not only five centuries, but also the leap into electronic `
+>
+  <Terminal />
+
+  <Accordion title="Fundamentos" sections={ai.fundamentos} />
+  <Accordion title="IA para Productividad en el Desarrollo" sections={ai.productividad} />
+  <Accordion title="Integrando IA en Aplicaciones Web" sections={ai.integracion} />
+  <Accordion title="Patrones Avanzados: RAG y Agentes" sections={ai.avanzados} />
+  <Accordion title="Ética, Costos y Producción" sections={ai.etica} />
+
+
+
+  <ActionMenu />
+</MainLayout>

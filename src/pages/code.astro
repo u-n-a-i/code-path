@@ -1,0 +1,32 @@
+---
+import MainLayout from "../layouts/MainLayout.astro";
+
+import Terminal from "../components/Terminal.astro";
+import Accordion from "../components/Accordion.astro";
+import ActionMenu from "../components/ActionMenu.astro";
+
+import { code } from "../data/code";
+---
+
+<MainLayout
+  title="Programación"
+  heading="Programación"
+  description=`
+        Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
+        when an unknown printer took a galley of type and scrambled it to make a type specimen book. 
+        It has survived not only five centuries, but also the leap into electronic `
+>
+  <Terminal />
+
+  <Accordion title="Fundamentos del desarrollo de software" sections={code.fundamentos} />
+  <Accordion title="Estructura y marcado semántico {HTML}" sections={code.html} />
+  <Accordion title="Diseño y estilización de interfaces {CSS}" sections={code.css} />
+  <Accordion title="JavaScript: el lenguaje (Core)" sections={code.js_core} />
+  <Accordion title="JavaScript en el navegador (Web)" sections={code.js_web} />
+  <Accordion title="JavaScript en el servidor {Node.js}" sections={code.js_node} />
+  <Accordion title="Pruebas y garantía de calidad del código" sections={code.testing} />
+  <Accordion title="Superset de JavaScript {TypeScript}" sections={code.typescript} />
+
+  <ActionMenu />
+</MainLayout>
