@@ -121,7 +121,11 @@ Este repositorio forma parte del proyecto [Bóveda-IT](https://github.com/u-n-a-
 
 ### TypeScript
 
-[![TypeScript](https://img.shields.io/badge/notas-3178C6?style=for-the-badge&logo=TypeScript&logoColor=white)]()
+[![TypeScript](https://img.shields.io/badge/notas-3178C6?style=for-the-badge&logo=TypeScript&logoColor=white)](https://github.com/u-n-a-i/code-path/blob/master/ecosistema%20javascript/typescript/notas.md)
+[![TypeScript](https://img.shields.io/badge/bases-3178C6?style=for-the-badge&logo=TypeScript&logoColor=white)](https://github.com/u-n-a-i/code-path/tree/master/ecosistema%20javascript/typescript/bases)
+[![TypeScript](https://img.shields.io/badge/modulos-3178C6?style=for-the-badge&logo=TypeScript&logoColor=white)](https://github.com/u-n-a-i/code-path/tree/master/ecosistema%20javascript/typescript/modulos)
+[![TypeScript](https://img.shields.io/badge/poo-3178C6?style=for-the-badge&logo=TypeScript&logoColor=white)](https://github.com/u-n-a-i/code-path/tree/master/ecosistema%20javascript/typescript/poo)
+[![TypeScript](https://img.shields.io/badge/web-3178C6?style=for-the-badge&logo=TypeScript&logoColor=white)](https://github.com/u-n-a-i/code-path/tree/master/ecosistema%20javascript/typescript/web)
 
 ### Jest
 
