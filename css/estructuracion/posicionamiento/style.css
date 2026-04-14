@@ -1,0 +1,245 @@
+ody {
+  margin: 0;
+  font-family: sans-serif; /* Usando sans-serif genérico */
+  line-height: 1.6;
+  color: #333;
+  background-color: #f4f7f6;
+}
+
+h1,
+h2,
+h3 {
+  font-family: sans-serif; /* Usando sans-serif genérico */
+  color: #2c3e50;
+  margin-top: 25px;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+/* --- Barra de Navegación Fija (fixed) --- */
+.navbar-fixed {
+  position: fixed; /* ¡El posicionamiento fijo! */
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #34495e;
+  padding: 10px 0;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  z-index: 1000; /* Asegura que esté encima de otros elementos */
+}
+
+.navbar-fixed ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.navbar-fixed li {
+  margin: 0 15px;
+}
+
+.navbar-fixed a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 5px 10px;
+  transition: background-color 0.3s ease;
+}
+
+.navbar-fixed a:hover {
+  background-color: #55728f;
+  border-radius: 4px;
+}
+
+/* --- Sección Hero (para espacio inicial y un botón fijo) --- */
+.hero-section {
+  background: linear-gradient(
+    135deg,
+    #7f00ff 0%,
+    #e100ff 100%
+  ); /* Degradado vibrante */
+  color: white;
+  text-align: center;
+  padding: 150px 20px 100px; /* Padding superior para dejar espacio a la navbar fija */
+  margin-top: 50px; /* Espacio para que la navbar fija no oculte el contenido */
+  position: relative; /* Es el contexto de posicionamiento para el botón fijo *dentro* de él */
+  overflow: hidden; /* Asegura que nada se salga */
+}
+
+.hero-section h1 {
+  font-size: 3.8em;
+  margin-bottom: 10px;
+  color: white;
+  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.4);
+}
+
+.hero-section p {
+  font-size: 1.3em;
+  opacity: 0.9;
+}
+
+/* Botón fijo dentro del hero - Ejemplo de fixed relativo a la ventana, pero también un caso de uso común */
+.fixed-button {
+  position: fixed; /* ¡Fijo! Se posiciona respecto al viewport */
+  bottom: 30px; /* 30px desde abajo de la ventana */
+  right: 30px; /* 30px desde la derecha de la ventana */
+  background-color: #28a745;
+  padding: 12px 25px;
+  border-radius: 50px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  z-index: 999; /* Para que esté sobre el contenido, pero debajo de la navbar */
+  transition: transform 0.3s ease;
+}
+
+.fixed-button:hover {
+  transform: translateY(-5px);
+}
+
+.fixed-button a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.1em;
+}
+
+main {
+  max-width: 900px;
+  margin: 20px auto;
+  padding: 20px;
+}
+
+.general-section {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 40px;
+  padding: 30px;
+}
+
+/* --- 1. Static --- */
+.static-box {
+  background-color: #e0f2f7;
+  border: 1px solid #a7d9ee;
+  padding: 20px;
+  margin: 15px 0;
+  text-align: center;
+  /* position: static; (Es el valor por defecto, no es necesario declararlo) */
+  /* top, left, z-index no tendrían efecto aquí */
+}
+
+/* --- 2. Relative --- */
+.relative-container {
+  background-color: #fce4ec; /* Rosa muy claro */
+  border: 2px dashed #f48fb1;
+  padding: 30px;
+  margin: 20px 0;
+  position: relative; /* ¡Padre posicionado para la caja relativa! */
+  min-height: 250px; /* Para visualizar mejor el desplazamiento */
+}
+
+.relative-box {
+  background-color: #ffccbc; /* Naranja claro */
+  border: 1px solid #ff7043;
+  padding: 20px;
+  margin: 15px; /* Margen para que se vea el espacio que ocupa */
+  text-align: center;
+  position: relative; /* ¡Relative! Se mueve desde su posición normal */
+  z-index: 1; /* Para demostrar que puede estar encima de otros elementos si lo deseamos */
+}
+
+.relative-shifted-box {
+  background-color: #c8e6c9; /* Verde claro */
+  border: 1px solid #66bb6a;
+  padding: 15px;
+  position: relative; /* ¡Relative de nuevo! Se mueve desde su propia posición normal */
+  top: 20px;
+  left: 20px;
+  z-index: 2; /* Estará encima de relative-box si se superponen */
+  width: 80%; /* Para que se vea el desplazamiento */
+  margin: 0 auto; /* Para centrarlo horizontalmente en su 'flujo normal' */
+}
+
+/* --- 3. Absolute --- */
+.absolute-parent {
+  background-color: #e3f2fd; /* Azul pálido */
+  border: 2px dashed #90caf9;
+  padding: 40px;
+  margin: 20px 0;
+  min-height: 300px; /* Para que la caja absoluta tenga espacio para moverse */
+  position: relative; /* ¡CRUCIAL! Hace que los hijos absolutos se posicionen respecto a este padre */
+  overflow: hidden; /* Oculta partes de la caja absoluta si se sale */
+}
+
+.absolute-parent h3 {
+  text-align: left;
+  color: #1976d2;
+}
+
+.absolute-box {
+  background-color: #ffcdd2; /* Rojo pálido */
+  border: 1px solid #ef5350;
+  padding: 15px;
+  text-align: center;
+  position: absolute; /* ¡Absolute! Se saca del flujo */
+  bottom: 10px; /* 10px desde el borde inferior del padre posicionado */
+  right: 10px; /* 10px desde el borde derecho del padre posicionado */
+  width: 200px; /* Ancho fijo para el ejemplo */
+  z-index: 50; /* Para que esté claramente por encima del contenido del padre */
+}
+
+/* --- Contenido de Relleno (Dummy Content) --- */
+.dummy-content {
+  background-color: #fafafa;
+  color: #555;
+  text-align: center;
+  padding: 40px 20px;
+  font-style: italic;
+  box-shadow: none; /* Sin sombra para diferenciar */
+  border: 1px dashed #eee;
+}
+
+/* --- 4. Fixed --- */
+.fixed-box {
+  background-color: #ffeb3b; /* Amarillo vibrante */
+  border: 2px solid #fbc02d;
+  padding: 15px;
+  text-align: center;
+  position: fixed; /* ¡Fijo! Se posiciona respecto al viewport */
+  top: 150px; /* 150px desde el tope de la ventana */
+  left: 50px; /* 50px desde la izquierda de la ventana */
+  width: 150px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 900; /* Alto z-index para que sea siempre visible */
+}
+
+/* --- 5. Sticky --- */
+.sticky-header {
+  background-color: #81c784; /* Verde suave */
+  color: white;
+  padding: 15px;
+  margin-bottom: 20px;
+  text-align: center;
+  font-weight: bold;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  position: sticky; /* ¡Sticky! */
+  top: 50px; /* Se pegará a 50px del tope de la ventana cuando se haga scroll */
+  z-index: 100; /* Para que esté por encima del contenido de la sección */
+}
+
+/* --- Sección después de la onda (con el mismo color de fill del SVG) --- */
+.seccion-despues-onda {
+  background-color: #ffffff; /* Asegúrate de que este color coincida con el fill del SVG de la onda */
+  padding-top: 60px; /* Normaliza el padding si la onda se superpone */
+}
+
+/* --- Footer --- */
+footer {
+  text-align: center;
+  margin-top: 50px;
+  padding: 30px 20px;
+  background-color: #34495e;
+  color: white;
+  font-size: 0.9em;
+}

@@ -1,0 +1,23 @@
+:root {
+  --color-principal: #007bff;
+  --tamanio-fuentes: 18px;
+  --espaciado: 1rem;
+  --borde-radio: 8px;
+}
+
+body {
+  font-family: sans-serif;
+  padding: var(--espaciado);
+}
+
+h1 {
+  color: var(--color-principal);
+  font-size: var(--tamanio-fuentes);
+}
+
+.caja {
+  background-color: var(--color-principal);
+  color: #fff;
+  padding: var(--espaciado);
+  border-radius: var(--borde-radio);
+}

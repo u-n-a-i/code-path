@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Capas (z-index)</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <header>
+      <h1>Crea tu Helado con Capas CSS</h1>
+      <p>Controlando el orden de apilamiento con <code>z-index</code>.</p>
+    </header>
+
+    <main>
+      <section class="helado-container">
+        <h2>Helado Base (Contexto de Apilamiento)</h2>
+        <div class="barquillo">
+          <p>Barquillo (z-index: 1)</p>
+        </div>
+        <div class="bola-vainilla">
+          <p>Bola Vainilla (z-index: 2)</p>
+        </div>
+        <div class="bola-chocolate">
+          <p>Bola Chocolate (z-index: 3)</p>
+        </div>
+        <div class="nata-montada">
+          <p>Nata Montada (z-index: 4)</p>
+        </div>
+        <div class="virutas-chocolate">
+          <p>Virutas (z-index: 5)</p>
+        </div>
+        <div class="cereza">
+          <p>Cereza (z-index: 6)</p>
+        </div>
+      </section>
+
+      <section class="helado-personalizado-container">
+        <h2>Helado Personalizado (Cambio de Orden)</h2>
+        <p>
+          Aquí, la bola de chocolate tiene un `z-index` más bajo que la
+          vainilla, ¡así que la vainilla se superpone!
+        </p>
+        <div class="barquillo-custom">
+          <p>Barquillo (z-index: 1)</p>
+        </div>
+        <div class="bola-vainilla-custom">
+          <p>Bola Vainilla (z-index: 3)</p>
+        </div>
+        <div class="bola-chocolate-custom">
+          <p>Bola Chocolate (z-index: 2)</p>
+        </div>
+        <div class="nata-montada-custom">
+          <p>Nata Montada (z-index: 4)</p>
+        </div>
+        <div class="virutas-chocolate-custom">
+          <p>Virutas (z-index: 5)</p>
+        </div>
+        <div class="cereza-custom">
+          <p>Cereza (z-index: 6)</p>
+        </div>
+      </section>
+
+      <section class="otro-ejemplo-zindex">
+        <h2>Otro Ejemplo de z-index y Contextos de Apilamiento</h2>
+        <div class="contenedor-padre-uno">
+          <h3>Contenedor Padre Uno (z-index: 1)</h3>
+          <div class="caja-hija-uno">Caja Hija Uno (z-index: 100)</div>
+        </div>
+        <div class="contenedor-padre-dos">
+          <h3>Contenedor Padre Dos (z-index: 2)</h3>
+          <div class="caja-hija-dos">Caja Hija Dos (z-index: 10)</div>
+        </div>
+        <p>
+          Observa cómo el `z-index` de los hijos solo tiene sentido **dentro de
+          su propio padre**. La "Caja Hija Uno" (z-index: 100) NO puede estar
+          por encima de la "Caja Hija Dos" (z-index: 10) porque su **padre**
+          tiene un `z-index` más bajo que el padre de la Caja Hija Dos.
+        </p>
+      </section>
+    </main>
+  </body>
+</html>

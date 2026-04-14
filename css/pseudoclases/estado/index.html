@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pseudoclases de estado</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>Pseudoclases de estado</h1>
+
+    <h2>:any-link</h2>
+    <p>
+      Visita <a href="https://openai.com">OpenAI</a> o
+      <a href="/otra-pagina">otra página</a>.
+    </p>
+
+    <h2>:blank</h2>
+    <label>
+      Comentarios:
+      <textarea rows="4" cols="30" placeholder="Escribe algo..."></textarea>
+    </label>
+
+    <h2>:default</h2>
+    <form>
+      <label>
+        <input type="radio" name="plan" value="gratis" checked />
+        Plan gratis
+      </label>
+      <label>
+        <input type="radio" name="plan" value="pro" />
+        Plan Pro
+      </label>
+
+      <br />
+
+      <button type="submit">Enviar</button>
+      <button type="submit" default>Enviar por defecto (Chrome)</button>
+    </form>
+  </body>
+</html>

@@ -1,0 +1,267 @@
+body {
+  margin: 0;
+  font-family: sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #f8f8f8;
+  padding-bottom: 50px;
+}
+
+header {
+  background: linear-gradient(135deg, #673ab7 0%, #9c27b0 100%); /* Morado */
+  color: white;
+  text-align: center;
+  padding: 40px 20px;
+  margin-bottom: 30px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+  font-size: 2.8em;
+  margin-bottom: 10px;
+  color: white;
+}
+
+main {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+section {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 40px;
+  padding: 30px;
+  text-align: center; /* Centrar contenido de la sección */
+}
+
+h2 {
+  margin-bottom: 20px;
+  color: #673ab7; /* Morado */
+}
+
+p {
+  margin-bottom: 20px;
+}
+
+/* --- Estilos Base para los Cuadros de Animación --- */
+.animation-box {
+  width: 150px;
+  height: 100px;
+  background-color: #2196f3; /* Azul */
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px auto; /* Centrar */
+  border-radius: 8px;
+  font-weight: bold;
+  font-size: 1.1em;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.animation-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 20px;
+  padding: 15px;
+  background-color: #e3f2fd; /* Azul claro */
+  border-radius: 8px;
+}
+.animation-container .animation-box {
+  margin: 0; /* Anula el margin auto */
+}
+
+/* --- 1. Animación Básica --- */
+@keyframes slideAndChangeColor {
+  0% {
+    transform: translateX(-100px);
+    background-color: #ffeb3b; /* Amarillo */
+    opacity: 0.5;
+  }
+  50% {
+    transform: translateX(100px);
+    background-color: #e91e63; /* Rosa */
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(-100px);
+    background-color: #ffeb3b; /* Amarillo */
+    opacity: 0.5;
+  }
+}
+
+.basic-animation {
+  animation-name: slideAndChangeColor;
+  animation-duration: 3s;
+  animation-iteration-count: infinite; /* Se repite indefinidamente */
+  animation-timing-function: ease-in-out;
+}
+
+/* --- 2. Control de Duración y Curva de Velocidad --- */
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.spin-animation-slow {
+  background-color: #ffc107; /* Amarillo */
+  animation: spin 5s linear infinite; /* 5s, velocidad constante, infinito */
+}
+
+.spin-animation-fast {
+  background-color: #ff5722; /* Naranja */
+  animation: spin 1s ease-in-out infinite; /* 1s, empieza/termina lento, infinito */
+}
+
+/* --- 3. `animation-delay` y `animation-iteration-count` --- */
+@keyframes blink {
+  0%,
+  100% {
+    opacity: 0;
+    background-color: #ffd180; /* Naranja muy claro */
+  }
+  50% {
+    opacity: 1;
+    background-color: #ffab40; /* Naranja */
+  }
+}
+
+.blink-animation {
+  background-color: #cfd8dc; /* Gris claro inicial */
+  animation: blink 0.5s ease-out 1s 3 forwards; /* Nombre Duración Curva Retraso Repeticiones Fill-mode */
+  /* Empieza después de 1s, dura 0.5s, se repite 3 veces, se queda en el estado final (opacidad 0) */
+}
+
+/* --- 4. `animation-direction` --- */
+@keyframes moveLeftRight {
+  0% {
+    transform: translateX(0);
+    background-color: #4caf50;
+  }
+  100% {
+    transform: translateX(150px);
+    background-color: #8bc34a;
+  }
+}
+
+.alternate-animation {
+  animation: moveLeftRight 2s ease-in-out infinite alternate; /* Alterna la dirección en cada ciclo */
+}
+
+.reverse-animation {
+  animation: moveLeftRight 2s ease-in-out infinite reverse; /* Siempre se reproduce en sentido inverso */
+  background-color: #f44336; /* Color inicial distinto */
+}
+
+/* --- 5. `animation-fill-mode` --- */
+@keyframes stretchAndFade {
+  0% {
+    width: 100px;
+    opacity: 1;
+    background-color: #b39ddb;
+  }
+  50% {
+    width: 200px;
+    opacity: 0.5;
+  }
+  100% {
+    width: 50px;
+    opacity: 0;
+    background-color: #5e35b1;
+  }
+}
+
+.fill-mode-container {
+  background-color: #ede7f6;
+}
+
+.fill-mode-none {
+  /* Default */
+  animation: stretchAndFade 1.5s ease-out 1; /* Solo una vez */
+  background-color: #d1c4e9; /* Estilo inicial antes de la animación */
+}
+/* Después de la animación, vuelve al estilo original */
+
+.fill-mode-forwards {
+  animation: stretchAndFade 1.5s ease-out 1 forwards; /* Se queda en el estado final (100% o to) */
+  background-color: #d1c4e9;
+}
+
+.fill-mode-backwards {
+  animation: stretchAndFade 1.5s ease-out 1 backwards; /* Aplica el estado inicial (0% o from) durante el delay */
+  animation-delay: 1s; /* Para que se note el efecto */
+  background-color: #d1c4e9;
+}
+
+.fill-mode-both {
+  animation: stretchAndFade 1.5s ease-out 1 both; /* Aplica estados iniciales y finales */
+  animation-delay: 1s;
+  background-color: #d1c4e9;
+}
+
+/* --- 6. `animation-play-state` --- */
+.play-state-animation {
+  animation: spin 3s linear infinite; /* Animación de giro indefinida */
+  cursor: pointer;
+  background-color: #00bcd4; /* Cian */
+}
+
+.play-state-animation:hover {
+  animation-play-state: paused; /* Pausa la animación al pasar el ratón */
+  background-color: #4dd0e1; /* Un poco más claro al pausar */
+}
+
+/* --- 7. Ejemplo Combinado: Loader/Spinner --- */
+@keyframes rotateSpinner {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes changeColor {
+  0% {
+    border-top-color: #ffeb3b;
+  }
+  25% {
+    border-top-color: #e91e63;
+  }
+  50% {
+    border-top-color: #4caf50;
+  }
+  75% {
+    border-top-color: #2196f3;
+  }
+  100% {
+    border-top-color: #ffeb3b;
+  }
+}
+
+.loader {
+  width: 60px;
+  height: 60px;
+  border: 8px solid #f3f3f3; /* Color de fondo del borde */
+  border-top: 8px solid #3498db; /* Color del borde superior (que girará) */
+  border-radius: 50%; /* Lo hace redondo */
+  margin: 40px auto;
+
+  /* Animación de rotación */
+  animation: rotateSpinner 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+
+  /* Animación de cambio de color */
+  animation-name: rotateSpinner, changeColor; /* Múltiples animaciones */
+  animation-duration: 1.2s, 4s; /* Duración para cada una */
+  animation-timing-function: cubic-bezier(0.5, 0, 0.5, 1), linear; /* Curva para cada una */
+  animation-iteration-count: infinite, infinite; /* Repeticiones para cada una */
+}

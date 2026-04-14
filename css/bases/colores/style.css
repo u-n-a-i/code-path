@@ -1,0 +1,19 @@
+.nombre {
+  color: lightgreen;
+}
+
+.hex {
+  color: #e63946;
+}
+
+.rgb {
+  color: rgb(38, 70, 83);
+}
+
+.hsl {
+  color: hsl(200, 70%, 50%);
+}
+
+.rgba {
+  background-color: rgba(255, 140, 0, 0.3);
+}

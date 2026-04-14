@@ -1,0 +1,345 @@
+body {
+  margin: 0;
+  font-family: sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #f8f8f8;
+  padding-bottom: 50px;
+}
+
+header {
+  background: linear-gradient(
+    135deg,
+    #ff5733 0%,
+    #ffbd33 100%
+  ); /* Naranja a Amarillo */
+  color: white;
+  text-align: center;
+  padding: 40px 20px;
+  margin-bottom: 30px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+  font-size: 2.8em;
+  margin-bottom: 10px;
+  color: white;
+}
+
+main {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+section {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 40px;
+  padding: 30px;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #e67e22; /* Naranja para títulos de sección */
+}
+
+h3 {
+  text-align: center;
+  margin-top: 25px;
+  margin-bottom: 15px;
+  color: #2c3e50;
+  font-size: 1.3em;
+}
+
+p.note {
+  font-style: italic;
+  color: #555;
+  margin-top: 25px;
+  padding: 10px 15px;
+  background-color: #e0f2f7;
+  border-left: 4px solid #03a9f4;
+  border-radius: 4px;
+}
+
+/* --- Estilos Base para Contenedores Grid --- */
+.grid-container {
+  border: 2px solid #ccc;
+  padding: 10px;
+  margin-bottom: 25px;
+  background-color: #eef;
+  display: grid; /* Valor por defecto para la mayoría de los ejemplos */
+  min-height: 150px; /* Altura mínima para visualizar */
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+/* --- Estilos Base para Items Grid --- */
+.grid-item {
+  background-color: #6c757d; /* Gris oscuro */
+  color: white;
+  padding: 15px;
+  text-align: center;
+  display: flex; /* Para centrar texto dentro del item */
+  justify-content: center;
+  align-items: center;
+  border-radius: 4px;
+  font-weight: bold;
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.2);
+}
+
+/* Colores alternos para los items */
+.grid-item:nth-child(even) {
+  background-color: #007bff; /* Azul */
+}
+.grid-item:nth-child(odd) {
+  background-color: #28a745; /* Verde */
+}
+
+/* --- display: grid y display: inline-grid --- */
+.display-grid-example {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.display-inline-grid-example {
+  display: inline-grid;
+  grid-template-columns: 1fr 1fr;
+  width: auto;
+  vertical-align: top;
+  margin-right: 15px;
+}
+
+/* --- Definición de la Estructura --- */
+.template-example {
+  grid-template-columns: 150px 1fr 200px; /* Ancho fijo, fracción, ancho fijo */
+  grid-template-rows: auto 1fr auto; /* Auto, fracción, auto */
+  min-height: 250px;
+}
+.template-example .grid-item:nth-child(1) {
+  grid-column: 1 / -1; /* Header abarca todas las columnas */
+  background-color: #f44336;
+}
+.template-example .grid-item:nth-child(2) {
+  background-color: #ff9800;
+}
+.template-example .grid-item:nth-child(3) {
+  background-color: #4caf50;
+}
+.template-example .grid-item:nth-child(4) {
+  grid-column: 1 / -1; /* Footer abarca todas las columnas */
+  background-color: #2196f3;
+}
+
+.gap-example {
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 100px);
+  gap: 20px; /* 20px de espacio entre filas y columnas */
+  /* row-gap: 20px; column-gap: 20px; */
+}
+
+/* --- Comportamiento Automático --- */
+.auto-tracks-example {
+  grid-template-columns: repeat(2, 100px); /* Dos columnas explícitas */
+  grid-template-rows: 80px; /* Una fila explícita */
+  grid-auto-columns: 80px; /* Columnas auto de 80px */
+  grid-auto-rows: 60px; /* Filas auto de 60px */
+  min-height: 200px; /* Para ver filas adicionales */
+}
+.auto-tracks-example .grid-item {
+  height: auto; /* Dejar que la altura se ajuste */
+}
+.auto-tracks-example .grid-item:nth-child(3) {
+  background-color: #e91e63;
+}
+.auto-tracks-example .grid-item:nth-child(4) {
+  background-color: #9c27b0;
+}
+
+.auto-flow-column-example {
+  grid-template-rows: repeat(3, 80px); /* 3 filas explícitas */
+  grid-auto-flow: column; /* Rellena por columnas */
+  min-height: 280px; /* Ajustar la altura para que se vea el flujo */
+}
+
+.auto-fill-example,
+.auto-fit-example {
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  /* grid-template-rows: 100px; */
+  gap: 10px;
+  height: 100px; /* Para que solo haya una fila de items */
+}
+
+.auto-fit-example {
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+}
+
+/* --- Manipulación de Líneas --- */
+.line-manipulation-example {
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 80px 1fr 1fr 80px;
+  gap: 10px;
+  min-height: 350px;
+}
+.header-item {
+  grid-column: 1 / -1; /* Desde la primera línea hasta la última */
+  background-color: #d32f2f;
+}
+.nav-item {
+  grid-row: 2 / span 2; /* Desde la línea 2, abarca 2 filas */
+  background-color: #f57c00;
+}
+.main-item {
+  grid-row: 2 / span 2;
+  grid-column: 2 / span 3; /* Desde la línea 2 de columna, abarca 3 columnas */
+  background-color: #388e3c;
+}
+.sidebar-item {
+  /* Por defecto se posiciona en la primera celda disponible */
+  background-color: #0288d1;
+}
+.footer-item {
+  /* Usando grid-area para nombrar y posicionar */
+  grid-area: 4 / 1 / 5 / -1; /* row-start / col-start / row-end / col-end */
+  background-color: #1976d2;
+}
+
+/* --- Alineación y Espaciado --- */
+.align-items-justify-items-example {
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 120px); /* Altura fija para ver alineación */
+  gap: 10px;
+  min-height: 250px;
+}
+.align-items-justify-items-example .grid-item {
+  width: 80px; /* Ancho fijo para ver alineación */
+  height: 80px; /* Altura fija para ver alineación */
+}
+.align-items-justify-items-example .start {
+  justify-self: start;
+  align-self: start;
+}
+.align-items-justify-items-example .end {
+  justify-self: end;
+  align-self: end;
+}
+.align-items-justify-items-example .center {
+  justify-self: center;
+  align-self: center;
+}
+.align-items-justify-items-example .stretch {
+  justify-self: stretch; /* Se estira para llenar la celda horizontalmente */
+  align-self: stretch; /* Se estira para llenar la celda verticalmente */
+  width: auto; /* Permitir que stretch funcione */
+  height: auto; /* Permitir que stretch funcione */
+}
+
+.justify-align-content-example {
+  grid-template-columns: repeat(
+    2,
+    100px
+  ); /* Columnas fijas, con espacio extra */
+  grid-template-rows: repeat(2, 80px); /* Filas fijas, con espacio extra */
+  width: 600px; /* Contenedor más grande que el contenido de grid */
+  height: 300px; /* Contenedor más grande que el contenido de grid */
+  background-color: #f0f4c3; /* Color de fondo para ver el espacio */
+  justify-content: center; /* Centra la cuadrícula horizontalmente */
+  align-content: center; /* Centra la cuadrícula verticalmente */
+  /* También puedes usar place-content: center center; */
+}
+
+.align-self-justify-self-example {
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 120px);
+  gap: 10px;
+  min-height: 250px;
+  /* align-items y justify-items del contenedor para mostrar sobrescritura */
+  align-items: flex-start;
+  justify-items: flex-start;
+}
+.align-self-justify-self-example .grid-item {
+  width: 80px;
+  height: 80px;
+}
+.align-self-justify-self-example .item-start {
+  place-self: start; /* equivalente a align-self: start; justify-self: start; */
+  background-color: #28a745;
+}
+.align-self-justify-self-example .item-end {
+  place-self: end;
+  background-color: #dc3545;
+}
+.align-self-justify-self-example .item-center {
+  place-self: center;
+  background-color: #ffc107;
+}
+.align-self-justify-self-example .item-stretch {
+  place-self: stretch;
+  background-color: #17a2b8;
+  width: auto;
+  height: auto;
+}
+
+/* --- Subgrid --- */
+.main-grid-subgrid-example {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr; /* Tres columnas para la cuadrícula principal */
+  grid-template-rows: auto auto; /* Filas automáticas */
+  gap: 15px;
+  min-height: 250px;
+  background-color: #e0f2f7;
+  border: 3px solid #03a9f4;
+}
+
+.parent-item-1,
+.parent-item-2 {
+  background-color: #bbdefb;
+  border: 1px solid #64b5f6;
+  padding: 10px;
+  grid-column: span 1; /* Cada padre ocupa una columna de la grid principal */
+  display: grid; /* El padre es también un grid container */
+  grid-template-columns: subgrid; /* ¡Aquí la magia de subgrid en columnas! */
+  grid-template-rows: auto auto; /* Las filas de la subgrid se definen internamente */
+  gap: 5px; /* Espacio dentro de la subgrid */
+  min-height: 100px;
+}
+
+.parent-item-1 {
+  grid-column: 1 / 3; /* Este padre ocupa dos columnas de la grid principal */
+}
+
+.parent-item-2 {
+  grid-column: 2 / 4; /* Este padre también ocupa dos columnas, solapando con el anterior */
+}
+
+.subgrid-container {
+  /* Este es el elemento que es grid item Y grid container, aplicando subgrid */
+  /* No necesitamos display:grid aquí, ya lo tiene .parent-item-1 y .parent-item-2 */
+  /* Los hijos de .parent-item-X se convierten en los ítems de esta subgrid implícita */
+  grid-column: 1 / 3; /* El subgrid container en sí abarca las dos columnas de su padre*/
+  display: grid; /* Lo ponemos aquí por claridad, aunque es el padre quien define la subgrid */
+  grid-template-columns: subgrid; /* ¡Define que usará las líneas de su padre! */
+  grid-template-rows: auto; /* Las filas se gestionan automáticamente */
+  gap: 5px;
+  background-color: #d1c4e9; /* Un color para el subgrid container */
+  padding: 8px;
+  border: 1px dashed #7e57c2;
+}
+
+.subgrid-item {
+  background-color: #b39ddb;
+  color: white;
+  padding: 5px;
+  text-align: center;
+  border-radius: 3px;
+  font-size: 0.8em;
+}
+
+/* Para otros items que no son subgrid */
+.parent-item-3,
+.parent-item-4 {
+  background-color: #ffccbc;
+  border: 1px solid #ff7043;
+  padding: 10px;
+  text-align: center;
+}

@@ -1,0 +1,229 @@
+body {
+    margin: 0;
+    font-family: sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f8f8f8;
+    padding-bottom: 50px;
+}
+
+header {
+    background: linear-gradient(135deg, #007bff 0%, #00d4ff 100%);
+    color: white;
+    text-align: center;
+    padding: 40px 20px;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    font-size: 2.8em;
+    margin-bottom: 10px;
+    color: white;
+}
+
+main {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+section {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 40px;
+    padding: 30px;
+    text-align: center;
+}
+
+h2 {
+    margin-bottom: 20px;
+    color: #007bff;
+}
+
+p {
+    margin-bottom: 20px;
+}
+
+/* --- Estilos Base para los Contenedores de Ruta --- */
+.path-container {
+    width: 100%;
+    height: 200px; /* Altura para ver la ruta */
+    border: 2px dashed #ccc;
+    position: relative; /* Importante para el posicionamiento del motion item */
+    margin: 40px auto;
+    background-color: #eef;
+    overflow: hidden; /* Asegurarse de que el elemento no se salga del contenedor */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* --- Estilos Base para los Elementos en Movimiento --- */
+.motion-item {
+    position: absolute; /* Esencial para usar motion-path */
+    width: 40px;
+    height: 40px;
+    background-color: #ff5733;
+    border-radius: 50%; /* Por defecto un círculo */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 0.8em;
+    font-weight: bold;
+    /* La animación se define en cada ejemplo */
+}
+
+/* --- Animación @keyframes --- */
+@keyframes moveAlongPath {
+    from {
+        offset-distance: 0%;
+    }
+    to {
+        offset-distance: 100%;
+    }
+}
+
+
+/* --- 1. Animación Simple a lo Largo de una Línea (FIXED) --- */
+.line-path {
+    height: 100px;
+    /* Visualizar la ruta SVG en el fondo para depuración */
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100%" height="100%"><path d="M0 50 L100 50" fill="none" stroke="lightgray" stroke-width="2"/></svg>');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 95% 100%; /* Ajustar el tamaño del fondo para que la línea se vea bien */
+}
+.line-path .motion-item {
+    /* Referencia la ruta SVG definida en el HTML */
+    offset-path: url(#horizontalLinePath); 
+    animation: moveAlongPath 3s linear infinite alternate; /* Animación de ida y vuelta */
+}
+.circle-item {
+    background-color: #ff5733;
+    border-radius: 50%;
+}
+
+
+/* --- 2. Animación a lo Largo de una Curva Compleja --- */
+.curve-path {
+    height: 180px;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 210 200" width="100%" height="100%"><path d="M10 100 C 40 20, 65 20, 95 100 S 150 180, 200 100" fill="none" stroke="lightgray" stroke-width="2"/></svg>');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+.curve-path .motion-item {
+    /* Ruta SVG curva */
+    offset-path: path('M10 100 C 40 20, 65 20, 95 100 S 150 180, 200 100'); 
+    animation: moveAlongPath 4s cubic-bezier(0.68, -0.55, 0.27, 1.55) infinite alternate; /* Con curva de rebote */
+    background-color: #e91e63;
+    border-radius: 0; /* Cuadrado */
+}
+.square-item::after {
+    content: ""; /* Para ver la dirección */
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-bottom: 8px solid white;
+    top: -5px;
+}
+
+
+/* --- 3. `offset-rotate` y `offset-anchor` --- */
+.rotate-anchor-path {
+    height: 180px;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 210 200" width="100%" height="100%"><path d="M10 100 C 40 20, 65 20, 95 100 S 150 150, 180 80 C 200 20, 220 10, 250 80" fill="none" stroke="lightgray" stroke-width="2"/></svg>');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+.rotate-anchor-path .motion-item {
+    offset-path: path('M10 100 C 40 20, 65 20, 95 100 S 150 180, 200 100');
+    animation: moveAlongPath 4s linear infinite; /* Animación continua */
+    background-color: #4CAF50;
+    width: 50px;
+    height: 50px;
+    border-radius: 0;
+    /* Gira automáticamente para seguir la ruta, y añade 90 grados adicionales */
+    offset-rotate: auto 90deg; 
+    /* El punto de anclaje está en la esquina superior izquierda del elemento */
+    offset-anchor: 0% 0%; 
+}
+.triangle-item {
+    background: none;
+    width: 0;
+    height: 0;
+    border-left: 25px solid transparent;
+    border-right: 25px solid transparent;
+    border-bottom: 50px solid #4CAF50; /* Forma de triángulo */
+    box-shadow: none;
+}
+
+
+/* --- 4. Múltiples Elementos en la Misma Ruta --- */
+.multiple-items-path {
+    height: 100px;
+    background-color: #f0f0f0;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100%" height="100%"><path d="M0 50 L100 50" fill="none" stroke="lightgray" stroke-width="2"/></svg>');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 95% 100%;
+}
+.multiple-items-path .motion-item {
+    offset-path: url(#horizontalLinePath); /* Reutiliza la ruta de la primera sección */
+    animation: moveAlongPath 3s linear infinite;
+    width: 20px;
+    height: 20px;
+    background-color: #FFC107;
+}
+
+.dot-1 {
+    animation-delay: 0s;
+}
+.dot-2 {
+    animation-delay: 1s; /* Empieza 1 segundo después */
+    background-color: #FF9800;
+}
+.dot-3 {
+    animation-delay: 2s; /* Empieza 2 segundos después */
+    background-color: #FF5722;
+}
+
+
+/* --- 5. Uso de un `path` desde SVG Externo/Interno --- */
+.svg-path-example {
+    height: 200px;
+    background-color: #e0f7fa;
+    /* Visualizar la ruta SVG en el fondo */
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 260 200" width="100%" height="100%"><path d="M10 80 C 40 10, 65 10, 95 80 S 150 150, 180 80 C 200 20, 220 10, 250 80" fill="none" stroke="lightgray" stroke-width="2"/></svg>');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+
+.svg-path-example .motion-item {
+    /* Aquí se referencia el ID de la ruta SVG definida en el HTML */
+    offset-path: url(#complexPath);
+    animation: moveAlongPath 6s ease-in-out infinite alternate;
+    background-color: #2196F3;
+    width: 50px;
+    height: 50px;
+    border-radius: 0;
+    offset-rotate: auto; /* Se alinea con la dirección de la ruta */
+}
+
+.arrow-item {
+    background: none;
+    width: 0;
+    height: 0;
+    border-left: 25px solid transparent;
+    border-right: 25px solid transparent;
+    border-bottom: 50px solid #2196F3;
+    box-shadow: none;
+}

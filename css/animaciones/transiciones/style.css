@@ -1,0 +1,192 @@
+body {
+  margin: 0;
+  font-family: sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #f8f8f8;
+  padding-bottom: 50px;
+}
+
+header {
+  background: linear-gradient(135deg, #4caf50 0%, #8bc34a 100%); /* Verde */
+  color: white;
+  text-align: center;
+  padding: 40px 20px;
+  margin-bottom: 30px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+  font-size: 2.8em;
+  margin-bottom: 10px;
+  color: white;
+}
+
+main {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+section {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 40px;
+  padding: 30px;
+  text-align: center; /* Centrar contenido de la sección */
+}
+
+h2 {
+  margin-bottom: 20px;
+  color: #4caf50; /* Verde */
+}
+
+p {
+  margin-bottom: 20px;
+}
+
+/* --- Estilos Base para los Cuadros de Transición --- */
+.transition-box {
+  width: 150px;
+  height: 100px;
+  background-color: #2196f3; /* Azul inicial */
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px auto; /* Centrar */
+  border-radius: 8px;
+  font-weight: bold;
+  font-size: 1.1em;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* --- 1. Transición Básica --- */
+.basic-transition {
+  /* Propiedad: background-color, Duración: 0.5 segundos */
+  transition: background-color 0.5s, width 0.5s;
+}
+
+.basic-transition:hover {
+  background-color: #ffc107; /* Amarillo al pasar el ratón */
+  width: 200px; /* Aumenta el ancho */
+}
+
+/* --- 2. `transition-timing-function` --- */
+.timing-functions-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.timing-functions-container .transition-box {
+  width: 120px;
+  height: 80px;
+  transition-property: transform; /* Solo transicionar el escalado */
+  transition-duration: 0.8s;
+  background-color: #9c27b0; /* Morado */
+}
+
+.timing-functions-container .transition-box:hover {
+  transform: scale(1.2); /* Escalar al pasar el ratón */
+}
+
+.timing-linear {
+  transition-timing-function: linear;
+}
+.timing-ease {
+  transition-timing-function: ease;
+}
+.timing-ease-in {
+  transition-timing-function: ease-in;
+}
+.timing-ease-out {
+  transition-timing-function: ease-out;
+}
+.timing-ease-in-out {
+  transition-timing-function: ease-in-out;
+}
+.timing-cubic-bezier {
+  transition-timing-function: cubic-bezier(0.68, -0.55, 0.27, 1.55);
+} /* Efecto de "rebote" */
+
+/* --- 3. `transition-delay` --- */
+.delay-transition {
+  background-color: #e91e63; /* Rosa */
+  transition: background-color 0.5s ease-in-out;
+  transition-delay: 1s; /* Retraso de 1 segundo antes de empezar */
+}
+
+.delay-transition:hover {
+  background-color: #ffeb3b; /* Amarillo */
+}
+
+/* --- 4. Transiciones Múltiples Propiedades --- */
+.multiple-properties {
+  background-color: #00bcd4; /* Cian */
+  /* Define transiciones separadas para cada propiedad */
+  transition: background-color 0.4s ease-out, width 0.6s ease-in,
+    transform 0.5s 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275); /* Con delay */
+}
+
+.multiple-properties:hover {
+  background-color: #ff5722; /* Naranja */
+  width: 250px; /* Más ancho */
+  transform: rotate(15deg) scale(1.1); /* Rotar y escalar */
+}
+
+/* --- 5. Uso de `all` y Animaciones de Texto --- */
+.text-transition {
+  font-size: 1.2em;
+  color: #3f51b5; /* Azul índigo */
+  font-weight: bold;
+  /* Transicionará todas las propiedades que cambien */
+  transition: all 0.6s ease-in-out;
+  padding: 10px;
+  border: 2px solid transparent; /* Para transicionar el borde */
+  display: inline-block; /* Para que width y height funcionen */
+  border-radius: 5px;
+}
+
+.text-transition:hover {
+  font-size: 1.5em; /* Tamaño más grande */
+  color: #ff4081; /* Rosa fuerte */
+  transform: translateX(10px); /* Ligeramente a la derecha */
+  border-color: #ff4081; /* Borde del mismo color */
+}
+
+/* --- 6. Ejemplo Práctico: Botón Interactivo --- */
+.interactive-button {
+  background-color: #4caf50; /* Verde */
+  color: white;
+  padding: 15px 30px;
+  border: 2px solid #4caf50;
+  border-radius: 50px; /* Redondo */
+  font-size: 1.1em;
+  font-weight: bold;
+  cursor: pointer;
+  outline: none; /* Quita el contorno al hacer clic */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+
+  /* Transicionar todas las propiedades relevantes */
+  transition: background-color 0.3s ease-in-out, border-color 0.3s ease-in-out,
+    transform 0.2s ease-out, box-shadow 0.3s ease-in-out;
+}
+
+.interactive-button:hover {
+  background-color: #689f38; /* Verde más oscuro */
+  border-color: #689f38;
+  transform: translateY(-3px); /* Levanta el botón ligeramente */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.interactive-button:active {
+  background-color: #388e3c; /* Verde aún más oscuro */
+  border-color: #388e3c;
+  transform: translateY(1px); /* Baja el botón ligeramente al hacer clic */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}

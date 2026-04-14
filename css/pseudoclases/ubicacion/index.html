@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ubicación</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>Pseudoclases de ubicación</h1>
+    <section>
+      <h2>Lista con hijos ordenados</h2>
+      <ul>
+        <li>Elemento 1 (first-child)</li>
+        <li>Elemento 2 (nth-child)</li>
+        <li>Elemento 3</li>
+        <li>Elemento 4 (nth-last-child)</li>
+        <li>Elemento 5 (last-child)</li>
+      </ul>
+    </section>
+
+    <section class="grupo">
+      <h2>Párrafos mezclados</h2>
+      <p>Párrafo 1 (first-of-type)</p>
+      <div>Elemento intermedio</div>
+      <p>Párrafo 2</p>
+      <p>Párrafo 3 (last-of-type & nth-last-of-type)</p>
+    </section>
+
+    <section class="solo">
+      <h2>Solo un hijo</h2>
+      <p>:only-child</p>
+    </section>
+
+    <section class="mezcla">
+      <h2>Solo un tipo de elemento</h2>
+      <p>:only-of-type (es el único &lt;p&gt; aquí)</p>
+      <span>Otro tipo</span>
+      <div>Otro tipo</div>
+    </section>
+  </body>
+</html>

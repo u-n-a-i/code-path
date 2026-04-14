@@ -1,0 +1,26 @@
+body {
+  background-color: #333;
+  color: #fff;
+}
+
+a {
+  text-decoration: none;
+  color: lightcyan;
+}
+
+a[href] {
+  color: lightgreen;
+}
+
+a[href="blog.html"] {
+  color: lightpink;
+}
+
+a[target] {
+  background-color: #fff;
+  color: red;
+}
+
+a[href$=".php"] {
+  color: purple;
+}

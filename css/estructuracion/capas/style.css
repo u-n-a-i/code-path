@@ -1,0 +1,260 @@
+/* Estilos Generales */
+body {
+  margin: 0;
+  font-family: sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #f4f7f6;
+  padding-bottom: 50px;
+}
+
+header {
+  background: linear-gradient(135deg, #ff6b6b 0%, #ffd166 100%);
+  color: white;
+  text-align: center;
+  padding: 40px 20px;
+  margin-bottom: 30px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+  font-size: 2.8em;
+  margin-bottom: 10px;
+  color: white;
+}
+
+main {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+section {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 40px;
+  padding: 30px;
+  position: relative; /* Contexto de apilamiento para los elementos del helado */
+  min-height: 350px; /* Para que las capas se superpongan bien */
+  overflow: hidden; /* Asegura que las capas no se salgan del padre */
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #e67e22; /* Color naranja para títulos de sección */
+}
+
+/* --- Estilos Comunes para las Capas del Helado --- */
+.barquillo,
+.bola-vainilla,
+.bola-chocolate,
+.nata-montada,
+.virutas-chocolate,
+.cereza,
+.barquillo-custom,
+.bola-vainilla-custom,
+.bola-chocolate-custom,
+.nata-montada-custom,
+.virutas-chocolate-custom,
+.cereza-custom {
+  position: absolute; /* Esencial para que z-index funcione */
+  width: 150px;
+  height: 150px;
+  border-radius: 50%; /* Hacerlos redondos */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-weight: bold;
+  font-size: 0.9em;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  left: 50%; /* Centrar horizontalmente */
+  transform: translateX(-50%); /* Ajuste fino para centrar */
+}
+
+/* --- Helado Base --- */
+.helado-container {
+  background-color: #ffe0b2; /* Fondo de color helado */
+}
+
+.barquillo {
+  background-color: #cd853f; /* Marrón */
+  height: 180px;
+  border-radius: 0 0 50% 50%; /* Forma de cono invertido */
+  width: 180px;
+  bottom: 20px;
+  z-index: 1;
+}
+
+.bola-vainilla {
+  background-color: #fffacd; /* Amarillo claro */
+  bottom: 120px;
+  z-index: 2;
+}
+
+.bola-chocolate {
+  background-color: #8b4513; /* Marrón chocolate */
+  bottom: 200px;
+  z-index: 3;
+}
+
+.nata-montada {
+  background-color: #fffaf0; /* Blanco crema */
+  width: 130px;
+  height: 130px;
+  bottom: 280px;
+  z-index: 4;
+  border-radius: 50%;
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+.virutas-chocolate {
+  background-color: #4b2d1c; /* Marrón oscuro */
+  width: 100px;
+  height: 30px;
+  border-radius: 5px; /* Forma de viruta */
+  bottom: 350px;
+  left: 50%;
+  transform: translateX(-50%) rotate(10deg);
+  z-index: 5;
+  opacity: 0.8;
+}
+
+.cereza {
+  background-color: #dc143c; /* Rojo cereza */
+  width: 40px;
+  height: 40px;
+  bottom: 370px;
+  z-index: 6;
+  box-shadow: 0 0 10px rgba(255, 0, 0, 0.5);
+  border: none; /* Sin borde para la cereza */
+}
+
+/* --- Helado Personalizado (Cambiando Z-index) --- */
+.helado-personalizado-container {
+  background-color: #e0f7fa; /* Fondo azul pálido */
+  margin-top: 60px; /* Para separar visualmente */
+}
+
+.helado-personalizado-container .barquillo-custom {
+  background-color: #cd853f;
+  height: 180px;
+  border-radius: 0 0 50% 50%;
+  width: 180px;
+  bottom: 20px;
+  z-index: 1;
+}
+
+.helado-personalizado-container .bola-vainilla-custom {
+  background-color: #fffacd;
+  bottom: 120px;
+  z-index: 3; /* ¡Más alto que el chocolate! */
+}
+
+.helado-personalizado-container .bola-chocolate-custom {
+  background-color: #8b4513;
+  bottom: 200px;
+  z-index: 2; /* ¡Más bajo que la vainilla! */
+}
+
+.helado-personalizado-container .nata-montada-custom {
+  background-color: #fffaf0;
+  width: 130px;
+  height: 130px;
+  bottom: 280px;
+  z-index: 4;
+  border-radius: 50%;
+}
+
+.helado-personalizado-container .virutas-chocolate-custom {
+  background-color: #4b2d1c;
+  width: 100px;
+  height: 30px;
+  border-radius: 5px;
+  bottom: 350px;
+  left: 50%;
+  transform: translateX(-50%) rotate(10deg);
+  z-index: 5;
+  opacity: 0.8;
+}
+
+.helado-personalizado-container .cereza-custom {
+  background-color: #dc143c;
+  width: 40px;
+  height: 40px;
+  bottom: 370px;
+  z-index: 6;
+  border: none;
+}
+
+/* --- Otro Ejemplo de z-index y Contextos de Apilamiento --- */
+.otro-ejemplo-zindex {
+  background-color: #fce4ec; /* Fondo rosa pálido */
+  margin-top: 60px;
+  padding: 30px;
+  min-height: 200px;
+  position: relative; /* Este es un contexto de apilamiento */
+}
+
+.otro-ejemplo-zindex p {
+  margin-top: 20px;
+  font-size: 0.9em;
+  color: #666;
+}
+
+.contenedor-padre-uno {
+  background-color: #bbdefb; /* Azul claro */
+  padding: 20px;
+  border: 2px dashed #64b5f6;
+  width: 40%;
+  margin: 20px auto;
+  position: relative; /* Crea su propio contexto de apilamiento */
+  z-index: 1; /* Bajo z-index para este padre */
+  float: left; /* Para que se pongan lado a lado */
+  margin-left: 5%;
+}
+
+.contenedor-padre-dos {
+  background-color: #c8e6c9; /* Verde claro */
+  padding: 20px;
+  border: 2px dashed #81c784;
+  width: 40%;
+  margin: 20px auto;
+  position: relative; /* Crea su propio contexto de apilamiento */
+  z-index: 2; /* Alto z-index para este padre */
+  float: right; /* Para que se pongan lado a lado */
+  margin-right: 5%;
+}
+
+.caja-hija-uno {
+  background-color: #f44336; /* Rojo */
+  color: white;
+  padding: 10px;
+  position: absolute;
+  top: 10px;
+  right: -10px; /* Se sale un poco para visualizar */
+  z-index: 100; /* Alto z-index DENTRO de su padre */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.caja-hija-dos {
+  background-color: #4caf50; /* Verde */
+  color: white;
+  padding: 10px;
+  position: absolute;
+  top: 10px;
+  right: -10px; /* Se sale un poco para visualizar */
+  z-index: 10; /* Bajo z-index DENTRO de su padre */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+/* Limpiar flotadores para que el contenido fluya correctamente */
+.otro-ejemplo-zindex::after {
+  content: "";
+  display: table;
+  clear: both;
+}

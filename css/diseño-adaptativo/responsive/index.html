@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Responsive, adaptive y fluid</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <header>
+      <h1>Diseños Web: Fluid, Responsive y Adaptive</h1>
+      <p>Explorando cómo las páginas se adaptan a diferentes dispositivos.</p>
+    </header>
+
+    <main>
+      <section class="section-fluid">
+        <h2>1. Diseño Fluido (`fluid`)</h2>
+        <p>
+          Este contenido utiliza anchos en porcentajes. Redimensiona la ventana
+          del navegador para ver cómo el texto y las imágenes se ajustan
+          proporcionalmente. No hay "saltos" abruptos, simplemente una escala
+          continua.
+        </p>
+        <div class="fluid-container">
+          <div class="fluid-box box-1">Box 1 (50% ancho)</div>
+          <div class="fluid-box box-2">Box 2 (40% ancho)</div>
+        </div>
+        <img
+          src="https://picsum.photos/id/282/200/300"
+          alt="Imagen Fluida"
+          class="fluid-image"
+        />
+        <p class="note">
+          Observa cómo los elementos se escalan de forma continua. En pantallas
+          muy pequeñas o muy grandes, esto puede no ser óptimo.
+        </p>
+      </section>
+
+      <section class="section-responsive">
+        <h2>2. Diseño Responsive (`responsive`)</h2>
+        <p>
+          Este diseño combina la fluidez con "breakpoints" (puntos de quiebre)
+          definidos por media queries. Redimensiona la ventana: en ciertos
+          anchos, el layout cambiará significativamente. Esto es el estándar
+          moderno.
+        </p>
+        <div class="responsive-grid">
+          <div class="responsive-item item-1">Item 1</div>
+          <div class="responsive-item item-2">Item 2</div>
+          <div class="responsive-item item-3">Item 3</div>
+          <div class="responsive-item item-4">Item 4</div>
+        </div>
+        <p class="note">
+          Arrastra el borde de la ventana. Verás que las columnas cambian de 4 a
+          2 y luego a 1 en puntos específicos, mientras se mantienen fluidas
+          entre esos puntos.
+        </p>
+      </section>
+
+      <section class="section-adaptive">
+        <h2>3. Diseño Adaptativo (`adaptive`)</h2>
+        <p>
+          El diseño adaptativo salta entre layouts fijos en puntos de quiebre
+          específicos. No hay fluidez entre ellos; el layout es más "rígido"
+          para cada breakpoint. Este ejemplo simula un layout para escritorio,
+          tablet y móvil.
+        </p>
+        <div class="adaptive-layout">
+          <div class="adaptive-header">Header Adaptativo</div>
+          <div class="adaptive-sidebar">Sidebar Adaptativo</div>
+          <div class="adaptive-content">
+            <h3>Contenido Principal Adaptativo</h3>
+            <p>
+              Este es el contenido principal. Observa cómo el sidebar se mueve y
+              el contenido se reorganiza solo en los breakpoints definidos, sin
+              cambios continuos.
+            </p>
+          </div>
+          <div class="adaptive-footer">Footer Adaptativo</div>
+        </div>
+        <p class="note">
+          Redimensiona la ventana. Verás que el layout cambia de golpe en 992px
+          y 768px, adaptándose a estructuras predefinidas para esos tamaños.
+        </p>
+      </section>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pseudoclases - Formulario</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>Pseudoclases de formulario</h1>
+
+    <form>
+      <!-- :placeholder-shown + :required + :valid/:invalid -->
+      <label>
+        Nombre (requerido):
+        <input
+          type="text"
+          name="nombre"
+          required
+          placeholder="Escribe tu nombre"
+        />
+      </label>
+
+      <!-- :optional -->
+      <label>
+        Apodo (opcional):
+        <input type="text" name="apodo" placeholder="Opcional" />
+      </label>
+
+      <!-- :in-range y :out-of-range -->
+      <label>
+        Edad (entre 18 y 99):
+        <input type="number" name="edad" min="18" max="99" />
+      </label>
+
+      <!-- :checked -->
+      <label>
+        <input type="checkbox" name="acepto" /> Acepto los términos
+      </label>
+
+      <!-- :disabled -->
+      <label>
+        Campo deshabilitado:
+        <input type="text" disabled value="No editable" />
+      </label>
+
+      <!-- :autofill — se activa en uso real, si el navegador autocompleta -->
+      <label>
+        Email:
+        <input type="email" name="email" autocomplete="email" />
+      </label>
+
+      <button type="submit">Enviar</button>
+    </form>
+  </body>
+</html>

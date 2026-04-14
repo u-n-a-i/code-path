@@ -1,0 +1,252 @@
+body {
+  margin: 0;
+  font-family: sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #f8f8f8;
+  padding-bottom: 50px;
+}
+
+header {
+  background: linear-gradient(
+    135deg,
+    #ff6f61 0%,
+    #ffd700 100%
+  ); /* Colores cálidos */
+  color: white;
+  text-align: center;
+  padding: 40px 20px;
+  margin-bottom: 30px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+  font-size: 2.8em;
+  margin-bottom: 10px;
+  color: white;
+}
+
+main {
+  max-width: 1200px; /* Ancho máximo para el contenido principal */
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+section {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 40px;
+  padding: 30px;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #e91e63; /* Rosa para títulos de sección */
+}
+
+p.note {
+  font-style: italic;
+  color: #555;
+  margin-top: 25px;
+  padding: 10px 15px;
+  background-color: #e0f2f7;
+  border-left: 4px solid #03a9f4;
+  border-radius: 4px;
+}
+
+/* --- 1. Diseño Fluido --- */
+.section-fluid {
+  background-color: #f7e8f9;
+}
+
+.fluid-container {
+  display: flex;
+  justify-content: center;
+  padding: 20px 0;
+  border: 1px dashed #e1bee7;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+.fluid-box {
+  padding: 20px;
+  text-align: center;
+  background-color: #ce93d8; /* Morado claro */
+  color: white;
+  margin: 0 1%; /* Márgenes fluidos */
+  box-sizing: border-box; /* Incluir padding y borde en el ancho */
+  flex-shrink: 0; /* No encogerse por defecto */
+}
+
+.fluid-box.box-1 {
+  width: 50%; /* Ancho fluido */
+}
+
+.fluid-box.box-2 {
+  width: 40%; /* Ancho fluido */
+  background-color: #ba68c8; /* Morado más oscuro */
+}
+
+.fluid-image {
+  max-width: 100%; /* La imagen nunca será más grande que su contenedor */
+  height: auto; /* Mantiene la proporción de aspecto */
+  display: block; /* Elimina espacio extra debajo de la imagen */
+  margin: 20px auto; /* Centra la imagen */
+  border: 3px solid #8e24aa;
+  border-radius: 5px;
+}
+
+/* --- 2. Diseño Responsive --- */
+.section-responsive {
+  background-color: #e8f5e9;
+}
+
+.responsive-grid {
+  display: grid;
+  /* Por defecto: 4 columnas fluidas para escritorio */
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+  padding: 20px 0;
+  border: 1px dashed #c8e6c9;
+  border-radius: 5px;
+}
+
+.responsive-item {
+  background-color: #4caf50; /* Verde */
+  color: white;
+  padding: 25px;
+  text-align: center;
+  font-weight: bold;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Breakpoint para tablet (máximo 992px) */
+@media (max-width: 992px) {
+  .responsive-grid {
+    /* En tablet, 2 columnas */
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+  .responsive-item {
+    font-size: 1.1em;
+    padding: 30px;
+  }
+}
+
+/* Breakpoint para móvil (máximo 768px) */
+@media (max-width: 768px) {
+  .responsive-grid {
+    /* En móvil, 1 columna */
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+  .responsive-item {
+    font-size: 1em;
+    padding: 20px;
+  }
+}
+
+/* --- 3. Diseño Adaptativo --- */
+.section-adaptive {
+  background-color: #e3f2fd;
+}
+
+/* Estilos por defecto para Escritorio (más de 992px) */
+.adaptive-layout {
+  display: grid;
+  grid-template-columns: 200px 1fr; /* Sidebar fijo, contenido fluido */
+  grid-template-rows: auto 1fr auto;
+  gap: 15px;
+  padding: 20px;
+  border: 1px dashed #90caf9;
+  border-radius: 5px;
+  min-height: 400px;
+  grid-template-areas:
+    "header header"
+    "sidebar content"
+    "footer footer";
+}
+
+.adaptive-header {
+  grid-area: header;
+  background-color: #2196f3; /* Azul */
+  color: white;
+  padding: 15px;
+  text-align: center;
+  font-weight: bold;
+  border-radius: 4px;
+}
+
+.adaptive-sidebar {
+  grid-area: sidebar;
+  background-color: #bbdefb; /* Azul claro */
+  padding: 15px;
+  border-radius: 4px;
+}
+
+.adaptive-content {
+  grid-area: content;
+  background-color: #e3f2fd; /* Más claro */
+  padding: 15px;
+  border-radius: 4px;
+}
+
+.adaptive-footer {
+  grid-area: footer;
+  background-color: #2196f3; /* Azul */
+  color: white;
+  padding: 15px;
+  text-align: center;
+  font-weight: bold;
+  border-radius: 4px;
+}
+
+/* Breakpoint para Tablet (entre 769px y 992px) */
+@media (max-width: 992px) {
+  .adaptive-layout {
+    /* Reconfigura el grid para tablet: Header, luego Sidebar, luego Contenido, luego Footer */
+    grid-template-columns: 1fr; /* Una sola columna */
+    grid-template-rows: auto auto 1fr auto;
+    grid-template-areas:
+      "header"
+      "sidebar"
+      "content"
+      "footer";
+    gap: 10px; /* Reduce el gap para tablet */
+    min-height: auto; /* La altura se ajusta */
+  }
+  .adaptive-sidebar {
+    order: 2; /* Cambia el orden visual para que sidebar aparezca después del header */
+  }
+  .adaptive-content {
+    order: 3;
+  }
+}
+
+/* Breakpoint para Móvil (menos de 768px) */
+@media (max-width: 768px) {
+  .adaptive-layout {
+    /* Reconfigura el grid para móvil: Solo header, contenido, footer. Sidebar oculto */
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr auto;
+    grid-template-areas:
+      "header"
+      "content"
+      "footer";
+    gap: 8px; /* Reduce el gap para móvil */
+  }
+  .adaptive-sidebar {
+    display: none; /* Oculta el sidebar en móvil (ejemplo de adaptive) */
+  }
+  .adaptive-header,
+  .adaptive-footer {
+    padding: 10px;
+    font-size: 0.9em;
+  }
+  .adaptive-content {
+    padding: 10px;
+  }
+}

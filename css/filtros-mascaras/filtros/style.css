@@ -1,0 +1,217 @@
+body {
+  margin: 0;
+  font-family: sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #f8f8f8;
+  padding-bottom: 50px;
+}
+
+header {
+  background: linear-gradient(
+    135deg,
+    #ff5733 0%,
+    #ffbd33 100%
+  ); /* Naranja a Amarillo */
+  color: white;
+  text-align: center;
+  padding: 40px 20px;
+  margin-bottom: 30px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+  font-size: 2.8em;
+  margin-bottom: 10px;
+  color: white;
+}
+
+main {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+section {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 40px;
+  padding: 30px;
+  text-align: center;
+}
+
+h2 {
+  margin-bottom: 20px;
+  color: #ff5733; /* Naranja rojizo */
+}
+
+h3 {
+  margin-top: 0;
+  margin-bottom: 15px;
+  color: #2c3e50;
+  font-size: 1.2em;
+}
+
+p {
+  margin-bottom: 20px;
+}
+
+/* --- Estilos Base para Contenedores y Cajas de Filtro --- */
+.filter-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  padding: 20px;
+  background-color: #f0f4c3; /* Fondo suave para la sección de filtros */
+  border-radius: 8px;
+  margin-top: 20px;
+}
+
+.filter-box {
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 15px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  width: 320px; /* Ancho fijo para las cajas */
+  box-sizing: border-box;
+}
+
+.filter-box img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 10px auto 0;
+  border-radius: 4px;
+  transition: filter 0.3s ease-in-out; /* Transición para el hover */
+}
+
+/* Estilos para las imágenes originales */
+.original-image {
+  filter: none; /* Asegura que no tenga filtros por defecto */
+}
+
+/* --- Aplicación de Filtros --- */
+
+/* blur() */
+.blur-filter {
+  filter: blur(5px);
+}
+.blur-filter:hover {
+  filter: blur(0px); /* Quita el filtro al pasar el ratón */
+}
+
+/* brightness() */
+.brightness-filter {
+  filter: brightness(1.5); /* 150% de brillo */
+}
+.brightness-filter:hover {
+  filter: brightness(1); /* Vuelve al brillo original */
+}
+
+/* contrast() */
+.contrast-filter {
+  filter: contrast(200%); /* 200% de contraste */
+}
+.contrast-filter:hover {
+  filter: contrast(100%);
+}
+
+/* grayscale() */
+.grayscale-filter {
+  filter: grayscale(100%); /* Completamente en escala de grises */
+}
+.grayscale-filter:hover {
+  filter: grayscale(0%);
+}
+
+/* hue-rotate() */
+.hue-rotate-filter {
+  filter: hue-rotate(90deg); /* Rotación de tono de 90 grados */
+}
+.hue-rotate-filter:hover {
+  filter: hue-rotate(0deg);
+}
+
+/* invert() */
+.invert-filter {
+  filter: invert(100%); /* Invierte completamente los colores */
+}
+.invert-filter:hover {
+  filter: invert(0%);
+}
+
+/* saturate() */
+.saturate-filter {
+  filter: saturate(300%); /* 300% de saturación */
+}
+.saturate-filter:hover {
+  filter: saturate(100%);
+}
+
+/* sepia() */
+.sepia-filter {
+  filter: sepia(100%); /* Completamente sepia */
+}
+.sepia-filter:hover {
+  filter: sepia(0%);
+}
+
+/* drop-shadow() */
+.drop-shadow-text-container {
+  background-color: #f0f0f0;
+  padding: 30px;
+  margin: 20px auto;
+  width: 250px;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.drop-shadow-text {
+  font-size: 2.5em;
+  font-weight: bold;
+  color: #333;
+  /* Sombra que sigue la forma del texto */
+  filter: drop-shadow(5px 5px 3px rgba(0, 0, 0, 0.4));
+  transition: filter 0.3s ease;
+}
+.drop-shadow-text:hover {
+  filter: drop-shadow(
+    8px 8px 5px rgba(0, 0, 0, 0.6)
+  ); /* Sombra más pronunciada al hover */
+}
+
+.drop-shadow-image-container {
+  background-color: #f0f0f0;
+  padding: 20px;
+  margin: 20px auto;
+  width: 200px;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.drop-shadow-image {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%; /* Para que la imagen sea redonda */
+  /* Sombra que sigue la forma del círculo */
+  filter: drop-shadow(0 0 10px rgba(233, 30, 99, 0.7));
+  transition: filter 0.3s ease;
+}
+.drop-shadow-image:hover {
+  filter: drop-shadow(0 0 20px rgba(233, 30, 99, 1));
+}
+
+/* Múltiples Filtros Combinados */
+.multiple-filters {
+  /* El orden de los filtros importa: se aplican de izquierda a derecha */
+  filter: blur(2px) grayscale(50%) contrast(150%) hue-rotate(45deg);
+}
+.multiple-filters:hover {
+  filter: none; /* Quita todos los filtros al pasar el ratón */
+}

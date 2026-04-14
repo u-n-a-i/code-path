@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Clip-path y Shape-outside</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <header>
+      <h1>`clip-path` y `shape-outside`: Control Total de Formas</h1>
+      <p>Aprende a recortar elementos y a envolver texto de manera creativa.</p>
+    </header>
+
+    <main>
+      <section>
+        <h2>`clip-path`: Recortes Creativos de Elementos</h2>
+        <p>
+          Pasa el ratón sobre las imágenes para ver las animaciones de recorte.
+        </p>
+        <div class="clip-path-examples">
+          <div class="clip-item">
+            <h3>Círculo Animado</h3>
+            <img
+              src="https://picsum.photos/id/400/400/300"
+              alt="Imagen con clip-path circle"
+              class="clip-img clip-circle-animated"
+            />
+          </div>
+          <div class="clip-item">
+            <h3>Rombo Interactivo</h3>
+            <img
+              src="https://picsum.photos/id/401/400/300"
+              alt="Imagen con clip-path polygon"
+              class="clip-img clip-rhombus-hover"
+            />
+          </div>
+          <div class="clip-item">
+            <h3>Flecha en el Borde</h3>
+            <img
+              src="https://picsum.photos/id/402/400/300"
+              alt="Imagen con clip-path arrow"
+              class="clip-img clip-arrow"
+            />
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h2>`shape-outside`: El Texto Fluye Alrededor</h2>
+        <p>
+          Observa cómo el texto de la derecha se adapta a la forma de la imagen
+          flotante, creando un efecto de maquetación de revista.
+        </p>
+        <div class="shape-outside-example">
+          <img
+            src="https://picsum.photos/id/403/300/300"
+            alt="Imagen flotante circular"
+            class="float-img float-circle"
+          />
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat. Duis aute irure dolor in
+            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+            culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum
+            dolor sit amet, consectetur adipiscing elit. Integer nec odio.
+            Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis
+            sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent
+            mauris. Fusce nec tellus sed augue semper porta. Mauris massa.
+            Vestibulum lacinia arcu eget nulla. Class aptent taciti sociosqu ad
+            litora torquent per conubia nostra, per inceptos himenaeos.
+            Curabitur sodales ligula in libero. Sed dignissim lacinia nunc.
+            Curabitur tortor. Pellentesque nibh. Aenean quam. In scelerisque sem
+            at dolor. Maecenas mattis. Sed convallis tristique sem. Proin ut
+            ligula vel nunc egestas porttitor. Morbi lectus risus, iaculis vel,
+            suscipit quis, luctus non, massa. Fusce ac turpis quis ligula
+            lacinia aliquet. Duis cursus, mi quis viverra ornare, eros dolor
+            interdum nulla, ut commodo diam libero vitae erat. Aenean faucibus
+            quam quis justo.
+          </p>
+        </div>
+        <div class="shape-outside-example">
+          <img
+            src="https://picsum.photos/id/404/300/300"
+            alt="Imagen flotante con forma de estrella"
+            class="float-img float-star"
+          />
+          <p>
+            Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec
+            id elit non mi porta gravida at eget metus. Nullam quis risus eget
+            urna mollis ornare vel eu leo. Curabitur blandit tempus porttitor.
+            Nullam id dolor id nibh ultricies vehicula ut id elit. Etiam porta
+            sem malesuada magna mollis euismod. Fusce dapibus, tellus ac cursus
+            commodo, tortor mauris condimentum nibh, ut fermentum massa justo
+            sit amet risus. Praesent commodo cursus magna, vel scelerisque nisl
+            consectetur et. Sed posuere consectetur est at lobortis. Vestibulum
+            id ligula porta felis euismod semper. Curabitur blandit tempus
+            porttitor. Nullam quis risus eget urna mollis ornare vel eu leo.
+            Maecenas sed diam eget risus varius blandit sit amet non magna. Duis
+            mollis, est non commodo luctus, nisi erat porttitor ligula, eget
+            lacinia odio sem nec elit. Aenean eu leo quam. Pellentesque ornare
+            sem lacinia quam venenatis vestibulum. Maecenas faucibus mollis
+            interdum. Nulla vitae elit libero, a pharetra augue.
+          </p>
+        </div>
+      </section>
+
+      <section>
+        <h2>Combinando `clip-path` y `shape-outside`</h2>
+        <p>
+          Aquí, la imagen no solo tiene una forma de nube (con `clip-path`),
+          sino que el texto también fluye alrededor de esa forma (gracias a
+          `shape-outside`).
+        </p>
+        <div class="combined-example">
+          <img
+            src="https://picsum.photos/id/405/350/250"
+            alt="Imagen de nube"
+            class="float-img float-cloud"
+          />
+          <p>
+            Donec ullamcorper nulla non metus auctor fringilla. Maecenas sed
+            diam eget risus varius blandit sit amet non magna. Aenean lacinia
+            bibendum nulla sed consectetur. Fusce dapibus, tellus ac cursus
+            commodo, tortor mauris condimentum nibh, ut fermentum massa justo
+            sit amet risus. Praesent commodo cursus magna, vel scelerisque nisl
+            consectetur et. Sed posuere consectetur est at lobortis. Vestibulum
+            id ligula porta felis euismod semper. Curabitur blandit tempus
+            porttitor. Nullam quis risus eget urna mollis ornare vel eu leo.
+            Maecenas sed diam eget risus varius blandit sit amet non magna. Duis
+            mollis, est non commodo luctus, nisi erat porttitor ligula, eget
+            lacinia odio sem nec elit. Aenean eu leo quam. Pellentesque ornare
+            sem lacinia quam venenatis vestibulum. Maecenas faucibus mollis
+            interdum. Nulla vitae elit libero, a pharetra augue. Lorem ipsum
+            dolor sit amet, consectetur adipiscing elit. Proin ut ligula vel
+            nunc egestas porttitor. Morbi lectus risus, iaculis vel, suscipit
+            quis, luctus non, massa.
+          </p>
+        </div>
+        <svg width="0" height="0" style="position: absolute; overflow: hidden">
+          <defs>
+            <clipPath id="cloudClip">
+              <path
+                d="M50 0 C20 0 0 20 0 50 C0 80 20 100 50 100 C80 100 100 80 100 50 C100 20 80 0 50 0 Z"
+              ></path>
+            </clipPath>
+          </defs>
+        </svg>
+      </section>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Transformaciones</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Explorando Transformaciones CSS (2D y 3D)</h1>
+      <p>Posición, rotación, escala e inclinación de elementos.</p>
+    </header>
+
+    <main>
+      <section>
+        <h2>Transformaciones 2D</h2>
+        <div class="transform-grid">
+          <div class="transform-box translate-example">Translate (Mover)</div>
+          <div class="transform-box scale-example">Scale (Escalar)</div>
+          <div class="transform-box rotate-example">Rotate (Rotar)</div>
+          <div class="transform-box skew-example">Skew (Inclinar)</div>
+        </div>
+      </section>
+
+      <section>
+        <h2>`transform-origin` (Punto de Origen de la Transformación)</h2>
+        <div class="transform-origin-container">
+          <div class="transform-box origin-center">
+            Origin: Center (Default)
+          </div>
+          <div class="transform-box origin-top-left">Origin: Top Left</div>
+          <div class="transform-box origin-bottom-right">
+            Origin: Bottom Right
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h2>Transformaciones 3D</h2>
+        <p>
+          Pasa el ratón para ver los efectos 3D. La `perspective` del contenedor
+          padre ayuda a visualizar la profundidad.
+        </p>
+        <div class="transform-3d-container">
+          <div class="transform-box rotateX-example">RotateX</div>
+          <div class="transform-box rotateY-example">RotateY</div>
+          <div class="transform-box translateZ-example">TranslateZ</div>
+          <div class="transform-box scale3d-example">Scale3d</div>
+        </div>
+      </section>
+
+      <section>
+        <h2>
+          `transform-style: preserve-3d` y `backface-visibility` (Tarjeta
+          Volteable)
+        </h2>
+        <p>
+          Haz clic en la tarjeta para voltearla y ver `preserve-3d` y
+          `backface-visibility` en acción.
+        </p>
+        <div class="card-flip-container">
+          <div class="card">
+            <div class="card-face card-front">
+              <h3>Frontal de la Tarjeta</h3>
+              <p>Contenido visible en la cara frontal.</p>
+              <button
+                onclick="this.closest('.card').classList.toggle('flipped')"
+              >
+                Voltear
+              </button>
+            </div>
+            <div class="card-face card-back">
+              <h3>Trasera de la Tarjeta</h3>
+              <p>Contenido visible en la cara trasera.</p>
+              <button
+                onclick="this.closest('.card').classList.toggle('flipped')"
+              >
+                Volver
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

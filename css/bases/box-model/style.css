@@ -1,0 +1,14 @@
+* {
+  /* Sin border-box = 200 + 40 + 10 */
+  box-sizing: border-box;
+  /* Con border-box = 150 + 40 + 10 */
+}
+
+.caja {
+  width: 200px;
+  padding: 20px;
+  border: 5px solid blue;
+  margin: 30px;
+  background-color: lightyellow;
+  outline: 3px solid red;
+}

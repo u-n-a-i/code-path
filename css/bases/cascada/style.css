@@ -1,0 +1,15 @@
+p {
+  color: blue;
+}
+
+.especial {
+  color: green;
+}
+
+#importante {
+  color: red;
+}
+
+p {
+  color: purple !important;
+}

@@ -1,0 +1,408 @@
+html {
+  font-size: 16px; /* Tamaño base para rem, por defecto la mayoría de navegadores tienen  16px */
+}
+
+body {
+  margin: 0;
+  font-family: sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #f8f8f8;
+  padding-bottom: 50px;
+}
+
+header {
+  background: linear-gradient(135deg, #007bff 0%, #00d4ff 100%);
+  color: white;
+  text-align: center;
+  padding: 40px 20px;
+  margin-bottom: 30px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+  font-size: 2.8em;
+  margin-bottom: 10px;
+  color: white;
+}
+
+main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+section {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 40px;
+  padding: 30px;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #3498db;
+}
+
+h3 {
+  text-align: center;
+  margin-top: 25px;
+  margin-bottom: 15px;
+  color: #2c3e50;
+  font-size: 1.3em;
+}
+
+p.note {
+  font-style: italic;
+  color: #555;
+  margin-top: 25px;
+  padding: 10px 15px;
+  background-color: #e0f2f7;
+  border-left: 4px solid #03a9f4;
+  border-radius: 4px;
+}
+
+.grid-item,
+.flex-item,
+.mq-item,
+.responsive-item,
+.cq-card div {
+  background-color: #6c757d;
+  color: white;
+  padding: 15px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 4px;
+  font-weight: bold;
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.2);
+}
+
+/* --- 1. Unidades Adaptativas --- */
+.section-units {
+  background-color: #e6f7e9;
+}
+
+.text-rem {
+  font-size: 1rem; /* 16px por defecto */
+  margin-bottom: 10px;
+}
+
+.text-em {
+  font-size: 1.2em; /* 1.2 * 16px = 19.2px por defecto */
+  margin-bottom: 10px;
+}
+
+.heading-vw {
+  font-size: 3vw; /* Escala con el 3% del ancho del viewport */
+  text-align: center;
+  color: #28a745;
+}
+
+.vw-height-div {
+  width: 80%;
+  height: 20vh; /* 20% de la altura del viewport */
+  background-color: #d4edda;
+  border: 1px solid #28aa45;
+  margin: 20px auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #28a745;
+  font-weight: bold;
+}
+
+.grid-fr-example {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr; /* La segunda columna es el doble de las otras */
+  gap: 10px;
+  margin-top: 20px;
+  padding: 15px;
+  background-color: #c3e6cb;
+  border-radius: 5px;
+}
+.grid-fr-example .grid-item {
+  background-color: #388e3c;
+}
+.grid-fr-example .two-fr {
+  background-color: #1a7b29;
+}
+
+/* --- 2. Media Queries --- */
+.section-media-queries {
+  background-color: #fce4ec;
+}
+
+.mq-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* Por defecto: 4 columnas */
+  gap: 15px;
+  padding: 20px 0;
+  background-color: #f8bbd0;
+  border-radius: 5px;
+}
+.mq-item {
+  background-color: #e91e63;
+}
+
+/* Breakpoint para pantallas medianas */
+@media (max-width: 992px) {
+  .section-media-queries {
+    background-color: #fffde7; /* Cambia de color */
+  }
+  .mq-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 columnas */
+    background-color: #fff9c4;
+  }
+  .mq-item {
+    background-color: #ffd700;
+  }
+}
+
+/* Breakpoint para pantallas pequeñas */
+@media (max-width: 600px) {
+  .section-media-queries {
+    background-color: #e0f7fa; /* Otro color */
+  }
+  .mq-grid {
+    grid-template-columns: 1fr; /* 1 columna */
+    background-color: #b2ebf2;
+  }
+  .mq-item {
+    background-color: #00bcd4;
+  }
+}
+
+/* --- 3. Container Queries --- */
+/* Asegúrate de tener un navegador con soporte para Container Queries (ej. Chrome 105+, Firefox 110+) */
+.section-container-queries {
+  background-color: #e8f5e9;
+}
+
+.cq-parent-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  padding: 20px;
+  background-color: #d4edda;
+  border: 2px dashed #28a745;
+  border-radius: 5px;
+}
+
+.cq-card {
+  background-color: white;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  min-width: 200px; /* Tamaño base para las tarjetas */
+  flex: 1 1 250px; /* Para que las tarjetas puedan crecer y encoger */
+
+  /* ** Define el contenedor para las container queries ** */
+  container-type: inline-size;
+  container-name: card-container; /* Nombre opcional para referencia */
+}
+
+.cq-card h3 {
+  margin-top: 10px;
+  margin-bottom: 5px;
+  font-size: 1.2em;
+  color: #3f51b5;
+}
+
+.cq-card p {
+  font-size: 0.9em;
+  color: #666;
+}
+
+.cq-card button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin-top: 15px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1em;
+}
+
+.cq-icon {
+  font-size: 2em;
+  margin-bottom: 10px;
+}
+
+/* ** Container Queries (aplicadas al .cq-card) ** */
+@container card-container (max-width: 250px) {
+  .cq-card h3 {
+    font-size: 0.9em; /* Título más pequeño */
+  }
+  .cq-card p {
+    display: none; /* Oculta el párrafo */
+  }
+  .cq-card button {
+    padding: 8px; /* Botón más pequeño */
+    font-size: 0.8em;
+  }
+  .cq-icon {
+    font-size: 1.5em; /* Icono más pequeño */
+  }
+}
+
+@container card-container (min-width: 400px) {
+  .cq-card {
+    padding: 30px;
+  }
+  .cq-card h3 {
+    font-size: 1.5em;
+  }
+  .cq-card p {
+    display: block;
+    font-size: 1em;
+  }
+  .cq-icon {
+    font-size: 3em;
+  }
+}
+
+/* Simulando tarjetas de diferentes tamaños para ver el efecto */
+.small-cq-card {
+  flex: 0 0 200px; /* Más pequeña */
+}
+.larger-cq-card {
+  flex: 0 0 450px; /* Más grande */
+}
+
+/* --- 4. Imágenes y Video Adaptativos --- */
+.section-media-optimization {
+  background-color: #fef3e4;
+}
+
+.responsive-image {
+  max-width: 100%; /* La imagen nunca desbordará su contenedor */
+  height: auto; /* Mantiene la proporción */
+  display: block; /* Elimina el espacio extra debajo */
+  margin: 20px auto;
+  border: 3px solid #f9a825;
+  border-radius: 8px;
+}
+
+.video-container {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%; /* Relación de aspecto 16:9 (altura es 56.25% del ancho) */
+  height: 0;
+  overflow: hidden;
+  background-color: black;
+  margin: 20px auto;
+  border-radius: 8px;
+}
+
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+/* --- 5. Tipografía Adaptativa --- */
+.section-typography {
+  background-color: #f7e8f9;
+}
+
+.typo-base {
+  font-size: 1rem;
+}
+
+.typo-rem {
+  font-size: 1.2rem; /* 1.2 * 16px = 19.2px */
+}
+
+.typo-clamp {
+  font-size: clamp(1.2rem, 3vw + 0.5rem, 3rem); /* min, ideal(vw), max */
+  text-align: center;
+  color: #9c27b0;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+/* --- 6. Flexbox y Grid (Flexible y Adaptable) --- */
+.section-flex-grid {
+  background-color: #e3f2fd;
+}
+
+.flex-responsive-container {
+  display: flex;
+  flex-wrap: wrap; /* Permite que los ítems se envuelvan */
+  justify-content: center;
+  gap: 15px;
+  padding: 20px;
+  background-color: #bbdefb;
+  border: 1px dashed #2196f3;
+  border-radius: 5px;
+}
+
+.flex-responsive-item {
+  flex: 1 1 200px; /* flex-grow, flex-shrink, flex-basis: Item flexible, base 200px */
+  min-width: 150px; /* Ancho mínimo para evitar que se hagan muy pequeños */
+  background-color: #2196f3;
+}
+
+.grid-responsive-container {
+  display: grid;
+  /* auto-fit: Se adapta al espacio, expandiendo si hay pocas columnas. */
+  /* minmax(250px, 1fr): Cada columna tiene un mínimo de 250px, si hay más espacio, lo distribuye equitativamente. */
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 15px;
+  padding: 20px;
+  background-color: #c8e6c9;
+  border: 1px dashed #4caf50;
+  border-radius: 5px;
+}
+
+.grid-responsive-item {
+  background-color: #4caf50;
+}
+
+/* --- 7. Rendimiento en Diseño Responsive --- */
+.section-performance {
+  background-color: #ffebee;
+}
+
+.performance-box {
+  width: 250px;
+  height: 100px;
+  margin: 20px auto;
+  background-color: #ef9a9a;
+  border: 2px solid #ef5350;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 0.9em;
+  transition: transform 0.3s ease-out, opacity 0.3s ease-out; /* Transición para ver will-change */
+}
+
+.will-change-example {
+  will-change: transform, opacity; /* Sugiere al navegador que estas propiedades cambiarán */
+}
+
+.will-change-example:hover {
+  transform: scale(1.1) rotate(5deg);
+  opacity: 0.8;
+}
+
+.contain-example {
+  contain: layout paint; /* Aisla los cálculos de layout y pintura */
+  /* Esto puede ser difícil de ver sin herramientas de desarrollador */
+  background-color: #a1887f;
+  border-color: #8d6e63;
+}

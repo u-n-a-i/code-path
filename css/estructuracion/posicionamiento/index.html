@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Posicionamiento</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <nav class="navbar-fixed">
+      <ul>
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#static-section">Static</a></li>
+        <li><a href="#relative-section">Relative</a></li>
+        <li><a href="#absolute-section">Absolute</a></li>
+        <li><a href="#fixed-section">Fixed</a></li>
+        <li><a href="#sticky-section">Sticky</a></li>
+      </ul>
+    </nav>
+
+    <header class="hero-section" id="inicio">
+      <h1>Entendiendo el Posicionamiento CSS</h1>
+      <p>
+        Un recorrido por `static`, `relative`, `absolute`, `fixed` y `sticky`.
+      </p>
+      <div class="fixed-button">
+        <a href="#">Contacto Rápido</a>
+      </div>
+    </header>
+
+    <main>
+      <section class="general-section" id="static-section">
+        <h2>1. Posicionamiento `static` (Por Defecto)</h2>
+        <p>
+          Este párrafo tiene `position: static`, que es el valor predeterminado.
+          Los elementos estáticos se posicionan según el flujo normal del
+          documento. Las propiedades `top`, `bottom`, `left`, `right` y
+          `z-index` no tienen ningún efecto aquí.
+        </p>
+        <div class="static-box">
+          <p>Soy una caja estática.</p>
+        </div>
+        <p>
+          El siguiente texto fluye normalmente después de la caja estática.
+          Puedes ver que la caja ocupa su espacio en el documento.
+        </p>
+      </section>
+
+      <section class="general-section" id="relative-section">
+        <h2>2. Posicionamiento `relative`</h2>
+        <p>
+          Este es un texto normal antes de la caja con `position: relative`.
+        </p>
+        <div class="relative-container">
+          <div class="relative-box">
+            <p>Soy una caja **relativa**.</p>
+            <div class="relative-shifted-box">
+              <p>
+                Me moví 20px a la derecha y 20px abajo de mi posición normal.
+              </p>
+            </div>
+          </div>
+          <p>
+            A pesar de que la caja interna `relative-shifted-box` se movió, la
+            `relative-box` original **sigue ocupando su espacio** en el flujo
+            normal, como puedes ver con este texto que la rodea.
+          </p>
+        </div>
+        <p>
+          Este texto viene después del contenedor relativo. Observa que el
+          espacio de `relative-box` sigue ocupado.
+        </p>
+      </section>
+
+      <section class="general-section" id="absolute-section">
+        <h2>3. Posicionamiento `absolute`</h2>
+        <p>
+          Un elemento con `position: absolute` se saca del flujo normal del
+          documento. Esto significa que otros elementos se comportarán como si
+          no existiera.
+        </p>
+        <div class="absolute-parent">
+          <h3>Soy el padre posicionado (`relative`)</h3>
+          <p>Mi hijo `absolute` se posicionará relativo a mí.</p>
+          <div class="absolute-box">
+            <p>Soy una caja **absoluta**.</p>
+            <p>
+              Estoy a 10px del borde derecho y 10px del borde inferior de mi
+              padre posicionado.
+            </p>
+          </div>
+          <p>
+            El texto en el padre fluye como si la caja absoluta no estuviera. El
+            espacio que "ocuparía" la caja absoluta es ignorado por los demás
+            elementos. Esto es crucial para entender la diferencia con
+            `relative`.
+          </p>
+          <p style="margin-top: 100px">
+            Más contenido para mostrar el flujo...
+          </p>
+        </div>
+        <p>
+          Este párrafo está fuera del padre. Se posiciona después del contenedor
+          padre.
+        </p>
+      </section>
+
+      <section class="general-section dummy-content">
+        <h2>Contenido de Relleno</h2>
+        <p>
+          Este contenido existe para permitir el scroll y observar los efectos
+          de `position: fixed` y `position: sticky`. ¡Sigue haciendo scroll!
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex ea commodo consequat.
+        </p>
+        <p>
+          Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
+          dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+          proident, sunt in culpa qui officia deserunt mollit anim id est
+          laborum.
+        </p>
+        <p>
+          Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+          accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae
+          ab illo inventore veritatis et quasi architecto beatae vitae dicta
+          sunt explicabo.
+        </p>
+        <p>
+          Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut
+          fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem
+          sequi nesciunt.
+        </p>
+        <p>
+          Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet,
+          consectetur, adipisci velit, sed quia non numquam eius modi tempora
+          incidunt ut labore et dolore magnam aliquam quaerat voluptatem.
+        </p>
+      </section>
+
+      <section class="general-section" id="fixed-section">
+        <h2>4. Posicionamiento `fixed`</h2>
+        <p>
+          Este elemento con `position: fixed` está siempre visible en la
+          pantalla, sin importar cuánto hagas scroll. Es útil para barras de
+          navegación o botones de acción flotantes.
+        </p>
+        <div class="fixed-box">
+          <p>¡Soy fijo!</p>
+          <p>Siempre en la misma posición.</p>
+        </div>
+        <p>
+          El texto de la sección fluye normalmente, como si la caja fija no
+          existiera. La caja fija se posiciona con respecto al viewport (la
+          ventana del navegador).
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex ea commodo consequat.
+        </p>
+        <p>
+          Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
+          dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+          proident, sunt in culpa qui officia deserunt mollit anim id est
+          laborum.
+        </p>
+      </section>
+
+      <section class="general-section dummy-content">
+        <h2>Más Contenido de Relleno</h2>
+        <p>Scroll, scroll, scroll... para llegar a la sección `sticky`.</p>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex ea commodo consequat.
+        </p>
+        <p>
+          Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
+          dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+          proident, sunt in culpa qui officia deserunt mollit anim id est
+          laborum.
+        </p>
+      </section>
+
+      <section class="general-section" id="sticky-section">
+        <h2>5. Posicionamiento `sticky`</h2>
+        <div class="sticky-header">
+          <h3>Este encabezado se pegará al tope</h3>
+        </div>
+        <p>
+          Este encabezado `sticky` se comportará como un elemento normal
+          (`static` o `relative`) hasta que su posición de desplazamiento cruce
+          el umbral (`top: 0` en este caso). Luego se "pegará" a esa posición
+          como si fuera `fixed`.
+        </p>
+        <p>
+          ¡Sigue haciendo scroll hacia abajo para ver el efecto! El encabezado
+          se mantendrá visible mientras su contenedor padre esté en la vista.
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex ex ea commodo consequat.
+        </p>
+        <p>
+          Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
+          dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+          proident, sunt in culpa qui officia deserunt mollit anim id est
+          laborum.
+        </p>
+        <p>
+          Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+          accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae
+          ab illo inventore veritatis et quasi architecto beatae vitae dicta
+          sunt explicabo.
+        </p>
+        <p>
+          Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut
+          fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem
+          sequi nesciunt.
+        </p>
+        <p>
+          Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet,
+          consectetur, adipisci velit, sed quia non numquam eius modi tempora
+          incidunt ut labore et dolore magnam aliquam quaerat voluptatem.
+        </p>
+      </section>
+
+      <section class="general-section dummy-content">
+        <h2>Fin del Contenido de Relleno</h2>
+        <p>
+          Esto es para asegurar suficiente scroll y probar todos los tipos de
+          posicionamiento.
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex ex ea commodo consequat.
+        </p>
+        <p>
+          Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
+          dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+          proident, sunt in culpa qui officia deserunt mollit anim id est
+          laborum.
+        </p>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2025 Ejemplo de Posicionamiento CSS</p>
+    </footer>
+  </body>
+</html>

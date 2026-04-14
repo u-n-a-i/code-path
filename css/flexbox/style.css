@@ -1,0 +1,270 @@
+body {
+  margin: 0;
+  font-family: sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #f8f8f8;
+  padding-bottom: 50px;
+}
+
+header {
+  background: linear-gradient(135deg, #007bff 0%, #00d4ff 100%);
+  color: white;
+  text-align: center;
+  padding: 40px 20px;
+  margin-bottom: 30px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+  font-size: 2.8em;
+  margin-bottom: 10px;
+  color: white;
+}
+
+main {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+section {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 40px;
+  padding: 30px;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #3498db;
+}
+
+h3 {
+  text-align: center;
+  margin-top: 25px;
+  margin-bottom: 15px;
+  color: #2c3e50;
+  font-size: 1.3em;
+}
+
+/* --- Estilos Base para Contenedores Flex --- */
+.flex-container {
+  border: 2px solid #ccc;
+  padding: 10px;
+  margin-bottom: 25px;
+  background-color: #eef;
+  display: flex; /* Valor por defecto para la mayoría de los ejemplos */
+  min-height: 100px; /* Altura mínima para visualizar alineaciones verticales */
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+/* --- Estilos Base para Items Flex --- */
+.flex-item {
+  background-color: #6c757d; /* Gris oscuro */
+  color: white;
+  padding: 15px;
+  margin: 5px;
+  text-align: center;
+  min-width: 80px;
+  height: 60px; /* Altura fija para algunos ejemplos */
+  display: flex; /* Para centrar texto dentro del item */
+  justify-content: center;
+  align-items: center;
+  border-radius: 4px;
+  font-weight: bold;
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.2);
+}
+
+/* Colores para diferenciar items */
+.flex-item:nth-child(even) {
+  background-color: #007bff; /* Azul */
+}
+.flex-item:nth-child(odd) {
+  background-color: #28a745; /* Verde */
+}
+
+/* --- Configuración del Contenedor Flex --- */
+.display-flex-example {
+  /* display: flex; ya está en .flex-container */
+  width: 100%; /* Asegura que sea de bloque */
+}
+
+.display-inline-flex-example {
+  display: inline-flex; /* Convierte el contenedor en inline-flex */
+  width: auto; /* Se ajusta al contenido */
+  vertical-align: top; /* Para alinear múltiples inline-flex */
+  margin-right: 15px;
+}
+
+/* --- Dirección del Contenido --- */
+.flex-direction-row {
+  flex-direction: row; /* Default */
+}
+.flex-direction-row-reverse {
+  flex-direction: row-reverse;
+}
+.flex-direction-column {
+  flex-direction: column;
+  min-height: 200px; /* Más alto para ver columnas */
+}
+.flex-direction-column-reverse {
+  flex-direction: column-reverse;
+  min-height: 200px; /* Más alto para ver columnas */
+}
+
+.flex-wrap-nowrap {
+  flex-wrap: nowrap; /* Default - puede desbordar */
+  overflow-x: auto; /* Para ver el desbordamiento si la pantalla es pequeña */
+}
+.flex-item.wide {
+  min-width: 150px;
+}
+.flex-wrap-wrap {
+  flex-wrap: wrap; /* Envuelve los items en varias líneas */
+}
+
+.flex-flow-column-wrap {
+  flex-flow: column wrap; /* Dirección de columna y envuelve */
+  height: 300px; /* Necesario para que envuelva en columnas */
+  align-content: flex-start; /* Para que las columnas se peguen a la izquierda */
+}
+
+/* --- Alineación Horizontal (`justify-content`) --- */
+.justify-flex-start {
+  justify-content: flex-start;
+}
+.justify-flex-end {
+  justify-content: flex-end;
+}
+.justify-center {
+  justify-content: center;
+}
+.justify-space-between {
+  justify-content: space-between;
+}
+.justify-space-around {
+  justify-content: space-around;
+}
+.justify-space-evenly {
+  justify-content: space-evenly;
+}
+
+/* --- Alineación Vertical (`align-items` y `align-content`) --- */
+.align-items-stretch {
+  align-items: stretch; /* Default - los items se estiran (si no tienen height fijo) */
+  height: 120px;
+}
+.flex-item.tall {
+  height: 80px; /* Algunas cajas más altas para ver el estiramiento */
+}
+.align-items-flex-start {
+  align-items: flex-start;
+  height: 120px;
+}
+.align-items-flex-end {
+  align-items: flex-end;
+  height: 120px;
+}
+.align-items-center {
+  align-items: center;
+  height: 120px;
+}
+.align-items-baseline {
+  align-items: baseline;
+  height: 120px;
+}
+.flex-item.large-text {
+  font-size: 1.8em; /* Para ver el efecto de baseline */
+  padding: 10px;
+}
+
+/* Para align-content, necesitamos flex-wrap: wrap y espacio vertical */
+.align-content-flex-start,
+.align-content-center,
+.align-content-space-between {
+  flex-wrap: wrap;
+  height: 250px; /* Altura para múltiples líneas */
+  align-items: flex-start; /* Alinea items a la parte superior de su línea */
+}
+.align-content-flex-start {
+  align-content: flex-start;
+}
+.align-content-center {
+  align-content: center;
+}
+.align-content-space-between {
+  align-content: space-between;
+}
+
+/* --- Estilos y Comportamiento de los Hijos --- */
+.flex-grow-example .flex-item {
+  width: 100px; /* Ancho base */
+}
+.flex-grow-example .grow-2 {
+  flex-grow: 2; /* Crece el doble que los otros */
+  background-color: #ffc107; /* Amarillo */
+}
+.flex-grow-example .flex-item:not(.grow-2) {
+  flex-grow: 1; /* Los demás crecen 1 */
+}
+
+.flex-shrink-example .flex-item {
+  width: 150px; /* Ancho base */
+  flex-shrink: 1; /* Por defecto, encogen */
+}
+.flex-shrink-example .no-shrink {
+  flex-shrink: 0; /* No se encoge */
+  background-color: #dc3545; /* Rojo */
+}
+
+.flex-basis-example .basis-auto {
+  flex-basis: auto; /* Por defecto, basado en el contenido o width */
+  background-color: #17a2b8; /* Turquesa */
+}
+.flex-basis-example .basis-100px {
+  flex-basis: 100px; /* Tamaño inicial de 100px */
+  background-color: #6f42c1; /* Púrpura */
+}
+.flex-basis-example .basis-20p {
+  flex-basis: 20%; /* Tamaño inicial del 20% del contenedor */
+  background-color: #fd7e14; /* Naranja */
+}
+
+.order-example .flex-item {
+  background-color: #6c757d;
+}
+.order-example .order-1 {
+  order: 1;
+  background-color: #007bff;
+}
+.order-example .order-2 {
+  order: 2;
+  background-color: #28a745;
+}
+.order-example .order-3 {
+  order: 3;
+  background-color: #ffc107;
+}
+
+.align-self-example {
+  height: 200px; /* Contenedor con altura para ver la alineación */
+  align-items: flex-start; /* Alineación por defecto del contenedor */
+}
+.align-self-example .flex-item {
+  height: 70px; /* Altura más pequeña para los items */
+}
+.align-self-example .self-start {
+  align-self: flex-start; /* Se alinea al inicio (igual que el contenedor) */
+  background-color: #28a745;
+}
+.align-self-example .self-end {
+  align-self: flex-end; /* Se alinea al final */
+  background-color: #dc3545;
+}
+.align-self-example .self-center {
+  align-self: center; /* Se alinea al centro */
+  background-color: #ffc107;
+}

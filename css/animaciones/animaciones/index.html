@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Animaciones</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <header>
+      <h1>Explorando Animaciones CSS</h1>
+      <p>Creando movimiento dinámico con `@keyframes`.</p>
+    </header>
+
+    <main>
+      <section>
+        <h2>Animación Básica</h2>
+        <p>
+          Un cuadro que se mueve de izquierda a derecha y viceversa
+          indefinidamente.
+        </p>
+        <div class="animation-box basic-animation">¡Anímate!</div>
+      </section>
+
+      <section>
+        <h2>Control de Duración y Curva de Velocidad</h2>
+        <p>
+          Diferentes duraciones y `timing-function` para la misma animación de
+          giro.
+        </p>
+        <div class="animation-container">
+          <div class="animation-box spin-animation-slow">
+            Giro Lento (Linear)
+          </div>
+          <div class="animation-box spin-animation-fast">
+            Giro Rápido (Ease-in-out)
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h2>`animation-delay` y `animation-iteration-count`</h2>
+        <p>
+          Un cuadro que aparece después de un retraso y parpadea un número
+          limitado de veces.
+        </p>
+        <div class="animation-box blink-animation">Parpadeo (x3)</div>
+      </section>
+
+      <section>
+        <h2>`animation-direction` (`alternate` y `reverse`)</h2>
+        <p>
+          Observa cómo la animación se reproduce hacia adelante y hacia atrás en
+          cada ciclo.
+        </p>
+        <div class="animation-box alternate-animation">Alternate Direction</div>
+        <div class="animation-box reverse-animation">Reverse Direction</div>
+      </section>
+
+      <section>
+        <h2>`animation-fill-mode` (Estado Final)</h2>
+        <p>
+          Controla qué ocurre con el elemento antes y después de la animación.
+        </p>
+        <div class="animation-container fill-mode-container">
+          <div class="animation-box fill-mode-none">None (Default)</div>
+          <div class="animation-box fill-mode-forwards">Forwards</div>
+          <div class="animation-box fill-mode-backwards">Backwards</div>
+          <div class="animation-box fill-mode-both">Both</div>
+        </div>
+      </section>
+
+      <section>
+        <h2>`animation-play-state` (Pausar/Reanudar)</h2>
+        <p>Pasa el ratón sobre el cuadro para pausar la animación.</p>
+        <div class="animation-box play-state-animation">
+          Pasa el ratón para pausar
+        </div>
+      </section>
+
+      <section>
+        <h2>Ejemplo Combinado: Loader/Spinner</h2>
+        <p>Un loader clásico que utiliza múltiples propiedades de animación.</p>
+        <div class="loader"></div>
+      </section>
+    </main>
+  </body>
+</html>

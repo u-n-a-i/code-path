@@ -1,0 +1,180 @@
+/* --- @charset: Siempre debe ser la primera regla en el archivo --- */
+@charset "UTF-8";
+
+/* --- @layer: Definición del orden de las capas de CSS --- */
+/* Las capas se aplican en el orden en que se definen.
+   "base" es la primera, luego "components", "layout", etc.
+   Esto ayuda a controlar la especificidad y la cascada. */
+@layer base, components, layout, animations, utilities, overrides;
+
+/* --- @import: Importa el archivo _base.css en la capa "base" --- */
+/* Es importante colocar los @import dentro de @layer si quieres que se apliquen a esa capa.
+   Si está fuera, se importará al principio de todas las capas. */
+@import url("_base.css") layer(base);
+
+/* --- @font-face: Carga una fuente personalizada --- */
+/* Esta fuente será usada por la clase .custom-font-text */
+@font-face {
+  font-family: "Playfair Display";
+  src: url("https://fonts.gstatic.com/s/playfairdisplay/v30/nuFv-zHQKqWzTwHNmGoudK1EaO7C.woff2")
+    format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap; /* swap: La fuente de respaldo se muestra mientras la nueva se carga */
+}
+
+@font-face {
+  font-family: "Playfair Display";
+  src: url("https://fonts.gstatic.com/s/playfairdisplay/v30/nuFr-zHQKqWzTwHNmGoudK1EaO5fMvY.woff2")
+    format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* --- Estilos Generales (fuera de capas específicas, se aplican según la cascada normal) --- */
+header {
+  background: linear-gradient(135deg, #007bff 0%, #00d4ff 100%);
+  color: white;
+  text-align: center;
+  padding: 40px 20px;
+  margin-bottom: 30px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+  font-size: 2.8em;
+  color: white;
+}
+
+main {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.content-section {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 40px;
+  padding: 30px;
+  text-align: center;
+}
+
+h2 {
+  margin-bottom: 20px;
+  color: #007bff;
+}
+
+/* --- @keyframes: Definición de una animación --- */
+/* Esta animación se usará en el encabezado */
+@keyframes slideInFromLeft {
+  from {
+    transform: translateX(
+      -100%
+    ); /* Empieza fuera de la pantalla a la izquierda */
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0); /* Termina en su posición original */
+    opacity: 1;
+  }
+}
+
+/* Aplicar la animación a la clase animated-heading */
+@layer animations {
+  .animated-heading {
+    animation: slideInFromLeft 1s ease-out forwards; /* 1 segundo, easing, se queda al final */
+  }
+}
+
+/* --- Estilos para la sección de @media --- */
+.responsive-box {
+  display: flex; /* Por defecto, usa flexbox */
+  gap: 15px;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.box-item {
+  background-color: #28a745; /* Verde */
+  color: white;
+  padding: 20px;
+  border-radius: 5px;
+  flex: 1; /* Todos los ítems ocupan el mismo espacio */
+  max-width: 200px;
+}
+
+/* --- @media: Puntos de ruptura para diseño responsive --- */
+@media screen and (max-width: 768px) {
+  /* Para pantallas más pequeñas que 768px */
+  header h1 {
+    font-size: 2em; /* Encabezado más pequeño */
+  }
+  .content-section {
+    padding: 20px;
+  }
+  .responsive-box {
+    flex-direction: column; /* Apila los ítems en pantallas pequeñas */
+    align-items: center; /* Centra los ítems apilados */
+  }
+  .box-item {
+    max-width: 90%; /* Los ítems ocupan más ancho */
+  }
+}
+
+@media print {
+  /* Estilos específicos para impresión */
+  body {
+    font-family: serif;
+    color: black;
+    background-color: white;
+  }
+  header,
+  footer,
+  .content-section h2 {
+    display: none; /* Oculta elementos no necesarios para la impresión */
+  }
+  .content-section p {
+    font-size: 1.2em;
+    margin-bottom: 0.8em;
+  }
+}
+
+/* --- Estilos para la sección de @font-face --- */
+.custom-font-text {
+  font-family: "Playfair Display", serif; /* Usa la fuente cargada */
+  font-size: 1.8em;
+  color: #6a0572; /* Color distintivo */
+  margin-top: 15px;
+}
+.custom-font-text span {
+  font-weight: 700; /* Aplica el peso bold de la fuente cargada */
+}
+
+/* --- @supports: Detección de características --- */
+.supports-text {
+  padding: 15px;
+  border-radius: 8px;
+  background-color: #f0f8ff; /* Fondo por defecto */
+  transition: background-color 0.3s ease;
+}
+
+@supports (display: flex) {
+  /* Si el navegador soporta flexbox */
+  .supports-text {
+    background-color: #d4edda; /* Fondo verde claro */
+    border: 1px solid #28a745;
+    color: #155724;
+  }
+}
+
+@supports not (display: flex) {
+  /* Si el navegador NO soporta flexbox */
+  .supports-text {
+    background-color: #ffe8d4; /* Fondo naranja claro */
+    border: 1px solid #ff9800;
+    color: #8b4513;
+  }
+}

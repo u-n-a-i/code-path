@@ -1,0 +1,55 @@
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+/* :link -> enlaces que NO han sido visitados */
+a:link {
+  color: blue;
+}
+
+/* :visited -> enlaces ya visitados */
+a:visited {
+  color: purple;
+}
+
+/* :hover -> al pasar el mouse */
+a:hover {
+  text-decoration: underline;
+  background-color: lightcoral;
+}
+
+/* :active -> mientras haces clic */
+a:active {
+  color: red;
+}
+
+/* :target -> cuando el id es referenciado por la URL (#seccion) */
+#seccion:target {
+  background-color: lightgreen;
+  border: 2px solid green;
+}
+
+/* :focus -> cuando el elemento está enfocado */
+input:focus {
+  outline: 2px solid royalblue;
+  background-color: #eef;
+}
+
+/* :focus-visible -> solo si es visible (teclado, no ratón) */
+input:focus-visible {
+  border: 2px dashed orangered;
+}
+
+/* :focus-within -> cuando un elemento contiene un hijo enfocado */
+.formulario:focus-within {
+  background-color: #f0f8ff;
+  border: 2px solid skyblue;
+}
+
+/* Estética general */
+section {
+  margin-bottom: 2rem;
+  padding: 1rem;
+  border: 1px solid #ccc;
+}

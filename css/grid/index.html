@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Grid</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Explorando CSS Grid Layout</h1>
+      <p>El poder del diseño bidimensional en la web.</p>
+    </header>
+
+    <main>
+      <section>
+        <h2>`display: grid` y `display: inline-grid`</h2>
+        <h3>`display: grid;` (Bloque)</h3>
+        <div class="grid-container display-grid-example">
+          <div class="grid-item">Item 1</div>
+          <div class="grid-item">Item 2</div>
+          <div class="grid-item">Item 3</div>
+        </div>
+        <p>Este contenedor `grid` ocupa todo el ancho disponible.</p>
+
+        <h3>`display: inline-grid;` (En línea)</h3>
+        <div class="grid-container display-inline-grid-example">
+          <div class="grid-item">Item A</div>
+          <div class="grid-item">Item B</div>
+        </div>
+        <div class="grid-container display-inline-grid-example">
+          <div class="grid-item">Item C</div>
+          <div class="grid-item">Item D</div>
+        </div>
+        <p>
+          Estos contenedores `inline-grid` se comportan como elementos en línea.
+        </p>
+      </section>
+
+      <section>
+        <h2>Definición de la Estructura</h2>
+        <h3>`grid-template-columns` y `grid-template-rows`</h3>
+        <div class="grid-container template-example">
+          <div class="grid-item">Header</div>
+          <div class="grid-item">Sidebar</div>
+          <div class="grid-item">Content</div>
+          <div class="grid-item">Footer</div>
+        </div>
+
+        <h3>`gap` (Espaciado)</h3>
+        <div class="grid-container gap-example">
+          <div class="grid-item">1</div>
+          <div class="grid-item">2</div>
+          <div class="grid-item">3</div>
+          <div class="grid-item">4</div>
+        </div>
+      </section>
+
+      <section>
+        <h2>Comportamiento Automático</h2>
+        <h3>`grid-auto-columns` y `grid-auto-rows`</h3>
+        <div class="grid-container auto-tracks-example">
+          <div class="grid-item">Item 1</div>
+          <div class="grid-item">Item 2</div>
+          <div class="grid-item" style="grid-column: 5">Item 3 (col 5)</div>
+          <div class="grid-item" style="grid-row: 3">Item 4 (row 3)</div>
+        </div>
+
+        <h3>`grid-auto-flow: column;`</h3>
+        <div class="grid-container auto-flow-column-example">
+          <div class="grid-item">1</div>
+          <div class="grid-item">2</div>
+          <div class="grid-item">3</div>
+          <div class="grid-item">4</div>
+          <div class="grid-item">5</div>
+          <div class="grid-item">6</div>
+        </div>
+
+        <h3>`auto-fill` vs `auto-fit` (con `repeat` y `minmax`)</h3>
+        <h4>`auto-fill`</h4>
+        <div class="grid-container auto-fill-example">
+          <div class="grid-item">Item 1</div>
+          <div class="grid-item">Item 2</div>
+          <div class="grid-item">Item 3</div>
+        </div>
+        <p>
+          Observa que `auto-fill` puede crear columnas vacías si hay espacio,
+          manteniendo el tamaño mínimo.
+        </p>
+
+        <h4>`auto-fit`</h4>
+        <div class="grid-container auto-fit-example">
+          <div class="grid-item">Item 1</div>
+          <div class="grid-item">Item 2</div>
+          <div class="grid-item">Item 3</div>
+        </div>
+        <p>
+          Observa que `auto-fit` expande las columnas para llenar el espacio,
+          colapsando las vacías.
+        </p>
+      </section>
+
+      <section>
+        <h2>
+          Manipulación de Líneas (`grid-row`, `grid-column`, `span`,
+          `grid-area`)
+        </h2>
+        <div class="grid-container line-manipulation-example">
+          <div class="grid-item header-item">Header (col 1 / -1)</div>
+          <div class="grid-item nav-item">Nav (row 2 / span 2)</div>
+          <div class="grid-item main-item">
+            Main Content (row 2 / col 2 / span 3)
+          </div>
+          <div class="grid-item sidebar-item">Sidebar</div>
+          <div class="grid-item footer-item">Footer (grid-area)</div>
+        </div>
+      </section>
+
+      <section>
+        <h2>Alineación y Espaciado (Contenedor y Elementos)</h2>
+        <h3>
+          Alineación en el Contenedor (`justify-items`, `align-items`,
+          `place-items`)
+        </h3>
+        <div class="grid-container align-items-justify-items-example">
+          <div class="grid-item start">Item Start</div>
+          <div class="grid-item end">Item End</div>
+          <div class="grid-item center">Item Center</div>
+          <div class="grid-item stretch">Item Stretch</div>
+        </div>
+
+        <h3>
+          Distribución de la Cuadrícula (`justify-content`, `align-content`,
+          `place-content`)
+        </h3>
+        <div class="grid-container justify-align-content-example">
+          <div class="grid-item">1</div>
+          <div class="grid-item">2</div>
+          <div class="grid-item">3</div>
+          <div class="grid-item">4</div>
+        </div>
+
+        <h3>
+          Alineación Individual de Hijos (`justify-self`, `align-self`,
+          `place-self`)
+        </h3>
+        <div class="grid-container align-self-justify-self-example">
+          <div class="grid-item item-start">Item Start</div>
+          <div class="grid-item item-end">Item End</div>
+          <div class="grid-item item-center">Item Center</div>
+          <div class="grid-item item-stretch">Item Stretch</div>
+        </div>
+      </section>
+
+      <section>
+        <h2>Subgrid (`display: subgrid`)</h2>
+        <p>
+          `Subgrid` permite que un ítem de cuadrícula actúe como un contenedor
+          de cuadrícula, pero sus pistas se alinean con las pistas de su padre.
+          (Soporte de navegador en mejora). Para ver este ejemplo funcionar
+          correctamente, necesitarás un navegador con soporte completo para
+          subgrid (ej. Firefox).
+        </p>
+        <div class="grid-container main-grid-subgrid-example">
+          <div class="grid-item parent-item-1">
+            <div class="subgrid-container">
+              <div class="subgrid-item">Sub 1.1</div>
+              <div class="subgrid-item">Sub 1.2</div>
+            </div>
+          </div>
+          <div class="grid-item parent-item-2">
+            <div class="subgrid-container">
+              <div class="subgrid-item">Sub 2.1</div>
+              <div class="subgrid-item">Sub 2.2</div>
+            </div>
+          </div>
+          <div class="grid-item parent-item-3">Elemento Adicional</div>
+          <div class="grid-item parent-item-4">Otro Elemento</div>
+        </div>
+        <p class="note">
+          En este ejemplo, `.subgrid-container` es un ítem de la cuadrícula
+          principal y a su vez es un contenedor subgrid, alineando sus hijos con
+          las pistas de columna de `.main-grid-subgrid-example`.
+        </p>
+      </section>
+    </main>
+  </body>
+</html>

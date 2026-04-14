@@ -1,0 +1,222 @@
+body {
+  margin: 0;
+  font-family: sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #f8f8f8;
+  padding-bottom: 50px;
+}
+
+header {
+  background: linear-gradient(
+    135deg,
+    #ff6f61 0%,
+    #ffd700 100%
+  ); /* Tonos cálidos */
+  color: white;
+  text-align: center;
+  padding: 40px 20px;
+  margin-bottom: 30px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+  font-size: 2.8em;
+  margin-bottom: 10px;
+  color: white;
+}
+
+main {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+section {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 40px;
+  padding: 30px;
+  text-align: center;
+}
+
+h2 {
+  margin-bottom: 20px;
+  color: #ff6f61; /* Naranja rojizo */
+}
+
+h3 {
+  margin-top: 0;
+  margin-bottom: 15px;
+  color: #2c3e50;
+  font-size: 1.2em;
+}
+
+p {
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+/* --- `clip-path` Ejemplos --- */
+.clip-path-examples {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  padding: 20px;
+  background-color: #fbe9e7; /* Rosa claro */
+  border-radius: 8px;
+  margin-top: 20px;
+}
+
+.clip-item {
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 15px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  width: 380px; /* Ancho fijo para las cajas */
+  box-sizing: border-box;
+}
+
+.clip-img {
+  max-width: 100%;
+  height: 250px; /* Altura fija para consistencia */
+  object-fit: cover; /* Asegura que la imagen cubra el espacio */
+  display: block;
+  margin: 10px auto 0;
+  border-radius: 4px;
+  transition: clip-path 0.5s ease-out; /* Transición suave para el recorte */
+}
+
+/* Círculo Animado */
+.clip-circle-animated {
+  clip-path: circle(30% at 50% 50%); /* Círculo pequeño en el centro */
+}
+.clip-circle-animated:hover {
+  clip-path: circle(70% at 50% 50%); /* Se expande a un círculo más grande */
+}
+
+/* Rombo Interactivo */
+.clip-rhombus-hover {
+  clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%); /* Forma de rombo */
+}
+.clip-rhombus-hover:hover {
+  clip-path: polygon(
+    0% 0%,
+    100% 0%,
+    100% 100%,
+    0% 100%
+  ); /* Vuelve a ser un cuadrado */
+}
+
+/* Flecha en el Borde */
+.clip-arrow {
+  /* Forma de flecha apuntando a la derecha */
+  clip-path: polygon(
+    0% 20%,
+    60% 20%,
+    60% 0%,
+    100% 50%,
+    60% 100%,
+    60% 80%,
+    0% 80%
+  );
+}
+/* No hay hover en este para mantener la forma de flecha estática */
+
+/* --- `shape-outside` Ejemplos --- */
+.shape-outside-example {
+  background-color: #e3f2fd; /* Azul muy claro */
+  border-radius: 8px;
+  padding: 25px;
+  margin-top: 30px;
+  overflow: auto; /* Importante para contener los flotantes */
+  margin-bottom: 30px;
+}
+
+.float-img {
+  width: 250px; /* Tamaño de la imagen flotante */
+  height: 250px;
+  object-fit: cover;
+  display: block;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease-out, box-shadow 0.3s ease-out;
+}
+.float-img:hover {
+  transform: scale(1.03);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Imagen flotante circular con texto alrededor */
+.float-circle {
+  float: left; /* Essential for shape-outside */
+  border-radius: 50%; /* Make the image visually circular */
+  shape-outside: circle(50%); /* Define the shape for text flow */
+  shape-margin: 25px; /* Spacing between image and text */
+  margin-right: 25px; /* Spacing from image to content on right */
+  margin-bottom: 15px; /* Spacing from image to content below */
+}
+
+/* Imagen flotante con forma de estrella */
+.float-star {
+  float: right; /* Flota a la derecha */
+  /* Recorta la imagen a una estrella (para que la forma visual coincida con shape-outside) */
+  clip-path: polygon(
+    50% 0%,
+    61% 35%,
+    98% 35%,
+    68% 57%,
+    79% 91%,
+    50% 70%,
+    21% 91%,
+    32% 57%,
+    2% 35%,
+    39% 35%
+  );
+  /* Define la forma de la estrella para el flujo de texto */
+  shape-outside: polygon(
+    50% 0%,
+    61% 35%,
+    98% 35%,
+    68% 57%,
+    79% 91%,
+    50% 70%,
+    21% 91%,
+    32% 57%,
+    2% 35%,
+    39% 35%
+  );
+  shape-margin: 20px;
+  margin-left: 25px;
+  margin-bottom: 15px;
+}
+
+/* --- Combinando `clip-path` y `shape-outside` --- */
+.combined-example {
+  background-color: #f0f4c3; /* Verde lima claro */
+  border-radius: 8px;
+  padding: 25px;
+  margin-top: 30px;
+  overflow: auto; /* Contiene los flotantes */
+}
+
+.float-cloud {
+  float: left;
+  width: 280px;
+  height: 200px;
+  object-position: center;
+  object-fit: cover;
+
+  /* `clip-path` para la forma visual de la nube */
+  clip-path: url(#cloudClip);
+
+  /* `shape-outside` para el flujo de texto alrededor de la nube */
+  /* Aquí se usa la misma ruta que en clip-path */
+  shape-outside: url(#cloudClip);
+  shape-margin: 25px;
+  margin-right: 25px;
+  margin-bottom: 15px;
+}

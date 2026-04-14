@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mascaras</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <header>
+      <h1>Máscaras CSS: La Propiedad `mask-image`</h1>
+      <p>Recortando y revelando elementos con imágenes y degradados.</p>
+    </header>
+
+    <main>
+      <section>
+        <h2>1. Máscara con Degradado Lineal (Luminancia)</h2>
+        <p>
+          El texto aparece gradualmente al pasar el ratón, usando un degradado
+          como máscara.
+        </p>
+        <div class="mask-container">
+          <div class="masked-text text-gradient-mask">
+            <span>¡Desvanece al pasar el ratón!</span>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h2>2. Máscara con Degradado Radial (Luminancia)</h2>
+        <p>Un efecto de "spotlight" que se expande al pasar el ratón.</p>
+        <div class="mask-container">
+          <img
+            src="https://picsum.photos/id/105/500/300"
+            alt="Imagen de paisaje"
+            class="masked-image image-radial-mask"
+          />
+        </div>
+      </section>
+
+      <section>
+        <h2>3. Máscara con Imagen PNG (Canal Alfa)</h2>
+        <p>La imagen se recorta según la forma del PNG transparente.</p>
+        <div class="mask-container">
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/4/47/PNG_transparency_demonstration_1.png"
+            alt="Imagen PNG con transparencia"
+            class="masked-image image-png-mask"
+          />
+        </div>
+      </section>
+
+      <section>
+        <h2>4. Máscara con Imagen SVG (Compleja)</h2>
+        <p>La imagen se recorta siguiendo la forma compleja del SVG.</p>
+        <div class="mask-container">
+          <img
+            src="https://picsum.photos/id/1060/500/300"
+            alt="Imagen de ciudad"
+            class="masked-image image-svg-mask"
+          />
+        </div>
+        <svg width="0" height="0" style="position: absolute">
+          <defs>
+            <mask id="star-mask">
+              <polygon
+                points="50 0, 61 35, 98 35, 68 57, 79 91, 50 70, 21 91, 32 57, 2 35, 39 35"
+                fill="white"
+              />
+            </mask>
+          </defs>
+        </svg>
+      </section>
+
+      <section>
+        <h2>5. Múltiples Máscaras y Animación</h2>
+        <p>Combina dos máscaras (degradado + imagen) y anímalas.</p>
+        <div class="mask-container multiple-mask-container">
+          <div class="multiple-mask-item">
+            <span>Efecto complejo</span>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,30 @@
+body {
+  background-color: #333;
+  color: #fff;
+}
+
+/* :any-link */
+a:any-link {
+  color: darkorange;
+  text-decoration: underline dotted;
+}
+
+/* :blank */
+textarea:blank {
+  border: 2px dashed gray;
+  background-color: #f9f9f9;
+}
+
+/* :default (ej. botón predeterminado o input radio por defecto) */
+button:default,
+input:default {
+  outline: 2px solid darksalmon;
+  font-weight: bold;
+}
+
+input,
+textarea {
+  display: block;
+  margin-bottom: 1rem;
+  padding: 0.5rem;
+}

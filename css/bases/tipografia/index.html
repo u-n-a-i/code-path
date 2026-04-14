@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tipografía</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Ejemplo de Estilos de **Tipografía**</h1>
+      <p>Explorando Google Fonts y propiedades de texto en CSS.</p>
+    </header>
+
+    <main>
+      <section class="seccion-fuentes">
+        <h2>Fuentes Personalizadas y Alternativas</h2>
+        <p class="parrafo-roboto">
+          Este párrafo usa la fuente **Roboto**, una fuente sans-serif moderna y
+          legible. Si Roboto no carga, el navegador usará una fuente sans-serif
+          genérica como Arial o Helvetica.
+        </p>
+        <p class="parrafo-playfair">
+          Este párrafo utiliza la fuente **Playfair Display**, una fuente serif
+          con un toque elegante. Es ideal para titulares o textos que buscan un
+          estilo más clásico.
+        </p>
+        <p class="parrafo-monospace">
+          Aquí vemos un ejemplo de fuente **monospace** genérica. Cada carácter
+          ocupa el mismo ancho, perfecto para bloques de código o datos.
+          <code>console.log("¡Hola Mundo!");</code>
+        </p>
+      </section>
+
+      <section class="seccion-propiedades-texto">
+        <h2>Propiedades de Texto y Estilo</h2>
+
+        <div class="ejemplo-tamano">
+          <p>Este es un texto con tamaño **normal**.</p>
+          <p class="texto-grande">
+            Este texto es **más grande** (usando `em`).
+          </p>
+          <p class="texto-pequeno">Y este es **más pequeño** (usando `rem`).</p>
+        </div>
+
+        <div class="ejemplo-peso-estilo">
+          <p class="texto-normal">Peso de fuente **normal**.</p>
+          <p class="texto-negrita">Peso de fuente **negrita** (`bold`).</p>
+          <p class="texto-extra-negrita">
+            Peso de fuente **extra-negrita** (800).
+          </p>
+          <p class="texto-cursiva">Texto en **cursiva** (`italic`).</p>
+        </div>
+
+        <div class="ejemplo-alineacion">
+          <p class="alinear-izquierda">Texto alineado a la **izquierda**.</p>
+          <p class="alinear-centro">Texto alineado al **centro**.</p>
+          <p class="alinear-derecha">Texto alineado a la **derecha**.</p>
+          <p class="alinear-justificado">
+            Este texto está **justificado**, lo que significa que se expande
+            para llenar el ancho completo de su contenedor, creando bordes
+            alineados tanto a la izquierda como a la derecha. Es común en
+            periódicos y revistas para una apariencia más formal.
+          </p>
+        </div>
+
+        <div class="ejemplo-decoracion-transformacion">
+          <p class="subrayado">Texto **subrayado**.</p>
+          <p class="tachado">Texto **tachado**.</p>
+          <p class="sin-decoracion">
+            Este enlace <a href="#">no tiene subrayado</a>.
+          </p>
+          <p class="mayusculas">Texto en **mayúsculas**.</p>
+          <p class="capitalizar">Texto con **cada palabra capitalizada**.</p>
+        </div>
+
+        <div class="ejemplo-espaciado-sombra">
+          <p class="espaciado-letras">E S P A C I O E N T R E L E T R A S</p>
+          <p class="espaciado-palabras">Espacio entre palabras es mayor.</p>
+          <h3 class="sombra-texto">Texto con Sombra</h3>
+        </div>
+
+        <div class="ejemplo-ellipsis">
+          <h3>Truncamiento de Texto con Elipsis</h3>
+          <p class="texto-truncado">
+            Este es un texto muy largo que se truncará con puntos suspensivos si
+            no cabe en el ancho asignado. Es útil para descripciones cortas o
+            titulares.
+          </p>
+        </div>
+
+        <div class="ejemplo-clamp">
+          <h3>Función clamp()</h3>
+          <p class="texto-clamp">
+            Esta técnica permite que el tamaño del texto se adapte al tamaño de
+            la pantalla, sin necesidad de media queries. Usar
+            <code>clamp()</code> es ideal para mejorar la legibilidad en móviles
+            y monitores grandes.
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2025 Ejemplo de Tipografía</p>
+    </footer>
+  </body>
+</html>

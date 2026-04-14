@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Conceptos Clave</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Conceptos Clave del Diseño Web Moderno</h1>
+      <p>
+        Unidades, Viewport, Media Queries, Container Queries, Medios y
+        Rendimiento.
+      </p>
+    </header>
+
+    <main>
+      <section class="section-units">
+        <h2>1. Unidades Adaptativas (`rem`, `vw`, `fr`, etc.)</h2>
+        <p class="text-rem">Este párrafo usa `font-size: 1rem`.</p>
+        <p class="text-em">
+          Este párrafo usa `font-size: 1.2em` (relativo a su padre).
+        </p>
+        <h3 class="heading-vw">Título que escala con el Viewport (`vw`)</h3>
+        <div class="vw-height-div">
+          <p>
+            Este div tiene una altura de `20vh` (20% de la altura del viewport).
+          </p>
+        </div>
+        <div class="grid-fr-example">
+          <div class="grid-item">1fr</div>
+          <div class="grid-item two-fr">2fr</div>
+          <div class="grid-item">1fr</div>
+        </div>
+      </section>
+
+      <section class="section-media-queries">
+        <h2>2. Media Queries</h2>
+        <p>
+          Redimensiona la ventana del navegador. El color de fondo y el número
+          de columnas cambiarán en diferentes puntos de quiebre (breakpoints).
+        </p>
+        <div class="mq-grid">
+          <div class="mq-item">MQ Item 1</div>
+          <div class="mq-item">MQ Item 2</div>
+          <div class="mq-item">MQ Item 3</div>
+          <div class="mq-item">MQ Item 4</div>
+          <div class="mq-item">MQ Item 5</div>
+          <div class="mq-item">MQ Item 6</div>
+        </div>
+      </section>
+
+      <section class="section-container-queries">
+        <h2>3. Container Queries (`@container`)</h2>
+        <p>
+          Este es un ejemplo de componentes que se adaptan a su propio tamaño de
+          contenedor, no al del viewport.
+        </p>
+        <div class="cq-parent-container">
+          <div class="cq-card">
+            <div class="cq-icon">✨</div>
+            <h3>Título de Tarjeta CQ</h3>
+            <p>
+              Un párrafo de texto corto para esta tarjeta de ejemplo. Observa
+              cómo el texto se oculta y el icono cambia de tamaño cuando el
+              contenedor se hace más pequeño.
+            </p>
+            <button>Ver Más</button>
+          </div>
+          <div class="cq-card small-cq-card">
+            <div class="cq-icon">🌟</div>
+            <h3>Título de Tarjeta CQ Pequeña</h3>
+            <p>Contenido.</p>
+            <button>Clic</button>
+          </div>
+          <div class="cq-card larger-cq-card">
+            <div class="cq-icon">🚀</div>
+            <h3>Título de Tarjeta CQ Grande</h3>
+            <p>
+              Un párrafo de texto más largo para esta tarjeta de ejemplo. Las
+              container queries son ideales para componentes reutilizables que
+              pueden aparecer en diferentes tamaños de contenedores en una
+              página.
+            </p>
+            <button>Descubrir</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-media-optimization">
+        <h2>4. Imágenes y Video Adaptativos</h2>
+        <h3>Imágenes Responsivas</h3>
+        <picture>
+          <source
+            media="(max-width: 600px)"
+            srcset="
+              https://via.placeholder.com/300x150/FF6B6B/FFFFFF?text=Mobile+Image
+            "
+          />
+          <source
+            media="(max-width: 1000px)"
+            srcset="
+              https://via.placeholder.com/600x200/FFD166/FFFFFF?text=Tablet+Image
+            "
+          />
+          <img
+            src="https://via.placeholder.com/900x300/4ECDC4/FFFFFF?text=Desktop+Image"
+            alt="Imagen Responsiva"
+            class="responsive-image"
+          />
+        </picture>
+        <p class="note">
+          Inspecciona la imagen y redimensiona para ver cómo el navegador carga
+          diferentes versiones.
+        </p>
+
+        <h3>Video Responsivo (Relación de Aspecto)</h3>
+        <div class="video-container">
+          <iframe
+            src="https://www.youtube.com/embed/"
+            frameborder="0"
+            allowfullscreen
+          ></iframe>
+        </div>
+        <p class="note">
+          El video mantiene su relación de aspecto al redimensionar el
+          navegador.
+        </p>
+      </section>
+
+      <section class="section-typography">
+        <h2>5. Tipografía Adaptativa</h2>
+        <p class="typo-base">Este es el tamaño de fuente base.</p>
+        <p class="typo-rem">Un texto con `font-size: 1.2rem;`.</p>
+        <h3 class="typo-clamp">Título con `clamp()` para tamaño adaptable.</h3>
+        <p class="note">
+          Redimensiona para ver cómo la fuente `clamp` escala pero se mantiene
+          dentro de límites.
+        </p>
+      </section>
+
+      <section class="section-flex-grid">
+        <h2>6. Flexbox y Grid (Flexible y Adaptable)</h2>
+        <h3>Flexbox: Diseño Flexible</h3>
+        <div class="flex-responsive-container">
+          <div class="flex-responsive-item">Flex Item 1</div>
+          <div class="flex-responsive-item">Flex Item 2</div>
+          <div class="flex-responsive-item">Flex Item 3</div>
+          <div class="flex-responsive-item">Flex Item 4</div>
+        </div>
+        <p class="note">
+          Los ítems Flexbox se envuelven y se ajustan al redimensionar.
+        </p>
+
+        <h3>Grid: Diseño Adaptable</h3>
+        <div class="grid-responsive-container">
+          <div class="grid-responsive-item">Grid Item A</div>
+          <div class="grid-responsive-item">Grid Item B</div>
+          <div class="grid-responsive-item">Grid Item C</div>
+          <div class="grid-responsive-item">Grid Item D</div>
+          <div class="grid-responsive-item">Grid Item E</div>
+        </div>
+        <p class="note">
+          Las columnas de Grid se adaptan automáticamente al espacio disponible
+          (`auto-fit, minmax`).
+        </p>
+      </section>
+
+      <section class="section-performance">
+        <h2>7. Rendimiento en Diseño Responsive (`will-change`, `contain`)</h2>
+        <p>
+          Estas propiedades ayudan al navegador a optimizar el renderizado,
+          especialmente en animaciones o componentes complejos.
+        </p>
+        <div class="performance-box will-change-example">
+          <p><code>will-change: transform;</code></p>
+          <p>Pasa el ratón (hover) para ver una animación más suave.</p>
+        </div>
+        <div class="performance-box contain-example">
+          <p><code>contain: layout paint;</code></p>
+          <p>
+            Este cuadro intenta aislar sus cálculos de layout y pintura del
+            resto de la página.
+          </p>
+        </div>
+        <p class="note">
+          Estas propiedades son para optimización avanzada y deben usarse solo
+          cuando se identifiquen problemas de rendimiento.
+        </p>
+      </section>
+    </main>
+  </body>
+</html>

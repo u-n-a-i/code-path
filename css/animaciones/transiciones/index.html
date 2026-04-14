@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Transiciones</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <header>
+      <h1>Explorando Transiciones CSS</h1>
+      <p>Añadiendo animaciones suaves a los cambios de estado.</p>
+    </header>
+
+    <main>
+      <section>
+        <h2>Transición Básica (`transition: property duration;`)</h2>
+        <p>
+          Pasa el ratón sobre el cuadro para ver el cambio de color de fondo y
+          el ancho.
+        </p>
+        <div class="transition-box basic-transition">Pasa el ratón</div>
+      </section>
+
+      <section>
+        <h2>`transition-timing-function` (Curvas de Velocidad)</h2>
+        <p>
+          Pasa el ratón sobre cada cuadro para ver diferentes efectos de
+          velocidad.
+        </p>
+        <div class="timing-functions-container">
+          <div class="transition-box timing-linear">Linear</div>
+          <div class="transition-box timing-ease">Ease (Default)</div>
+          <div class="transition-box timing-ease-in">Ease-in</div>
+          <div class="transition-box timing-ease-out">Ease-out</div>
+          <div class="transition-box timing-ease-in-out">Ease-in-out</div>
+          <div class="transition-box timing-cubic-bezier">Cubic-bezier</div>
+        </div>
+      </section>
+
+      <section>
+        <h2>`transition-delay` (Retraso de Transición)</h2>
+        <p>
+          Pasa el ratón sobre el cuadro. La transición comenzará después de un
+          retraso.
+        </p>
+        <div class="transition-box delay-transition">Retraso de 1 segundo</div>
+      </section>
+
+      <section>
+        <h2>Transiciones Múltiples Propiedades</h2>
+        <p>
+          Pasa el ratón para transicionar color, tamaño y rotación, cada uno con
+          su propia duración y retraso.
+        </p>
+        <div class="transition-box multiple-properties">
+          Múltiples propiedades
+        </div>
+      </section>
+
+      <section>
+        <h2>Uso de `all` y Animaciones de Texto</h2>
+        <p>
+          Pasa el ratón sobre este texto para ver transiciones en tamaño y color
+          de fuente.
+        </p>
+        <p class="text-transition">
+          Este texto cambiará de tamaño y color suavemente.
+        </p>
+      </section>
+
+      <section>
+        <h2>Ejemplo Práctico: Botón Interactivo</h2>
+        <p>
+          Haz clic en el botón para ver transiciones de fondo, borde y sombra.
+        </p>
+        <button class="interactive-button">Haz Clic Aquí</button>
+      </section>
+    </main>
+  </body>
+</html>

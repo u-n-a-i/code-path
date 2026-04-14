@@ -1,0 +1,239 @@
+/* Estilos Generales */
+body {
+  margin: 0;
+  font-family: "Open Sans", sans-serif;
+  color: #333;
+  line-height: 1.6;
+  background-color: #f8f8f8; /* Color de fondo general del cuerpo */
+}
+
+h1,
+h2,
+h3 {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  color: #2c3e50;
+  margin-top: 30px;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+section {
+  padding: 60px 20px;
+  margin-bottom: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+div[class^="bloque-"],
+div[class^="degradado-"],
+div[class^="imagen-"] {
+  background-color: #e9ecef; /* Color de fondo por defecto para los bloques de ejemplo */
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  text-align: center;
+  color: #333;
+  min-height: 120px; /* Altura mínima para visualizar bien los fondos */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+div[class^="bloque-"] p,
+div[class^="degradado-"] p,
+div[class^="imagen-"] p {
+  margin: 0;
+}
+
+/* --- HEADER con Degradado --- */
+.header-degradado {
+  background: linear-gradient(
+    135deg,
+    #007bff 0%,
+    #00d4ff 100%
+  ); /* Degradado de azul a azul claro */
+  color: white;
+  padding: 60px 20px;
+  text-align: center;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  margin-bottom: 0; /* Sin margen inferior para que la primera sección se pegue si es necesario */
+  border-radius: 0; /* Es un header completo */
+}
+
+.header-degradado h1 {
+  font-size: 3.5em;
+  margin-bottom: 10px;
+  color: white; /* Sobrescribe el color general de h1 */
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.header-degradado p {
+  font-size: 1.2em;
+  opacity: 0.9;
+}
+
+/* --- SECCIÓN: Colores Sólidos --- */
+.seccion-colores-solidos {
+  background-color: #ffffff;
+}
+.bloque-solido {
+  background-color: #00bcd4; /* Cian sólido */
+  color: white;
+}
+.bloque-transparente {
+  background-color: rgba(255, 99, 71, 0.6); /* Tomate con 60% de opacidad */
+  color: white;
+}
+
+/* --- SECCIÓN: Degradados --- */
+.seccion-degradados {
+  background-color: #f0f8ff; /* AliceBlue */
+}
+.degradado-lineal-vertical {
+  background: linear-gradient(
+    to bottom,
+    #a1c4fd,
+    #c2e9fb
+  ); /* De azul claro a celeste */
+  color: white;
+}
+.degradado-lineal-diagonal {
+  background: linear-gradient(
+    to bottom right,
+    #ff9a9e,
+    #fad0c4
+  ); /* De rosa a naranja claro */
+  color: white;
+}
+.degradado-radial-circular {
+  background: radial-gradient(
+    circle,
+    #d4fc79,
+    #96e6a1
+  ); /* De verde claro a verde */
+  color: #333;
+}
+
+/* --- SECCIÓN: Imagen Fija (Parallax) --- */
+.seccion-imagen-fija {
+  background-image: url("https://picsum.photos/id/1040/1920/1080"); /* Imagen de paisaje aleatoria */
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover; /* La imagen cubre todo el contenedor */
+  background-attachment: fixed; /* La imagen se mantiene fija durante el scroll */
+  color: white;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+  min-height: 400px; /* Necesario para apreciar el efecto parallax */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 1.3em;
+}
+
+/* --- SECCIÓN: Imagen Repetida --- */
+.seccion-imagen-repetida {
+  background-color: #fff;
+}
+.bloque-patron-x {
+  background-image: url("https://via.placeholder.com/50x50/B0E0E6/FFFFFF?text=%20"); /* Ladrillo ligero */
+  background-repeat: repeat-x; /* Se repite solo horizontalmente */
+  background-position: center bottom; /* Patrón centrado en la parte inferior */
+  min-height: 180px;
+  color: #555;
+}
+.bloque-patron-xy {
+  background-image: url("https://via.placeholder.com/30x30/D3D3D3/000000?text=."); /* Pequeños puntos */
+  background-repeat: repeat; /* Se repite en ambas direcciones por defecto */
+  min-height: 180px;
+  color: #555;
+}
+
+/* --- SECCIÓN: Posición y Tamaño de Imagen --- */
+.seccion-imagen-posicion-tamano {
+  background-color: #f7f7f7;
+}
+.imagen-centro-contain {
+  background-image: url("https://picsum.photos/id/237/200/300"); /* Imagen de perrito */
+  background-repeat: no-repeat;
+  background-position: center center; /* Centrada */
+  background-size: contain; /* Se ajusta para caber sin cortar */
+  min-height: 250px;
+  color: #333;
+}
+.imagen-esquina-superior {
+  background-image: url("https://via.placeholder.com/100x100/FFD700/000000?text=Icon"); /* Un pequeño ícono */
+  background-repeat: no-repeat;
+  background-position: top right; /* En la esquina superior derecha */
+  background-size: 80px 80px; /* Tamaño fijo */
+  min-height: 180px;
+  color: #333;
+}
+
+/* --- SECCIÓN: Múltiples Fondos --- */
+.seccion-multiples-fondos {
+  /* Múltiples fondos: se listan del frente (arriba) hacia atrás (abajo) */
+  background-image: url("https://via.placeholder.com/80x80/6A5ACD/FFFFFF?text=Star"),
+    /* 1ra: Pequeña estrella */
+      linear-gradient(
+        to top right,
+        rgba(255, 255, 255, 0.2),
+        rgba(255, 255, 255, 0.8)
+      ),
+    /* 2da: Degradado suave */ linear-gradient(135deg, #8bc6ec 0%, #9599e2 100%); /* 3ra: Degradado principal */
+  background-repeat: no-repeat, no-repeat, no-repeat; /* Repetición para cada capa */
+  background-position: 20px 20px, center center, center center; /* Posición para cada capa */
+  background-size: auto, cover, cover; /* Tamaño para cada capa */
+  padding: 80px 20px;
+  color: white;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
+  min-height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+/* --- FIGURA DE ONDA (Wave) --- */
+.onda-separador {
+  position: relative; /* Para que el SVG se posicione correctamente dentro */
+  width: 100%;
+  margin-top: -1px; /* Para que se superponga ligeramente y oculte bordes */
+  overflow: hidden; /* Importante para que la onda no se desborde */
+  line-height: 0; /* Elimina el espacio extra que a veces crea el SVG */
+  background-color: transparent; /* No tiene fondo propio, solo la forma del SVG */
+}
+
+.onda-separador svg {
+  display: block;
+  width: calc(100% + 1.3px); /* Asegura que la onda cubra de borde a borde */
+  height: 120px; /* Altura de la onda */
+  position: relative; /* Para z-index si hay elementos superpuestos */
+}
+
+/* El color del "fill" de la onda DEBE COINCIDIR con el background-color de la *siguiente* sección */
+.onda-separador .shape-fill {
+  fill: #ffffff; /* Este color debe ser el mismo que el fondo de .seccion-despues-onda */
+}
+
+.seccion-despues-onda {
+  background-color: #ffffff; /* Color de fondo que empata con la onda SVG */
+  padding-top: 20px; /* Ajusta el padding superior si la onda se superpone */
+}
+
+/* --- FOOTER --- */
+footer {
+  text-align: center;
+  margin-top: 50px;
+  padding: 30px 20px;
+  background-color: #34495e;
+  color: white;
+  font-size: 0.9em;
+  border-radius: 0; /* Elimina cualquier borde de radio */
+}

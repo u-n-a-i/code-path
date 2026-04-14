@@ -1,0 +1,69 @@
+ body {
+    background-color: #d3d3d3;
+ }
+
+ input, select, textarea {
+      padding: 0.5rem;
+      margin-bottom: 1rem;
+      display: block;
+      border: 2px solid #ccc;
+      border-radius: 4px;
+    }
+
+    /* :autofill (no se puede simular directamente, pero se muestra aquí) */
+    input:-webkit-autofill {
+      background-color: lightyellow;
+    }
+
+    /* :checked */
+    input:checked + label {
+      font-weight: bold;
+      color: green;
+    }
+
+    /* :disabled y :enabled */
+    input:disabled {
+      background-color: #eee;
+    }
+
+    input:enabled {
+      background-color: white;
+    }
+
+    /* :in-range y :out-of-range */
+    input:in-range {
+      border-color: green;
+    }
+
+    input:out-of-range {
+      border-color: red;
+    }
+
+    /* :invalid y :valid */
+    input:invalid {
+      background-color: #ffdddd;
+    }
+
+    input:valid {
+      background-color: #ddffdd;
+    }
+
+    /* :optional y :required */
+    input:optional {
+      border-style: dotted;
+    }
+
+    input:required {
+      border-style: solid;
+    }
+
+    /* :placeholder-shown */
+    input:placeholder-shown {
+      color: gray;
+      font-style: italic;
+    }
+
+    /* :user-invalid (para navegadores compatibles) */
+    input:user-invalid {
+      outline: 2px dashed red;
+    }

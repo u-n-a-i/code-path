@@ -1,0 +1,164 @@
+body {
+  margin: 0;
+  font-family: sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #f4f7f6;
+  padding-bottom: 50px;
+}
+
+header {
+  background: linear-gradient(135deg, #4caf50 0%, #8bc34a 100%); /* Verde */
+  color: white;
+  text-align: center;
+  padding: 40px 20px;
+  margin-bottom: 30px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+  font-size: 2.8em;
+  margin-bottom: 10px;
+  color: white;
+}
+
+main {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+section {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 40px;
+  padding: 30px;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #3f51b5; /* Azul índigo para títulos de sección */
+}
+
+p.nota {
+  font-style: italic;
+  color: #555;
+  margin-top: 25px;
+  padding: 10px 15px;
+  background-color: #e0f2f7;
+  border-left: 4px solid #03a9f4;
+  border-radius: 4px;
+}
+
+/* --- Estilos Comunes para las Cajas de Ejemplo --- */
+.opacidad-container,
+.visibilidad-container,
+.display-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  gap: 20px;
+  padding: 20px 0;
+  border: 1px dashed #ccc;
+  border-radius: 5px;
+}
+
+.caja-opaca,
+.caja-semi-transparente,
+.caja-invisible-opacidad,
+.caja-visible,
+.caja-hidden,
+.caja-bloque,
+.caja-none {
+  background-color: #f0f0f0;
+  border: 1px solid #ddd;
+  padding: 15px;
+  text-align: center;
+  width: 25%; /* Para que quepan 3 o 4 en la línea */
+  flex-shrink: 0; /* No se encogen */
+  min-height: 100px; /* Para visualizar mejor */
+  box-sizing: border-box; /* Incluye padding y borde en el ancho */
+}
+
+.caja-opaca p,
+.caja-semi-transparente p,
+.caja-invisible-opacidad p,
+.caja-visible p,
+.caja-hidden p,
+.caja-bloque p,
+.caja-none p {
+  margin-top: 0;
+  font-size: 0.9em;
+}
+
+/* --- 1. Opacidad --- */
+.caja-opaca {
+  background-color: #81c784; /* Verde */
+  color: white;
+  opacity: 1; /* Completamente visible (por defecto) */
+}
+
+.caja-semi-transparente {
+  background-color: #ff9800; /* Naranja */
+  color: white;
+  opacity: 0.5; /* 50% transparente */
+}
+
+.caja-invisible-opacidad {
+  background-color: #f44336; /* Rojo */
+  color: white;
+  opacity: 0; /* Completamente transparente, pero ocupa espacio y es interactuable */
+}
+
+/* --- 2. Visibilidad (`visibility`) --- */
+.caja-visible {
+  background-color: #2196f3; /* Azul */
+  color: white;
+  visibility: visible; /* Visible (por defecto) */
+}
+
+.caja-hidden {
+  background-color: #9c27b0; /* Púrpura */
+  color: white;
+  visibility: hidden; /* Oculto, pero ocupa espacio */
+}
+
+/* --- 3. Display (`display`) --- */
+.caja-bloque {
+  background-color: #009688; /* Teal */
+  color: white;
+  display: block; /* Ocupa todo el ancho disponible y fuerza nueva línea */
+  /* Aquí no usamos flex para ver el comportamiento natural de block */
+  width: auto; /* Ancho automático para block */
+  margin: 10px auto; /* Centrar para el ejemplo */
+}
+
+.caja-none {
+  background-color: #e91e63; /* Rosa */
+  color: white;
+  display: none; /* No se renderiza, no ocupa espacio, como si no existiera */
+}
+
+/* Para la sección display, ajustamos el contenedor para ver el efecto de 'none' */
+.display-container {
+  flex-direction: column; /* Apilar las cajas verticalmente */
+  align-items: center; /* Centrar horizontalmente */
+}
+
+/* --- Comparativa --- */
+.comparativa ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+  max-width: 600px;
+}
+
+.comparativa li {
+  background-color: #e8f5e9; /* Verde muy claro */
+  padding: 10px 15px;
+  margin-bottom: 8px;
+  border-left: 5px solid #4caf50;
+  border-radius: 4px;
+}

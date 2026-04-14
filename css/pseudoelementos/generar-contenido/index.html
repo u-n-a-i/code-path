@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pseudoelementos de contenido generado</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>Pseudoelementos de contenido generado</h1>
+    <h2>::before y ::after</h2>
+    <p class="nota">Este texto muestra símbolos antes y después.</p>
+
+    <h2>::file-selector-button</h2>
+    <label>
+      Subir archivo:
+      <input type="file" name="archivo" />
+    </label>
+
+    <h2>::backdrop</h2>
+    <button onclick="document.getElementById('miDialog').showModal()">
+      Abrir diálogo
+    </button>
+
+    <dialog id="miDialog">
+      <p>Este es un cuadro de diálogo.</p>
+      <button onclick="document.getElementById('miDialog').close()">
+        Cerrar
+      </button>
+    </dialog>
+  </body>
+</html>

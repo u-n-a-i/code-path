@@ -1,0 +1,28 @@
+body {
+  background-color: #333;
+  color: #fff;
+}
+
+p::first-letter {
+  font-size: 2rem;
+  font-weight: bold;
+  color: lightgreen;
+  float: left;
+  margin-right: 0.3rem;
+}
+
+p::first-line {
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: lightcoral;
+}
+
+ul li::marker {
+  color: green;
+  font-size: 1.2rem;
+}
+
+ol li::marker {
+  color: purple;
+  font-weight: bold;
+}

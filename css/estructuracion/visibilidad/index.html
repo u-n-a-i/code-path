@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Visibilidad</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Controlando la Visibilidad en CSS</h1>
+      <p>
+        Explorando <code>opacity</code>, <code>visibility</code> y
+        <code>display</code>.
+      </p>
+    </header>
+
+    <main>
+      <section class="seccion-opacidad">
+        <h2>1. Opacidad (`opacity`)</h2>
+        <p>
+          La propiedad `opacity` controla la transparencia de un elemento. Un
+          valor de `1` (o `100%`) significa completamente visible, mientras que
+          `0` (o `0%`) significa completamente transparente (invisible). El
+          elemento **sigue ocupando su espacio** en el flujo del documento y
+          **es interactuable**.
+        </p>
+        <div class="opacidad-container">
+          <div class="caja-opaca">
+            <p>Soy una caja opaca (opacity: 1).</p>
+            <button>Clic</button>
+          </div>
+          <div class="caja-semi-transparente">
+            <p>Soy semi-transparente (opacity: 0.5).</p>
+            <button>Clic</button>
+          </div>
+          <div class="caja-invisible-opacidad">
+            <p>Soy invisible (opacity: 0).</p>
+            <button onclick="alert('Encontrado')">Clic</button>
+          </div>
+        </div>
+        <p class="nota">
+          Nota: A pesar de ser invisible, el tercer botón de "Clic" **aún es
+          funcional** (puedes intentar hacer clic donde sabes que está).
+        </p>
+      </section>
+
+      <section class="seccion-visibility">
+        <h2>2. Visibilidad (`visibility: hidden` vs `display: none`)</h2>
+        <p>
+          Estas dos propiedades se usan para ocultar elementos, pero lo hacen de
+          maneras muy diferentes, afectando el flujo del documento y la
+          interacción.
+        </p>
+        <div class="visibilidad-container">
+          <div class="caja-visible">
+            <p>Soy una caja visible.</p>
+          </div>
+          <div class="caja-hidden">
+            <p>Soy `visibility: hidden`.</p>
+          </div>
+          <div class="caja-visible">
+            <p>Soy otra caja visible.</p>
+          </div>
+        </div>
+        <p class="nota">
+          Observa cómo la caja con `visibility: hidden` **sigue ocupando su
+          espacio** en el flujo del documento. Los elementos a su alrededor no
+          se mueven para llenar su vacío. Además, este elemento **no es
+          interactuable**.
+        </p>
+      </section>
+
+      <section class="seccion-display">
+        <h2>3. Display (`display: none`)</h2>
+        <div class="display-container">
+          <div class="caja-bloque">
+            <p>Soy una caja `display: block`.</p>
+          </div>
+          <div class="caja-none">
+            <p>Soy `display: none`.</p>
+          </div>
+          <div class="caja-bloque">
+            <p>Soy otra caja `display: block`.</p>
+          </div>
+        </div>
+        <p class="nota">
+          A diferencia de `visibility: hidden`, un elemento con `display: none`
+          se **elimina completamente del flujo del documento**. No ocupa ningún
+          espacio y, por lo tanto, los elementos a su alrededor se comportan
+          como si no existiera. Naturalmente, **no es interactuable**.
+        </p>
+      </section>
+
+      <section class="comparativa">
+        <h2>Comparativa Rápida</h2>
+        <ul>
+          <li>
+            <strong>`opacity: 0`</strong>: Invisible, ocupa espacio,
+            interactuable.
+          </li>
+          <li>
+            <strong>`visibility: hidden`</strong>: Invisible, ocupa espacio, NO
+            interactuable.
+          </li>
+          <li>
+            <strong>`display: none`</strong>: Invisible, NO ocupa espacio, NO
+            interactuable.
+          </li>
+        </ul>
+        <p>
+          La elección depende de si necesitas que el elemento reserve su espacio
+          y si debe ser interactuable.
+        </p>
+      </section>
+    </main>
+  </body>
+</html>

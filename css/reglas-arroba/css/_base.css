@@ -1,0 +1,30 @@
+/* _base.css
+El guion bajo (_) al principio de un nombre de archivo CSS (como _base.css o _variables.scss) es una convención de nomenclatura, no una característica impuesta por CSS o el navegador. Se usa principalmente en el contexto de preprocesadores CSS como Sass (SCSS) o Less.
+*/
+
+/*
+  @layer base:
+  Define la capa base para estilos generales como resets, tipografía global, etc.
+  Se importará y luego se definirá en style.css
+*/
+@layer base {
+  body {
+    margin: 0;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f8f8f8;
+    font-family: "Arial", sans-serif; /* Fuente por defecto antes de @font-face */
+  }
+
+  h1,
+  h2,
+  h3 {
+    margin-top: 0;
+    margin-bottom: 0.5em;
+    line-height: 1.2;
+  }
+
+  p {
+    margin-bottom: 1em;
+  }
+}

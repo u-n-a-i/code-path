@@ -1,0 +1,127 @@
+body {
+  margin: 0;
+  font-family: sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #f8f8f8;
+  padding-bottom: 50px;
+}
+
+header {
+  background: linear-gradient(
+    135deg,
+    #6a11cb 0%,
+    #2575fc 100%
+  ); /* Degradado morado a azul */
+  color: white;
+  text-align: center;
+  padding: 40px 20px;
+  margin-bottom: 30px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+  font-size: 2.8em;
+  margin-bottom: 10px;
+  color: white;
+}
+
+main {
+  max-width: 960px; /* Ancho máximo para el contenido principal */
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+section {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 40px;
+  padding: 30px;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #3498db; /* Azul */
+}
+
+/* --- 1. `column-count` --- */
+.texto-multi-columnas-count {
+  /* Divide el contenido en 3 columnas */
+  column-count: 3;
+  padding: 15px;
+  background-color: #e8f6f9;
+  border-radius: 5px;
+  border: 1px dashed #b3e5fc;
+}
+
+/* --- 2. `column-width` --- */
+.texto-multi-columnas-width {
+  /* Crea columnas que tengan al menos 200px de ancho */
+  column-width: 200px;
+  padding: 15px;
+  background-color: #e6f9e8;
+  border-radius: 5px;
+  border: 1px dashed #c8e6c9;
+}
+
+/* --- 3. `columns` (Shorthand) --- */
+.texto-multi-columnas-shorthand {
+  /* Intenta tener 3 columnas, pero que no sean menores de 180px */
+  columns: 180px 3;
+  padding: 15px;
+  background-color: #fcf9e8;
+  border-radius: 5px;
+  border: 1px dashed #ffecb3;
+}
+
+/* --- 4. `column-gap` y `column-rule` --- */
+.texto-gap-rule {
+  column-count: 2;
+  column-gap: 40px; /* 40px de espacio entre columnas */
+  column-rule: 2px solid #9c27b0; /* Regla de 2px, sólida y morada */
+  padding: 20px;
+  background-color: #f7e8f9;
+  border-radius: 5px;
+  border: 1px dashed #e1bee7;
+}
+
+/* --- 5. `column-span` --- */
+.texto-con-span {
+  column-count: 3;
+  column-gap: 30px;
+  padding: 20px;
+  background-color: #ffebee;
+  border-radius: 5px;
+  border: 1px dashed #ef9a9a;
+}
+
+.titulo-span {
+  column-span: all; /* Hace que este h3 abarque todas las columnas */
+  text-align: center;
+  color: #d32f2f;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+.imagen-span {
+  column-span: all; /* Hace que esta imagen abarque todas las columnas */
+  display: block; /* Asegura que la imagen ocupe su propia línea */
+  margin: 20px auto; /* Centra la imagen */
+  max-width: 100%; /* Asegura que la imagen sea responsiva */
+  height: auto;
+  border: 3px solid #d32f2f;
+  border-radius: 5px;
+}
+
+/* Estilos para los párrafos dentro de las columnas para mejor legibilidad */
+.texto-multi-columnas-count p,
+.texto-multi-columnas-width p,
+.texto-multi-columnas-shorthand p,
+.texto-gap-rule p,
+.texto-con-span p {
+  margin-top: 0;
+  margin-bottom: 1em; /* Espacio entre párrafos */
+  text-align: justify; /* Justificar el texto para apariencia de revista */
+}

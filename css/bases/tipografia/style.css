@@ -1,0 +1,228 @@
+/* Estilos Generales y Reset Básico */
+body {
+  margin: 0;
+  padding: 20px;
+  background-color: #f4f4f4;
+  color: #333;
+  font-family: "Roboto", Arial, sans-serif;
+  line-height: 1.6;
+}
+
+h1,
+h2,
+h3 {
+  margin-top: 20px;
+  margin-bottom: 10px;
+  font-weight: 700; /* Por defecto, negrita */
+}
+
+/* --- Estilos de Secciones --- */
+
+header {
+  background-color: #0056b3;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  border-radius: 8px;
+  margin-bottom: 30px;
+}
+
+header h1 {
+  font-family: "Playfair Display", serif; /* Usando Playfair Display para el título */
+  font-size: 2.8em;
+  font-weight: 700;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+  margin-bottom: 5px;
+}
+
+header p {
+  font-size: 1.1em;
+  font-style: italic;
+  opacity: 0.9;
+}
+
+main {
+  max-width: 900px;
+  margin: 0 auto;
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+section {
+  margin-bottom: 40px;
+  padding-bottom: 20px;
+  border-bottom: 1px dashed #ddd;
+}
+
+section:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+}
+
+/* --- Propiedades Font-Family --- */
+.parrafo-roboto {
+  font-family: "Roboto", Arial, sans-serif;
+  font-size: 1.1em;
+}
+
+.parrafo-playfair {
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 1.1em;
+  font-style: italic;
+  color: #5a2d00;
+}
+
+.parrafo-monospace {
+  font-family: "Courier New", Courier, monospace;
+  background-color: #eee;
+  padding: 5px;
+  border-radius: 4px;
+  font-size: 0.9em;
+}
+
+/* --- Propiedades Font y Text --- */
+
+.ejemplo-tamano p {
+  margin-bottom: 8px;
+}
+.texto-grande {
+  font-size: 1.5em; /* 1.5 veces el tamaño de la fuente del padre (div.ejemplo-tamano) */
+  font-weight: bold;
+  color: #1a73e8;
+}
+
+.texto-pequeno {
+  font-size: 0.8rem; /* 0.8 veces el tamaño de la fuente base del HTML (100%) */
+  color: #6a6a6a;
+}
+
+.ejemplo-peso-estilo p {
+  margin-bottom: 5px;
+}
+.texto-normal {
+  font-weight: normal; /* 400 */
+}
+.texto-negrita {
+  font-weight: bold; /* 700 */
+  color: #007bff;
+}
+.texto-extra-negrita {
+  font-weight: 800; /* Un peso más alto */
+  color: #dc3545;
+}
+.texto-cursiva {
+  font-style: italic;
+  color: #28a745;
+}
+
+.ejemplo-alineacion p {
+  border: 1px solid #ddd;
+  padding: 10px;
+  margin-bottom: 10px;
+  background-color: #f9f9f9;
+}
+.alinear-izquierda {
+  text-align: left;
+}
+.alinear-centro {
+  text-align: center;
+}
+.alinear-derecha {
+  text-align: right;
+}
+.alinear-justificado {
+  text-align: justify;
+}
+
+.ejemplo-decoracion-transformacion p {
+  margin-bottom: 10px;
+}
+.subrayado {
+  text-decoration: underline;
+  color: #6f42c1;
+}
+.tachado {
+  text-decoration: line-through;
+  color: #fd7e14;
+}
+.sin-decoracion a {
+  text-decoration: none; /* Quita el subrayado predeterminado del enlace */
+  color: #007bff;
+  font-weight: bold;
+}
+.sin-decoracion a:hover {
+  text-decoration: underline; /* Añade subrayado al pasar el ratón */
+}
+.mayusculas {
+  text-transform: uppercase;
+  font-weight: bold;
+  color: #c0392b;
+}
+.capitalizar {
+  text-transform: capitalize;
+  color: #27ae60;
+}
+
+.ejemplo-espaciado-sombra p {
+  margin-bottom: 10px;
+}
+.espaciado-letras {
+  letter-spacing: 3px; /* Más espacio entre letras */
+  font-weight: bold;
+  color: #8e44ad;
+}
+.espaciado-palabras {
+  word-spacing: 10px; /* Más espacio entre palabras */
+  color: #d35400;
+}
+.sombra-texto {
+  font-size: 2.5em;
+  color: #34495e;
+  /* Desplazamiento horizontal, desplazamiento vertical, radio de difuminado, color */
+  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.4);
+}
+
+.ejemplo-ellipsis h3 {
+  margin-bottom: 10px;
+}
+.texto-truncado {
+  width: 300px; /* Ancho fijo para que el truncamiento sea visible */
+  white-space: nowrap; /* Evita que el texto salte de línea */
+  overflow: hidden; /* Oculta el contenido que se desborda */
+  text-overflow: ellipsis; /* Muestra los puntos suspensivos */
+  border: 1px solid #ccc;
+  padding: 10px;
+  background-color: #e9ecef;
+}
+
+/* Clamp(valor mínimo, valor dinámico, valor máximo) */
+.ejemplo-clamp {
+  padding: clamp(1rem, 5vw, 3rem);
+  background-color: #f5f5f5;
+  border-radius: 0.5rem;
+  max-width: 60ch;
+  margin: auto;
+}
+
+.ejemplo-clamp h3 {
+  font-size: clamp(1.2rem, 3vw, 2rem);
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.texto-clamp {
+  font-size: clamp(1rem, 2.5vw, 1.4rem);
+  line-height: 1.6;
+  text-align: justify;
+}
+
+footer {
+  text-align: center;
+  margin-top: 40px;
+  padding-top: 20px;
+  border-top: 1px solid #ddd;
+  color: #777;
+  font-size: 0.9em;
+}

@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Filtros</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <header>
+      <h1>Filtros CSS: Efectos Visuales</h1>
+      <p>Aplica transformaciones gráficas a tus elementos.</p>
+    </header>
+
+    <main>
+      <section>
+        <h2>`blur()`: Desenfoque</h2>
+        <div class="filter-container">
+          <div class="filter-box">
+            <h3>Original</h3>
+            <img
+              src="https://placehold.co/300x200/ADD8E6/000000?text=Imagen"
+              alt="Imagen original"
+              class="original-image"
+            />
+          </div>
+          <div class="filter-box">
+            <h3>`blur(5px)`</h3>
+            <img
+              src="https://placehold.co/300x200/ADD8E6/000000?text=Imagen"
+              alt="Imagen con blur"
+              class="filtered-image blur-filter"
+            />
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h2>`brightness()`: Brillo</h2>
+        <div class="filter-container">
+          <div class="filter-box">
+            <h3>Original</h3>
+            <img
+              src="https://placehold.co/300x200/FFD700/000000?text=Imagen"
+              alt="Imagen original"
+              class="original-image"
+            />
+          </div>
+          <div class="filter-box">
+            <h3>`brightness(1.5)`</h3>
+            <img
+              src="https://placehold.co/300x200/FFD700/000000?text=Imagen"
+              alt="Imagen con brillo"
+              class="filtered-image brightness-filter"
+            />
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h2>`contrast()`: Contraste</h2>
+        <div class="filter-container">
+          <div class="filter-box">
+            <h3>Original</h3>
+            <img
+              src="https://placehold.co/300x200/87CEEB/000000?text=Imagen"
+              alt="Imagen original"
+              class="original-image"
+            />
+          </div>
+          <div class="filter-box">
+            <h3>`contrast(200%)`</h3>
+            <img
+              src="https://placehold.co/300x200/87CEEB/000000?text=Imagen"
+              alt="Imagen con contraste"
+              class="filtered-image contrast-filter"
+            />
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h2>`grayscale()`: Escala de Grises</h2>
+        <div class="filter-container">
+          <div class="filter-box">
+            <h3>Original</h3>
+            <img
+              src="https://placehold.co/300x200/FF6347/FFFFFF?text=Imagen"
+              alt="Imagen original"
+              class="original-image"
+            />
+          </div>
+          <div class="filter-box">
+            <h3>`grayscale(100%)`</h3>
+            <img
+              src="https://placehold.co/300x200/FF6347/FFFFFF?text=Imagen"
+              alt="Imagen en escala de grises"
+              class="filtered-image grayscale-filter"
+            />
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h2>`hue-rotate()`: Rotación de Tono</h2>
+        <div class="filter-container">
+          <div class="filter-box">
+            <h3>Original</h3>
+            <img
+              src="https://placehold.co/300x200/4CAF50/FFFFFF?text=Imagen"
+              alt="Imagen original"
+              class="original-image"
+            />
+          </div>
+          <div class="filter-box">
+            <h3>`hue-rotate(90deg)`</h3>
+            <img
+              src="https://placehold.co/300x200/4CAF50/FFFFFF?text=Imagen"
+              alt="Imagen con rotación de tono"
+              class="filtered-image hue-rotate-filter"
+            />
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h2>`invert()`: Invertir Colores</h2>
+        <div class="filter-container">
+          <div class="filter-box">
+            <h3>Original</h3>
+            <img
+              src="https://placehold.co/300x200/2196F3/FFFFFF?text=Imagen"
+              alt="Imagen original"
+              class="original-image"
+            />
+          </div>
+          <div class="filter-box">
+            <h3>`invert(100%)`</h3>
+            <img
+              src="https://placehold.co/300x200/2196F3/FFFFFF?text=Imagen"
+              alt="Imagen invertida"
+              class="filtered-image invert-filter"
+            />
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h2>`saturate()`: Saturación</h2>
+        <div class="filter-container">
+          <div class="filter-box">
+            <h3>Original</h3>
+            <img
+              src="https://placehold.co/300x200/FF9800/FFFFFF?text=Imagen"
+              alt="Imagen original"
+              class="original-image"
+            />
+          </div>
+          <div class="filter-box">
+            <h3>`saturate(300%)`</h3>
+            <img
+              src="https://placehold.co/300x200/FF9800/FFFFFF?text=Imagen"
+              alt="Imagen saturada"
+              class="filtered-image saturate-filter"
+            />
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h2>`sepia()`: Sepia</h2>
+        <div class="filter-container">
+          <div class="filter-box">
+            <h3>Original</h3>
+            <img
+              src="https://placehold.co/300x200/607D8B/FFFFFF?text=Imagen"
+              alt="Imagen original"
+              class="original-image"
+            />
+          </div>
+          <div class="filter-box">
+            <h3>`sepia(100%)`</h3>
+            <img
+              src="https://placehold.co/300x200/607D8B/FFFFFF?text=Imagen"
+              alt="Imagen sepia"
+              class="filtered-image sepia-filter"
+            />
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h2>`drop-shadow()`: Sombra de Contenido</h2>
+        <p>La sombra se adapta a la forma del texto o la imagen.</p>
+        <div class="filter-box drop-shadow-text-container">
+          <h3 class="drop-shadow-text">Texto con Sombra</h3>
+        </div>
+        <div class="filter-box drop-shadow-image-container">
+          <img
+            src="https://placehold.co/150x150/E91E63/FFFFFF?text=Forma"
+            alt="Imagen con drop-shadow"
+            class="drop-shadow-image"
+          />
+        </div>
+      </section>
+
+      <section>
+        <h2>Múltiples Filtros Combinados</h2>
+        <p>Puedes aplicar varios filtros a la vez, el orden importa.</p>
+        <div class="filter-container">
+          <div class="filter-box">
+            <h3>Original</h3>
+            <img
+              src="https://placehold.co/300x200/9C27B0/FFFFFF?text=Imagen"
+              alt="Imagen original"
+              class="original-image"
+            />
+          </div>
+          <div class="filter-box">
+            <h3>`blur() grayscale() contrast()`</h3>
+            <img
+              src="https://placehold.co/300x200/9C27B0/FFFFFF?text=Imagen"
+              alt="Imagen con múltiples filtros"
+              class="filtered-image multiple-filters"
+            />
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

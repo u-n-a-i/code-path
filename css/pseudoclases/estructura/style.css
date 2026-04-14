@@ -1,0 +1,40 @@
+body {
+  background-color: #333;
+  color: #fff;
+}
+
+/* :empty */
+div:empty {
+  background-color: #eee;
+  border: 2px dashed gray;
+  height: 2rem;
+  padding: 20px;
+  margin: 10px;
+}
+
+/* :has() */
+article:has(img) {
+  background-color: lightyellow;
+  padding: 1rem;
+}
+
+/* :is() */
+:is(h1, h2, h3) {
+  color: lightgreen;
+}
+
+/* :where() — sin especificidad, ideal para resetear */
+:where(section, article) {
+  margin-bottom: 1rem;
+}
+
+/* :not() */
+li:not(.activo) {
+  color: gray;
+  font-style: italic;
+}
+
+.activo {
+  font-weight: bold;
+  color: green;
+}

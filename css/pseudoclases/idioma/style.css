@@ -1,0 +1,41 @@
+body {
+  background-color: #333;
+  color: #fff;
+}
+
+/* Estilo para idioma español */
+p:lang(es) {
+  color: darkgreen;
+  font-weight: bold;
+}
+
+/* Estilo para idioma inglés */
+p:lang(en) {
+  color: lightgreen;
+  font-style: italic;
+}
+
+/* Estilo para idioma Frances */
+p:lang(fr) {
+  background-color: lightyellow;
+  color: lightseagreen;
+  font-style: oblique;
+}
+
+/* Estilo para idioma árabe */
+p:lang(ar) {
+  background-color: #f0e68c;
+  color: #000;
+  text-align: right;
+  padding: 0.5rem;
+}
+
+/* Dirección: rtl (right-to-left) */
+[dir="rtl"]:dir(rtl) {
+  border: 2px dashed crimson;
+}
+
+/* Dirección: ltr (left-to-right) */
+[dir="ltr"]:dir(ltr) {
+  border: 2px solid lightblue;
+}

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fondos</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <header class="header-degradado">
+      <h1>Diseño con Fondos Dinámicos</h1>
+      <p>Explorando el poder de `background` en CSS.</p>
+    </header>
+
+    <main>
+      <section class="seccion-colores-solidos">
+        <h2>Colores de Fondo Sólidos y Transparentes</h2>
+        <div class="bloque-solido">
+          <p>Este bloque tiene un **fondo azul cian sólido**.</p>
+        </div>
+        <div class="bloque-transparente">
+          <p>
+            Este bloque usa un **fondo rojo con 60% de transparencia** (RGBA).
+          </p>
+        </div>
+      </section>
+
+      <section class="seccion-degradados">
+        <h2>Degradados: Lineales y Radiales</h2>
+        <div class="degradado-lineal-vertical">
+          <h3>Degradado Lineal Vertical</h3>
+          <p>De azul claro a azul oscuro.</p>
+        </div>
+        <div class="degradado-lineal-diagonal">
+          <h3>Degradado Lineal Diagonal</h3>
+          <p>De naranja suave a rosa.</p>
+        </div>
+        <div class="degradado-radial-circular">
+          <h3>Degradado Radial Circular</h3>
+          <p>Del centro verde al borde azul.</p>
+        </div>
+      </section>
+
+      <section class="seccion-imagen-fija">
+        <h2>Imagen de Fondo Fija (Efecto Parallax)</h2>
+        <p>
+          Esta sección usa una imagen de fondo que permanece **fija** mientras
+          el contenido se desplaza. Es el famoso efecto **parallax**, ideal para
+          dar profundidad a tu diseño. La imagen **cubre** todo el espacio
+          disponible.
+        </p>
+        <p>Sigue haciendo scroll para apreciar el efecto.</p>
+        <p>Sigue haciendo scroll para apreciar el efecto.</p>
+        <p>Sigue haciendo scroll para apreciar el efecto.</p>
+      </section>
+
+      <section class="seccion-imagen-repetida">
+        <h2>Imagen de Fondo Repetida (Patrón)</h2>
+        <div class="bloque-patron-x">
+          <h3>Repetición Horizontal (repeat-x)</h3>
+          <p>
+            Un pequeño patrón de ladrillos que se repite a lo largo del eje X.
+          </p>
+        </div>
+        <div class="bloque-patron-xy">
+          <h3>Repetición Completa (repeat)</h3>
+          <p>Un patrón de puntos que cubre todo el área.</p>
+        </div>
+      </section>
+
+      <section class="seccion-imagen-posicion-tamano">
+        <h2>Posición y Tamaño de Imagen de Fondo</h2>
+        <div class="imagen-centro-contain">
+          <h3>Imagen Centrada (contain)</h3>
+          <p>
+            La imagen se ajusta para caber completamente dentro del contenedor,
+            manteniendo su proporción.
+          </p>
+        </div>
+        <div class="imagen-esquina-superior">
+          <h3>Imagen en Esquina Superior Derecha</h3>
+          <p>Posicionamiento exacto y tamaño fijo para una imagen.</p>
+        </div>
+      </section>
+
+      <section class="seccion-multiples-fondos">
+        <h2>Múltiples Fondos</h2>
+        <p>
+          Combinamos una **imagen, un degradado y un color sólido** en una misma
+          sección para crear un efecto complejo y atractivo.
+        </p>
+        <p>
+          La primera capa es una imagen sutil en la esquina, luego un degradado
+          suave, y finalmente un color de respaldo.
+        </p>
+      </section>
+    </main>
+
+    <div class="onda-separador">
+      <svg
+        data-name="Layer 1"
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 1200 120"
+        preserveAspectRatio="none"
+      >
+        <path
+          d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.3,148.53,8.42,217.48-7.36,8.88-1.57,17.77-3.22,26.66-4.93V0H0V59.72C1
+            63.93,56.32,163.93,56.32,263.93,56.32Z"
+          class="shape-fill"
+        ></path>
+      </svg>
+    </div>
+
+    <section class="seccion-despues-onda">
+      <h2>Sección Después de la Onda</h2>
+      <p>
+        Este es el contenido de la sección que aparece después de la forma de
+        onda, con un color de fondo que coincide con el `fill` del SVG para
+        crear una transición suave.
+      </p>
+    </section>
+
+    <footer>
+      <p>&copy; 2025 Ejemplos de Fondos CSS</p>
+    </footer>
+  </body>
+</html>

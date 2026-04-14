@@ -1,0 +1,267 @@
+body {
+  margin: 0;
+  font-family: sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #f8f8f8;
+  padding-bottom: 50px;
+}
+
+header {
+  background: linear-gradient(
+    135deg,
+    #ff6f61 0%,
+    #ffd700 100%
+  ); /* Colores cálidos */
+  color: white;
+  text-align: center;
+  padding: 40px 20px;
+  margin-bottom: 30px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+  font-size: 2.8em;
+  margin-bottom: 10px;
+  color: white;
+}
+
+main {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+section {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 40px;
+  padding: 30px;
+  text-align: center; /* Centrar contenido de la sección */
+}
+
+h2 {
+  margin-bottom: 20px;
+  color: #ff5733; /* Naranja rojizo */
+}
+
+p {
+  margin-bottom: 20px;
+}
+
+/* --- Estilos Base para los Cuadros de Transformación --- */
+.transform-box {
+  width: 150px;
+  height: 100px;
+  background-color: #42a5f5; /* Azul medio */
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px auto; /* Centrar por defecto */
+  border-radius: 8px;
+  font-weight: bold;
+  font-size: 1.1em;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  /* Aplicar una transición a la propiedad transform para suavizar los cambios */
+  transition: transform 0.4s ease-in-out;
+}
+
+/* --- 1. Transformaciones 2D --- */
+.transform-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  padding: 20px;
+  background-color: #e3f2fd; /* Azul claro */
+  border-radius: 8px;
+}
+
+.transform-grid .transform-box {
+  margin: 0; /* Anula el margin auto para el grid */
+  background-color: #64b5f6;
+}
+
+.translate-example:hover {
+  transform: translate(
+    20px,
+    10px
+  ); /* Mover 20px a la derecha, 10px hacia abajo */
+  background-color: #2196f3;
+}
+
+.scale-example:hover {
+  transform: scale(1.2); /* Aumentar el tamaño un 20% */
+  background-color: #1976d2;
+}
+
+.rotate-example:hover {
+  transform: rotate(
+    45deg
+  ); /* Rotar 45 grados en el sentido de las agujas del reloj */
+  background-color: #1565c0;
+}
+
+.skew-example:hover {
+  transform: skew(15deg, 10deg); /* Inclinar 15deg en X, 10deg en Y */
+  background-color: #0d47a1;
+}
+
+/* --- 2. `transform-origin` --- */
+.transform-origin-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+  background-color: #ffe0b2; /* Naranja claro */
+  border-radius: 8px;
+}
+
+.transform-origin-container .transform-box {
+  margin: 0;
+  background-color: #ffb74d;
+}
+
+.origin-center {
+  /* transform-origin: center center; (default) */
+}
+.origin-center:hover {
+  transform: rotate(30deg);
+  background-color: #ff9800;
+}
+
+.origin-top-left {
+  transform-origin: top left; /* El punto de rotación es la esquina superior izquierda */
+}
+.origin-top-left:hover {
+  transform: rotate(30deg);
+  background-color: #fb8c00;
+}
+
+.origin-bottom-right {
+  transform-origin: bottom right; /* El punto de rotación es la esquina inferior derecha */
+}
+.origin-bottom-right:hover {
+  transform: rotate(30deg);
+  background-color: #f57c00;
+}
+
+/* --- 3. Transformaciones 3D --- */
+.transform-3d-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  padding: 20px;
+  background-color: #c8e6c9; /* Verde claro */
+  border-radius: 8px;
+
+  /* Importante para las transformaciones 3D: Define la perspectiva en el contenedor */
+  perspective: 1000px; /* Distancia del observador al plano Z */
+}
+
+.transform-3d-container .transform-box {
+  margin: 0;
+  background-color: #81c784;
+}
+
+.rotateX-example:hover {
+  transform: rotateX(45deg); /* Gira alrededor del eje X */
+  background-color: #4caf50;
+}
+
+.rotateY-example:hover {
+  transform: rotateY(45deg); /* Gira alrededor del eje Y */
+  background-color: #43a047;
+}
+
+.translateZ-example:hover {
+  transform: translateZ(100px); /* Se mueve 100px hacia el observador */
+  background-color: #388e3c;
+}
+
+.scale3d-example:hover {
+  transform: scale3d(1.1, 1.1, 2); /* Escala en X, Y, y doble en Z */
+  background-color: #2e7d32;
+}
+
+/* --- 4. Tarjeta Volteable (transform-style y backface-visibility) --- */
+.card-flip-container {
+  width: 300px;
+  height: 200px;
+  margin: 40px auto;
+  background-color: #e0f2f7;
+  border-radius: 10px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  /* Establece la perspectiva en el contenedor de la tarjeta para el efecto 3D */
+  perspective: 1000px;
+}
+
+.card {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  /* Aplica la transformación de rotación aquí */
+  transform-style: preserve-3d; /* Permite que los hijos de .card tengan transformaciones 3D */
+  transition: transform 0.7s ease-in-out; /* Suaviza la animación de volteo */
+}
+
+.card.flipped {
+  transform: rotateY(180deg); /* Gira la tarjeta 180 grados en el eje Y */
+}
+
+.card-face {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden; /* Oculta la cara cuando no está de frente al observador */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  border-radius: 10px;
+  box-sizing: border-box;
+  font-weight: bold;
+  color: white;
+}
+
+.card-front {
+  background-color: #3f51b5; /* Azul índigo */
+  transform: rotateY(0deg); /* Asegura que la cara frontal esté de frente */
+}
+
+.card-back {
+  background-color: #ff4081; /* Rosa fuerte */
+  transform: rotateY(
+    180deg
+  ); /* Gira la cara trasera para que esté lista para mostrarse al voltear */
+}
+
+.card-face h3 {
+  margin-top: 0;
+  font-size: 1.5em;
+  color: white;
+}
+
+.card-face p {
+  font-size: 1em;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.card-face button {
+  background-color: rgba(255, 255, 255, 0.2);
+  border: 1px solid white;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 0.9em;
+  transition: background-color 0.2s ease;
+}
+.card-face button:hover {
+  background-color: rgba(255, 255, 255, 0.4);
+}

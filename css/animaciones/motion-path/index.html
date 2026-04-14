@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Motion Path</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <header>
+      <h1>Animación con Motion Path en CSS</h1>
+      <p>Moviendo elementos a lo largo de rutas SVG.</p>
+    </header>
+
+    <main>
+      <section>
+        <h2>1. Animación Simple a lo Largo de una Línea</h2>
+        <p>
+          Un círculo se mueve de izquierda a derecha a lo largo de una línea
+          recta.
+        </p>
+        <div class="path-container line-path">
+          <div class="motion-item circle-item"></div>
+        </div>
+      </section>
+
+      <section>
+        <h2>2. Animación a lo Largo de una Curva Compleja</h2>
+        <p>
+          Un cuadrado sigue una ruta curva personalizada con un efecto de
+          rebote.
+        </p>
+        <div class="path-container curve-path">
+          <div class="motion-item square-item"></div>
+        </div>
+      </section>
+
+      <section>
+        <h2>3. `offset-rotate` y `offset-anchor`</h2>
+        <p>
+          El elemento rota automáticamente para seguir la ruta y su punto de
+          anclaje se ajusta.
+        </p>
+        <div class="path-container rotate-anchor-path">
+          <div class="motion-item triangle-item"></div>
+        </div>
+      </section>
+
+      <section>
+        <h2>4. Múltiples Elementos en la Misma Ruta</h2>
+        <p>
+          Varios círculos siguen la misma ruta, pero con diferentes retrasos.
+        </p>
+        <div class="path-container multiple-items-path">
+          <div class="motion-item dot dot-1"></div>
+          <div class="motion-item dot dot-2"></div>
+          <div class="motion-item dot dot-3"></div>
+        </div>
+      </section>
+
+      <section>
+        <h2>5. Uso de un `path` desde SVG Externo/Interno</h2>
+        <p>Una flecha sigue una ruta compleja definida en un SVG.</p>
+        <div class="path-container svg-path-example">
+          <svg width="0" height="0" style="position: absolute">
+            <defs>
+              <path
+                id="complexPath"
+                d="M10 80 C 40 10, 65 10, 95 80 S 150 150, 180 80 C 200 20, 220 10, 250 80"
+              ></path>
+            </defs>
+          </svg>
+          <div class="motion-item arrow-item"></div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

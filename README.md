@@ -19,7 +19,6 @@ Este repositorio forma parte del proyecto [Bóveda-IT](https://github.com/u-n-a-
 - [Lenguajes declarativos](#lenguajes-declarativos)
   - [HTML](#html)
   - [CSS](#css)
-  - [SQL {PostgreSQL}](#sql-postgresql)
 - [Ecosistema JavaScript](#ecosistema-javascript)
   - [JavaScript](#javascript)
   - [TypeScript](#typescript)
@@ -57,15 +56,25 @@ Este repositorio forma parte del proyecto [Bóveda-IT](https://github.com/u-n-a-
 
 ### HTML
 
-[![HTML](https://img.shields.io/badge/notas-E34F26?style=for-the-badge&logo=HTML5&logoColor=white)]()
+[![HTML](https://img.shields.io/badge/cabecera-E34F26?style=for-the-badge&logo=HTML5&logoColor=white)](https://github.com/u-n-a-i/code-path/blob/master/html/cabecera/cabecera.html)
+[![HTML](https://img.shields.io/badge/textos-E34F26?style=for-the-badge&logo=HTML5&logoColor=white)](https://github.com/u-n-a-i/code-path/blob/master/html/elementos/texto.html)
+[![HTML](https://img.shields.io/badge/enlaces-E34F26?style=for-the-badge&logo=HTML5&logoColor=white)](https://github.com/u-n-a-i/code-path/blob/master/html/elementos/enlaces.html)
+[![HTML](https://img.shields.io/badge/listas-E34F26?style=for-the-badge&logo=HTML5&logoColor=white)](https://github.com/u-n-a-i/code-path/blob/master/html/elementos/listas.html)
+[![HTML](https://img.shields.io/badge/tablas-E34F26?style=for-the-badge&logo=HTML5&logoColor=white)](https://github.com/u-n-a-i/code-path/blob/master/html/elementos/tablas.html)
+[![HTML](https://img.shields.io/badge/formularios-E34F26?style=for-the-badge&logo=HTML5&logoColor=white)](https://github.com/u-n-a-i/code-path/blob/master/html/elementos/formularios.html)
+[![HTML](https://img.shields.io/badge/multimedia-E34F26?style=for-the-badge&logo=HTML5&logoColor=white)](https://github.com/u-n-a-i/code-path/blob/master/html/elementos/multimedia.html)
+[![HTML](https://img.shields.io/badge/interactivas-E34F26?style=for-the-badge&logo=HTML5&logoColor=white)](https://github.com/u-n-a-i/code-path/blob/master/html/elementos/interactivas.html)
+[![HTML](https://img.shields.io/badge/semantica-E34F26?style=for-the-badge&logo=HTML5&logoColor=white)](https://github.com/u-n-a-i/code-path/blob/master/html/buenas-practicas/semantica.html)
+[![HTML](https://img.shields.io/badge/aria%20role-E34F26?style=for-the-badge&logo=HTML5&logoColor=white)](https://github.com/u-n-a-i/code-path/blob/master/html/buenas-practicas/aria_role.html)
+[![HTML](https://img.shields.io/badge/tab%20index-E34F26?style=for-the-badge&logo=HTML5&logoColor=white)](https://github.com/u-n-a-i/code-path/blob/master/html/buenas-practicas/tabindex.html)
 
 ### CSS
 
 [![CSS](https://img.shields.io/badge/notas-663399?style=for-the-badge&logo=css&logoColor=white)]()
 
-### SQL {PostgreSQL}
+<!-- ### SQL {PostgreSQL}
 
-[![PostgreSQL](https://img.shields.io/badge/notas-336791?style=for-the-badge&logo=postgresql&logoColor=white)]()
+[![PostgreSQL](https://img.shields.io/badge/notas-336791?style=for-the-badge&logo=postgresql&logoColor=white)]() -->
 
 ---
 

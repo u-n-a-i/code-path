@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Combinadores</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Conceptos
+    <padre>
+       Los dos hijos son hermanos, están al mismo nivel 
+      <hijo-1></hijo-1>
+      <hijo-2></hijo-2>
+    </padre> -->
+
+    <!-- Descendiente -->
+    <h2>Descendiente (Espacio)</h2>
+    <div class="descendiente">
+      <p>Este párrafo es descendiente.</p>
+      <div>
+        <p>También este, aunque esté más adentro.</p>
+      </div>
+    </div>
+    <hr />
+
+    <!-- Hijo Directo -->
+    <h2>Hijo Directo (>)</h2>
+    <div class="hijo-directo">
+      <p>Este párrafo es hijo directo.</p>
+      <div>
+        <p>Este NO es hijo directo (es nieto).</p>
+      </div>
+    </div>
+    <hr />
+
+    <!-- Hermano adyacente -->
+    <h2 class="hermano-adyacente">Hermano adyacente</h2>
+    <p>Párrafo inmediatamente después del h2</p>
+    <p>Este no aplica, está más abajo, no es adyacente.</p>
+    <hr />
+
+    <!-- Hermano General -->
+    <h2 class="hermano-general">Título</h2>
+    <p>Primer párrafo después del h2</p>
+    <p>Otro párrafo que también aplica</p>
+    <div>
+      <p>Incluso este si está después del h2 y en el mismo nivel</p>
+    </div>
+    <hr />
+
+    <!-- Combinado -->
+     <h2>Combinado</h2>
+    <div class="combinado">
+      <p>Hijo directo de .contenedor</p>
+      <div>
+        <p>Descendiente (no directo) de .contenedor</p>
+      </div>
+    </div>
+
+    <h2>Sección principal</h2>
+    <p>Hermano general de h2</p>
+    <p>Otro hermano general de h2</p>
+
+    <h3>
+      Título con hijo
+      <p>Este p es hijo directo de h3</p>
+    </h3>
+
+    <section>
+      <article>
+        <p>Este p está dentro de un article dentro de section</p>
+      </article>
+    </section>
+  </body>
+</html>

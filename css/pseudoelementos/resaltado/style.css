@@ -1,0 +1,29 @@
+/* ::placeholder */
+input::placeholder,
+textarea::placeholder {
+  color: darkgray;
+  font-style: italic;
+  opacity: 0.8;
+}
+
+/* ::selection */
+::selection {
+  background-color: gold;
+  color: black;
+}
+
+/* Específico para elementos */
+p::selection {
+  background-color: darkorange;
+  color: white;
+}
+
+input,
+textarea {
+  margin: 1rem 0;
+  padding: 0.5rem;
+  width: 100%;
+  max-width: 400px;
+  display: block;
+  font-size: 1rem;
+}

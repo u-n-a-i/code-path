@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Interacción</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <h1>Pseudoclases de Interacción</h1>
+    <section>
+      <h2>:link, :visited, :hover, :active</h2>
+      <a href="#" target="_blank">Visita Example.com</a><br />
+      <a href="#seccion">Ir a sección</a>
+    </section>
+
+    <section id="seccion">
+      <h2>:target</h2>
+      <p>
+        Esta sección se resalta si llegas aquí mediante un enlace con
+        <code>#seccion</code>.
+      </p>
+    </section>
+
+    <section>
+      <h2>:focus, :focus-visible, :focus-within</h2>
+      <form class="formulario">
+        <label>
+          Nombre:
+          <input type="text" name="nombre" /> </label
+        ><br /><br />
+        <label>
+          Email:
+          <input type="email" name="email" />
+        </label>
+      </form>
+    </section>
+  </body>
+</html>
