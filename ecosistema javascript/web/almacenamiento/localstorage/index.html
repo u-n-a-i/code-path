@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Local Storage</title>
+    <style>
+      button {
+        display: block;
+        margin-bottom: 10px;
+
+        &:first-of-type {
+          margin-top: 10px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Demostración de Local Storage</h1>
+    <p>
+      Abre la consola y la pestaña "Application" o "Almacenamiento" en las
+      herramientas de desarrollo para ver los cambios.
+    </p>
+
+    <label for="username">Nombre de usuario:</label>
+    <input type="text" id="username" placeholder="Introduce tu nombre" />
+    <button onclick="guardarNombre()">Guardar Nombre</button>
+    <button onclick="cargarNombre()">Cargar Nombre</button>
+    <button onclick="guardarObjeto()">Guardar Objeto Complejo</button>
+    <button onclick="cargarObjeto()">Cargar Objeto Complejo</button>
+    <button onclick="eliminarNombre()">Eliminar Nombre</button>
+    <button onclick="limpiarTodo()">Limpiar Todo Local Storage</button>
+
+    <div id="output"></div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

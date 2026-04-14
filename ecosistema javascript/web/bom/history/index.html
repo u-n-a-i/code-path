@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>History</title>
+  </head>
+  <body>
+    <h1>Demostración del Objeto History</h1>
+    <p>Navega entre las páginas para ver el historial.</p>
+    <p>Abre la consola y prueba los botones.</p>
+
+    <mark>No están subidas las paginas: </mark>
+
+    <a href="pagina1.html">Ir a Página 1</a> |
+    <a href="pagina2.html">Ir a Página 2</a> |
+    <a href="pagina3.html">Ir a Página 3</a>
+
+    <br /><br />
+    <button onclick="irAtras()">Ir Atrás</button>
+    <button onclick="irAdelante()">Ir Adelante</button>
+    <button onclick="irAEstadoEspecifico()">Ir a 2 Páginas Atrás</button>
+    <button onclick="mostrarLongitudHistorial()">
+      Mostrar Longitud del Historial
+    </button>
+    <button onclick="anadirEstado()">
+      Añadir Estado a Historial (pushState)
+    </button>
+    <button onclick="reemplazarEstado()">
+      Reemplazar Estado (replaceState)
+    </button>
+
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fetch</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Demostración de la API `Workspace`</h1>
+
+      <h2>Petición GET: Obtener Publicaciones</h2>
+      <button id="getPostsBtn">Obtener 5 Publicaciones</button>
+      <button id="getSinglePostBtn">Obtener Publicación con ID 1</button>
+      <div id="getOutput" class="message"></div>
+      <h3>Datos Recibidos (GET):</h3>
+      <pre id="getResults"></pre>
+
+      <hr />
+
+      <h2>Petición POST: Crear Nueva Publicación</h2>
+      <label for="postTitle">Título:</label>
+      <input
+        type="text"
+        id="postTitle"
+        value="Nueva Publicación Fetch"
+        style="width: 100%; padding: 8px; margin-bottom: 10px"
+      />
+      <label for="postBody">Cuerpo:</label>
+      <textarea
+        id="postBody"
+        rows="4"
+        style="width: 100%; padding: 8px; margin-bottom: 10px"
+      >
+Este es el cuerpo de la nueva publicación creada con Fetch.</textarea
+      >
+      <button id="createPostBtn">Crear Publicación</button>
+      <div id="postOutput" class="message"></div>
+      <h3>Respuesta del Servidor (POST):</h3>
+      <pre id="postResults"></pre>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

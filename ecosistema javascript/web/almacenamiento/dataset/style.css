@@ -1,0 +1,23 @@
+.producto-card {
+  border: 1px solid #ddd;
+  padding: 15px;
+  margin: 15px;
+  width: 250px;
+  text-align: center;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  cursor: pointer;
+}
+.producto-card:hover {
+  background-color: #eaf6ff;
+}
+.output-box {
+  margin-top: 20px;
+  padding: 15px;
+  background-color: #e6f7ff;
+  border: 1px solid #91d5ff;
+  border-radius: 5px;
+  font-family: monospace;
+  color: #096dd9;
+}

@@ -16,11 +16,13 @@ Este repositorio forma parte del proyecto [Bóveda-IT](https://github.com/u-n-a-
   - [Git \& GitHub](#git--github)
   - [Docker](#docker) -->
 
-- [Lenguajes declarativos](#lenguajes-declarativos)
+- [Estructura y estilos](#estructura-y-estilos)
   - [HTML](#html)
   - [CSS](#css)
 - [Ecosistema JavaScript](#ecosistema-javascript)
   - [JavaScript](#javascript)
+    - [Core](#core)
+    - [Web](#web)
   - [TypeScript](#typescript)
   - [Jest](#jest)
   - [Node.js](#nodejs)
@@ -52,7 +54,7 @@ Este repositorio forma parte del proyecto [Bóveda-IT](https://github.com/u-n-a-
 
 --- -->
 
-## Lenguajes declarativos
+## Estructura y estilos
 
 ### HTML
 
@@ -91,6 +93,12 @@ Este repositorio forma parte del proyecto [Bóveda-IT](https://github.com/u-n-a-
 ## Ecosistema JavaScript
 
 ### JavaScript
+
+#### Core
+
+[![JavaScript](https://img.shields.io/badge/notas-F7DF1E?style=for-the-badge&logo=JavaScript&logoColor=black)]()
+
+#### Web
 
 [![JavaScript](https://img.shields.io/badge/notas-F7DF1E?style=for-the-badge&logo=JavaScript&logoColor=black)]()
 

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Eventos</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>Demostración de Eventos en JavaScript</h1>
+
+    <div id="miContenedorPadre" class="contenedor-evento">
+      Contenedor Padre (clic aquí)
+      <div
+        id="miContenedorHijo"
+        class="contenedor-evento"
+        style="border-color: green; background-color: lightgreen"
+      >
+        Contenedor Hijo (clic aquí)
+        <button id="miBoton" class="boton-evento">Haz clic aquí</button>
+        <input
+          type="text"
+          id="miInput"
+          placeholder="Escribe aquí"
+          style="margin-left: 10px"
+        />
+      </div>
+    </div>
+
+    <hr />
+
+    <h2>Ejemplo de `e.preventDefault()`</h2>
+    <form id="miFormulario" action="/submit-data" onsubmit="return false;">
+      <label for="nombre">Nombre:</label>
+      <input type="text" id="nombre" name="nombre" required />
+      <button type="submit">Enviar Formulario</button>
+      <p id="feedbackForm"></p>
+    </form>
+
+    <hr />
+
+    <h2>Ejemplo de Delegación de Eventos</h2>
+    <ul id="listaElementos">
+      <li class="tarjeta" data-id="1">Elemento de lista 1</li>
+      <li class="tarjeta" data-id="2">Elemento de lista 2</li>
+      <li class="tarjeta" data-id="3">Elemento de lista 3</li>
+    </ul>
+    <button id="addListItem">Añadir Nuevo Elemento</button>
+    <p id="feedbackDelegacion"></p>
+
+    <hr />
+
+    <h2>Registro de Eventos (ver consola y aquí)</h2>
+    <div id="eventLog" class="lista-eventos"></div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

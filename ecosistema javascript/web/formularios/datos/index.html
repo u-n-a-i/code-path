@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Manipular datos</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Formulario de Registro de Usuario</h1>
+      <form id="registroForm">
+        <label for="nombre">Nombre Completo:</label>
+        <input
+          type="text"
+          id="nombre"
+          name="nombre"
+          required
+          placeholder="Tu nombre y apellidos"
+        />
+        <span id="errorNombre" class="error-message"></span>
+
+        <label for="email">Email:</label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          required
+          placeholder="tu.email@example.com"
+        />
+        <span id="errorEmail" class="error-message"></span>
+
+        <label for="edad">Edad:</label>
+        <input
+          type="number"
+          id="edad"
+          name="edad"
+          min="18"
+          max="120"
+          placeholder="Solo números (ej. 30)"
+        />
+        <span id="errorEdad" class="error-message"></span>
+
+        <label for="mensaje">Mensaje (Opcional):</label>
+        <textarea
+          id="mensaje"
+          name="mensaje"
+          rows="4"
+          placeholder="Escribe tu mensaje aquí..."
+        ></textarea>
+
+        <label>Intereses:</label>
+        <div class="checkbox-group">
+          <label
+            ><input type="checkbox" name="intereses" value="programacion" />
+            Programación</label
+          >
+          <label
+            ><input type="checkbox" name="intereses" value="diseno" />
+            Diseño</label
+          >
+          <label
+            ><input type="checkbox" name="intereses" value="marketing" />
+            Marketing</label
+          >
+        </div>
+        <span id="errorIntereses" class="error-message"></span>
+
+        <label>Género:</label>
+        <div class="radio-group">
+          <label
+            ><input type="radio" name="genero" value="masculino" />
+            Masculino</label
+          >
+          <label
+            ><input type="radio" name="genero" value="femenino" />
+            Femenino</label
+          >
+          <label><input type="radio" name="genero" value="otro" /> Otro</label>
+        </div>
+        <span id="errorGenero" class="error-message"></span>
+
+        <label for="pais">País:</label>
+        <select id="pais" name="pais">
+          <option value="">Selecciona un país</option>
+          <option value="es">España</option>
+          <option value="mx">México</option>
+          <option value="ar">Argentina</option>
+          <option value="co">Colombia</option>
+          <option value="cl">Chile</option>
+          <option value="otro">Otro</option>
+        </select>
+        <span id="errorPais" class="error-message"></span>
+
+        <button type="submit">Enviar Registro</button>
+        <button type="reset">Limpiar Formulario</button>
+      </form>
+
+      <h2>Datos Recopilados</h2>
+      <div id="output" class="output-box">No hay datos enviados aún.</div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dataset</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>Demostración de Dataset</h1>
+    <p>
+      Haz clic en las tarjetas de producto para ver sus datos personalizados.
+    </p>
+
+    <div
+      class="producto-card"
+      data-id="12345"
+      data-nombre-producto="Auriculares Bluetooth"
+      data-precio="89.99"
+      data-disponible="true"
+      data-categoria="Audio"
+      data-sku="BT-HP-001"
+      data-oferta-especial
+    >
+      <h3>Auriculares Bluetooth (ID: 12345)</h3>
+      <p>Precio: 89.99€</p>
+      <p>Categoría: Audio</p>
+    </div>
+
+    <div
+      class="producto-card"
+      data-id="67890"
+      data-nombre-producto="Teclado Mecánico"
+      data-precio="120.00"
+      data-disponible="false"
+      data-categoria="Periféricos"
+      data-sku="MECH-KB-005"
+    >
+      <h3>Teclado Mecánico (ID: 67890)</h3>
+      <p>Precio: 120.00€</p>
+      <p>Categoría: Periféricos</p>
+    </div>
+
+    <div id="output" class="output-box">
+      Haz clic en un producto para ver sus detalles de `dataset`.
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
