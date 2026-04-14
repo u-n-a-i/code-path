@@ -96,11 +96,28 @@ Este repositorio forma parte del proyecto [Bóveda-IT](https://github.com/u-n-a-
 
 #### Core
 
-[![JavaScript](https://img.shields.io/badge/notas-F7DF1E?style=for-the-badge&logo=JavaScript&logoColor=black)]()
+[![JavaScript](https://img.shields.io/badge/bases-F7DF1E?style=for-the-badge&logo=JavaScript&logoColor=black)](https://github.com/u-n-a-i/code-path/tree/master/ecosistema%20javascript/javascript/core/bases)
+[![JavaScript](https://img.shields.io/badge/control%20de%20flujo-F7DF1E?style=for-the-badge&logo=JavaScript&logoColor=black)](https://github.com/u-n-a-i/code-path/tree/master/ecosistema%20javascript/javascript/core/control-de-flujo)
+[![JavaScript](https://img.shields.io/badge/funciones-F7DF1E?style=for-the-badge&logo=JavaScript&logoColor=black)](https://github.com/u-n-a-i/code-path/tree/master/ecosistema%20javascript/javascript/core/funciones)
+[![JavaScript](https://img.shields.io/badge/objetos-F7DF1E?style=for-the-badge&logo=JavaScript&logoColor=black)](https://github.com/u-n-a-i/code-path/tree/master/ecosistema%20javascript/javascript/core/objetos)
+[![JavaScript](https://img.shields.io/badge/objetos%20incorporados-F7DF1E?style=for-the-badge&logo=JavaScript&logoColor=black)](https://github.com/u-n-a-i/code-path/tree/master/ecosistema%20javascript/javascript/core/objetos-incorporados)
+[![JavaScript](https://img.shields.io/badge/array-F7DF1E?style=for-the-badge&logo=JavaScript&logoColor=black)](https://github.com/u-n-a-i/code-path/tree/master/ecosistema%20javascript/javascript/core/arrays)
+[![JavaScript](https://img.shields.io/badge/map%20y%20set-F7DF1E?style=for-the-badge&logo=JavaScript&logoColor=black)](https://github.com/u-n-a-i/code-path/tree/master/ecosistema%20javascript/javascript/core/map-set)
+[![JavaScript](https://img.shields.io/badge/json-F7DF1E?style=for-the-badge&logo=JavaScript&logoColor=black)](https://github.com/u-n-a-i/code-path/tree/master/ecosistema%20javascript/javascript/core/json)
+[![JavaScript](https://img.shields.io/badge/manipular%20datos-F7DF1E?style=for-the-badge&logo=JavaScript&logoColor=black)](https://github.com/u-n-a-i/code-path/tree/master/ecosistema%20javascript/javascript/core/manipular-datos)
+[![JavaScript](<https://img.shields.io/badge/prototipos(poo)-F7DF1E?style=for-the-badge&logo=JavaScript&logoColor=black>)](https://github.com/u-n-a-i/code-path/tree/master/ecosistema%20javascript/javascript/core/prototipos-poo)
+[![JavaScript](https://img.shields.io/badge/asincronía-F7DF1E?style=for-the-badge&logo=JavaScript&logoColor=black)](https://github.com/u-n-a-i/code-path/tree/master/ecosistema%20javascript/javascript/core/asincronia)
+[![JavaScript](https://img.shields.io/badge/módulos-F7DF1E?style=for-the-badge&logo=JavaScript&logoColor=black)](https://github.com/u-n-a-i/code-path/tree/master/ecosistema%20javascript/javascript/core/modulos)
+[![JavaScript](https://img.shields.io/badge/expresiones%20regulares-F7DF1E?style=for-the-badge&logo=JavaScript&logoColor=black)](https://github.com/u-n-a-i/code-path/tree/master/ecosistema%20javascript/javascript/core/expresiones-regulares)
 
 #### Web
 
-[![JavaScript](https://img.shields.io/badge/notas-F7DF1E?style=for-the-badge&logo=JavaScript&logoColor=black)]()
+[![JavaScript](https://img.shields.io/badge/dom-F7DF1E?style=for-the-badge&logo=JavaScript&logoColor=black)](https://github.com/u-n-a-i/code-path/tree/master/ecosistema%20javascript/javascript/web/dom)
+[![JavaScript](https://img.shields.io/badge/bom-F7DF1E?style=for-the-badge&logo=JavaScript&logoColor=black)](https://github.com/u-n-a-i/code-path/tree/master/ecosistema%20javascript/javascript/web/bom)
+[![JavaScript](https://img.shields.io/badge/eventos-F7DF1E?style=for-the-badge&logo=JavaScript&logoColor=black)](https://github.com/u-n-a-i/code-path/tree/master/ecosistema%20javascript/javascript/web/eventos)
+[![JavaScript](https://img.shields.io/badge/formularios-F7DF1E?style=for-the-badge&logo=JavaScript&logoColor=black)](https://github.com/u-n-a-i/code-path/tree/master/ecosistema%20javascript/javascript/web/formularios)
+[![JavaScript](https://img.shields.io/badge/almacenamiento-F7DF1E?style=for-the-badge&logo=JavaScript&logoColor=black)](https://github.com/u-n-a-i/code-path/tree/master/ecosistema%20javascript/javascript/web/almacenamiento)
+[![JavaScript](https://img.shields.io/badge/apis-F7DF1E?style=for-the-badge&logo=JavaScript&logoColor=black)](https://github.com/u-n-a-i/code-path/tree/master/ecosistema%20javascript/javascript/web/apis)
 
 ### TypeScript
 

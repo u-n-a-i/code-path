@@ -1,0 +1,11 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const Avion_1 = require("./entidades/Avion");
+const Coche_1 = require("./entidades/Coche");
+const miCoche = new Coche_1.Coche("Toyota", "Corolla");
+console.log(miCoche.getInfo());
+miCoche.encender();
+miCoche.apagar();
+const miAvion = new Avion_1.Avion();
+miAvion.encender();
+miAvion.apagar();
