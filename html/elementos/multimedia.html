@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Multimedia</title>
+  </head>
+  <body>
+    <h2>Imágenes</h2>
+    <img src="../../img/logo.png" width="100" alt="Descripción de la imagen" />
+    <br />
+    <img
+      src="../../img/logo.png"
+      width="100"
+      alt="Descripción de la imagen"
+      loading="lazy"
+    />
+    <br />
+    <img
+      src="../../img/logo.png"
+      width="100"
+      alt="Descripción de la imagen"
+      loading="eager"
+    />
+    <br />
+
+    <h2>Figure</h2>
+    <figure>
+      <img
+        src="../../img/logo.png"
+        width="100"
+        alt="Descripción de la imagen"
+      />
+      <figcaption>Esta es una imagen de ejemplo.</figcaption>
+    </figure>
+
+    <h2>Picture(ejemplo)</h2>
+    <picture>
+      <!-- Imagen para pantallas pequeñas (ancho máximo de 600px) -->
+      <source srcset="imagen-small.jpg" media="(max-width: 600px)" />
+
+      <!-- Imagen para pantallas medianas (ancho mínimo de 601px y máximo de 1200px) -->
+      <source
+        srcset="imagen-medium.jpg"
+        media="(min-width: 601px) and (max-width: 1200px)"
+      />
+
+      <!-- Imagen para pantallas grandes (ancho mínimo de 1201px) -->
+      <source srcset="imagen-large.jpg" media="(min-width: 1201px)" />
+
+      <!-- Imagen por defecto si el navegador no soporta la etiqueta <picture> -->
+      <img src="imagen-default.jpg" alt="Imagen responsiva" />
+    </picture>
+  </body>
+</html>

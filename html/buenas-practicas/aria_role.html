@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aria & Role</title>
+  </head>
+  <body>
+    <h1>Formulario de registro</h1>
+
+    <form>
+      <label for="usuario">Nombre de usuario:</label>
+      <input type="text" id="usuario" name="usuario" aria-required="true" />
+
+      <br /><br />
+
+      <button type="submit">Enviar</button>
+    </form>
+    <br />
+    <br />
+
+    <!-- Mensaje de error accesible -->
+    <div class="alerta" role="alert" aria-live="assertive">
+      ⚠️ El nombre de usuario es obligatorio.
+    </div>
+  </body>
+</html>

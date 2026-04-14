@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Interactivas</title>
+  </head>
+  <body>
+    <h2>Despegable</h2>
+    <details>
+      <summary>Click</summary>
+      <p>Texto aleatorio.</p>
+    </details>
+
+    <hr />
+
+    <h2>Popover</h2>
+    <button popovertarget="mensaje" popovertargetaction="toggle">
+      Mostrar Mensaje
+    </button>
+
+    <div id="mensaje" popover>
+      <p>Esto es un mensaje de prueba</p>
+    </div>
+
+    <h2>Editar contenido</h2>
+    <h1 contenteditable>Título editable</h1>
+    <div contenteditable>
+      <p>Texto editable</p>
+    </div>
+
+    <h2>Rango</h2>
+    <meter value="70" min="0" max="100">70%</meter>
+  </body>
+</html>

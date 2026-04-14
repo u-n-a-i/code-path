@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formularios</title>
+  </head>
+  <body>
+    <h2>Formulario</h2>
+    <form action="" method="post">
+      <label for="nombre">Nombre:</label>
+      <input type="text" id="nombre" name="nombre" required />
+
+      <label for="email">Correo electrónico:</label>
+      <input type="email" id="email" name="email" required />
+
+      <label for="mensaje">Mensaje:</label>
+      <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
+
+      <hr />
+
+      <label>Radio: (Selecciona un color)</label>
+      <br />
+      <input type="radio" name="color" value="rojo" /> Rojo
+      <br />
+      <input type="radio" name="color" value="verde" /> Verde
+      <br />
+      <input type="radio" name="color" value="azul" /> Azul
+
+      <hr />
+
+      <fieldset>
+        <legend>Información Personal</legend>
+        Nombre: <input name="nombre" type="text" required />
+        <br />
+        <br />
+        Apellidos: <input name="apellidos" type="text" required />
+
+        <br />
+        <br />
+
+        <select name="provincia">
+          <option value="">Elige Provincia</option>
+          <option value="Álava/Araba">Álava/Araba</option>
+          <option value="Albacete">Albacete</option>
+          <option value="Alicante">Alicante</option>
+        </select>
+      </fieldset>
+
+      <br />
+      <br />
+
+      <button type="submit">Enviar</button>
+    </form>
+  </body>
+</html>
