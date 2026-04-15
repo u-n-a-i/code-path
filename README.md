@@ -129,7 +129,17 @@ Este repositorio forma parte del proyecto [Bóveda-IT](https://github.com/u-n-a-
 
 ### Jest
 
-[![Jest](https://img.shields.io/badge/notas-C21325?style=for-the-badge&logo=Jest&logoColor=white)]()
+[![Jest](https://img.shields.io/badge/fundamentos-C21325?style=for-the-badge&logo=Jest&logoColor=white)]()
+[![Jest](https://img.shields.io/badge/tipos%20de%20datos-C21325?style=for-the-badge&logo=Jest&logoColor=white)]()
+[![Jest](https://img.shields.io/badge/comparaciones%20númericas-C21325?style=for-the-badge&logo=Jest&logoColor=white)]()
+[![Jest](https://img.shields.io/badge/expresiones-C21325?style=for-the-badge&logo=Jest&logoColor=white)]()
+[![Jest](https://img.shields.io/badge/colecciones-C21325?style=for-the-badge&logo=Jest&logoColor=white)]()
+[![Jest](https://img.shields.io/badge/organización-C21325?style=for-the-badge&logo=Jest&logoColor=white)]()
+[![Jest](https://img.shields.io/badge/callbacks-C21325?style=for-the-badge&logo=Jest&logoColor=white)]()
+[![Jest](https://img.shields.io/badge/promesas-C21325?style=for-the-badge&logo=Jest&logoColor=white)]()
+[![Jest](https://img.shields.io/badge/async%20await-C21325?style=for-the-badge&logo=Jest&logoColor=white)]()
+[![Jest](https://img.shields.io/badge/mock-C21325?style=for-the-badge&logo=Jest&logoColor=white)]()
+[![Jest](https://img.shields.io/badge/espiar%20funciones-C21325?style=for-the-badge&logo=Jest&logoColor=white)]()
 
 ### Node.js
 
